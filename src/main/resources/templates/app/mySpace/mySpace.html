@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 공간 - 나의바다</title>
+    <link rel="stylesheet" href="/css/fix/header.css">
+    <link rel="stylesheet" href="/css/fix/footer.css">
+    <link rel="stylesheet" href="/css/mySpace/mySpace.css">
+</head>
+<body class="fontLoaded">
+<header th:replace="/app/fix/header.html :: header"></header>
+    <div id="app">
+        <div class="MySpacePage__Wrapper fzBbGO">
+            <div class="MySpacePage__Header jIjcTX">
+                <div>
+                    <span class="MySpacePage__Title gVPyuz">나만의 공간</span>
+                </div>
+            </div>
+            <div class="Fade__Wrapper koasSX" style="opacity:1;display:block;">
+                <div class="view__TodoListWrapper ciajVR">
+                    <div>
+                        
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="MySpace__DiaryContainer jBoTV">
+                    <button class="Diary__Container juuNtL">
+                        <div class="Diary__Mark eYNaUp">
+                            <img src="data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M7.66667 8.39317L8.08667 10.2132C8.15333 10.4998 7.84 10.7265 7.58667 10.5732L6 9.61317L4.40667 10.5732C4.15333 10.7265 3.84 10.4998 3.90667 10.2132L4.33333 8.39984L2.93333 7.19317C2.70667 6.99984 2.82667 6.63317 3.12 6.6065L4.97333 6.4465L5.69333 4.73984C5.80667 4.4665 6.19333 4.4665 6.30667 4.73984L7.02667 6.43984L8.88 6.59984C9.17333 6.6265 9.29333 6.99317 9.06667 7.1865L7.66667 8.39317ZM0.793333 2.97984C0.313333 3.19317 0 3.67317 0 4.19984V7.33317C0 11.0332 2.56 14.4932 6 15.3332C9.44 14.4932 12 11.0332 12 7.33317V4.19984C12 3.67317 11.6867 3.19317 11.2067 2.97984L6.54 0.906504C6.19333 0.753171 5.8 0.753171 5.46 0.906504L0.793333 2.97984Z' fill='white'/%3E %3C/svg%3E" alt="badge icon">
+                            <strong class="Diary__DiaryTitle ibIiPD">나의 바다</strong>
+                        </div>
+                        <div class="Diary__TitleContainer ksIvnE">
+                            <!-- DB에 오늘자 일기가 있으면 일기제목, 없으면 일기 쓰러가기 -->
+                            <strong class="Diary__Title hOVumI">오늘의 일기</strong>
+                            <div class="Diary__SubTitleContainer ezRosO">
+                                <span>오늘의 일기를 써주세요</span>
+                            </div>
+                        </div>
+                        <img class="Diary__diaryImage fSDzSK" src="https://res.cloudinary.com/frientrip/image/upload/q_auto/11%E1%84%8B%E1%85%AF%E1%86%AF%20%E1%84%87%E1%85%A2%E1%84%8C%E1%85%B5_%E1%84%92%E1%85%B3%E1%86%A8%E1%84%87%E1%85%A2%E1%86%A8_42e6afd5ce1bc133fe3be64da971ce514ff84ff104829898157b9a7aa13f5026" alt="일기">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/fix/header.js"></script>
+<script src="/js/fix/fix.js"></script>
+</html>
