@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>h.hyeoniya 커뮤니티 글작성</title>
+    <link rel="stylesheet" href="/css/community/community_write.css">
+    <link rel="stylesheet" href="/css/fix/header.css">
+    <link rel="stylesheet" href="/css/fix/footer.css">
+    <link rel="stylesheet" href="https://codex.so/public/build/codex.bundle.css?v=1647866282">
+    <!--    <script>-->
+    <!--        /**-->
+    <!--         * Tiny wrapper for Hawk service initializing-->
+    <!--         */-->
+    <!--        function initializeHawk() {-->
+
+    <!--            /**-->
+    <!--             * Define global catcher for errors-->
+    <!--             */-->
+    <!--            new HawkCatcher({-->
+    <!--                token: 'eyJpbnRlZ3JhdGlvbklkIjoiMGFlZjVmOTAtN2E4ZC00YmNkLTgxZWYtYThkZWQ4ZTA5MTg1Iiwic2VjcmV0IjoiZGY3ZjdkNjAtZTMwYy00MDcyLWE1Y2UtYTZmNDY2ZTVlMDEzIn0=',-->
+    <!--                release: '223d8eb43073a38b4278'-->
+    <!--            });-->
+
+    <!--            /**-->
+    <!--             * Send a hit for a page open-->
+    <!--             */-->
+    <!--            (new HawkCatcher({-->
+    <!--           WFlMTEtZTViZjNjMjJhYWQ2Iiwic2VjcmV0IjoiNjBlNzBhMjEtZGI2MS00YzQ2LWI3YmQtNjMzMzY0YzBmMmI4In0=',-->
+    <!--                disableGlobalErrorsHandling: true-->
+    <!--            }))-->
+    <!--                .send(new Error(window.location.pathname));-->
+    <!--        }-->
+    <!--    </script>-->
+    <!--    <script src="https://codex.so/public/build/HawkCatcher.bundle.js?v=1630917502" onload="initializeHawk()"></script>-->
+    <script charset="utf-8" src="https://codex.so/public/build/editor.bundle.js?h=223d8eb43073a38b4278"></script>
+
+</head>
+<body>
+<header th:replace="/app/fix/header.html :: header"></header>
+    <div class="SocialFeedPage__Wrapper-ky5ymg-0 fzBbGO">
+        <div class="SocialFeedPage__Header-ky5ymg-1 jIjcTX">
+            <div style="padding-left: 20px; padding-right: 20px;">
+                <span class="SocialFeedPage__Title-ky5ymg-2 gVPyuz">마음껏 작성해 주세요</span>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 30px">
+        <div class="editor-landing__demo" data-module="editorLanding">
+                <textarea name="module-settings" hidden="">            {
+                        "output_id" : "output",
+                        "blocks" : []
+                    }
+                </textarea>
+
+            <div class="editor-landing__demo-inner">
+                <div id="editorjs">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
+
+</body>
+<!--<script data-cfasync="false" src="https://codex.so/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter32652805 = new Ya.Metrika({ id:32652805, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/32652805" style="position:absolute; left:-9999px;" alt="" /></div></noscript>-->
+<!--<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=r/h9TMw6W*8InHxVrFZ4tmb*x6Z5C3xX8BdMxOLhjmn9fIv51wjPMiGmbHGJJd7sOl87xLCs94644RwgS0o2PeBS*/xssAPVS1zN/LOx/HWw2kLUkcg0ELryq4QZF0IJtKIs0pJyo6/*z0qgpPsNl0u8pQPEQ12R4jrwKFQZK4k-';</script>-->
+<!--<script onload="codex.init();" src="https://codex.so/public/build/codex.bundle.js?v=1654014248" defer></script>-->
+<!--<script onload="codex.init();" src="/js/edit.js"></script>-->
+<!--<script onload="Emoji.parse();" src="https://codex.so/public/extensions/emoji-parser/specc-emoji.js?v=1630788928" defer></script>-->
+<script onload="codex.init();" src="https://codex.so/public/build/codex.bundle.js?v=1654014248" defer></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/fix/header.js"></script>
+</html>

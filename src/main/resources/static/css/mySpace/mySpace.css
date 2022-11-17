@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'SUIT';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.fontLoaded {
+    font-family: SUIT, "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+body {
+    margin: 0;
+}
+body {
+    display: block;
+    margin: 8px;
+}
+html {
+    box-sizing: border-box;
+    cursor: default;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+* {
+    outline: none;
+    font-family: inherit;
+}
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+html {
+    display: block;
+}
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+::selection {
+    background-color: #b3d4fc;
+    color: #000000;
+    text-shadow: none;
+}
+#app {
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+.fzBbGO {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 768px;
+    margin: 0px auto;
+}
+.jIjcTX {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.gVPyuz {
+    color: rgb(51, 61, 75);
+    font-weight: bold;
+    font-size: 24px;
+}
+.koasSX {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+.ciajVR {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+.ciajVR > div {
+    max-width: 385px;
+    width: 100%;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    border-left: 1px solid rgb(238, 238, 238);
+    margin-left: -1px;
+}
+.ciajVR div{
+    width: 385px;
+    height: 626px;
+}
+.jBoTV {
+    padding: 0px 20px 20px;
+}
+.juuNtL {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 105px;
+    padding: 23px 24px 23px 16px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 16px;
+    box-shadow: rgb(0 0 0 / 14%) 0px 4px 10px;
+}
+button {
+    cursor: pointer;
+}
+a, area, button, input, label, select, textarea, [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, input {
+    overflow: visible;
+}
+button, input, select, textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+.eYNaUp {
+    position: absolute;
+    top: -16.25px;
+    left: 20px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 85px;
+    padding: 6px 12px 6px 10px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+}
+img {
+    border-style: none;
+}
+.ibIiPD {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: -0.03em;
+    font-family: "Cafe24 Ohsquare", SUIT, "UI Frip", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.ksIvnE {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hOVumI {
+    margin-bottom: 11px;
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.03em;
+}
+.ezRosO {
+    display: flex;
+}
+.kdLIth {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+}
+.fSDzSK {
+    height: 58px;
+    width: 40px;
+    margin-right: 10px;
+}
