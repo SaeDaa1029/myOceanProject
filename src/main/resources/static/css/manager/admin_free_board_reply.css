@@ -2,6 +2,17 @@
 
 
 /* 사이드바 */
+@font-face {
+    font-family: 'SUIT';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: "Cafe24 Ohsquare", "SUIT", "UI Frip", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .menu {
     display: block;
     overflow: hidden;
@@ -133,8 +144,12 @@ body {
     width: 100%;
     margin: 0;
     background: rgb(238 238 238);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "SUIT", "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
     font-size: 14px;
+}
+
+button{
+    cursor: pointer;
 }
 
 #header {
@@ -214,19 +229,19 @@ body {
     background-color: #fff;
     width: 90%;
     display: block;
-    margin: 50px auto;
+    margin: 20px auto;
     color: #212121;
     padding: 40px;
 }
 
 #content-top-wrapper {
     display: flex;
-    align-items: center;
-    flex-direction: row;
 }
 
 #content-top-right {
     display: block;
+    align-items: center;
+
 }
 
 #menu-title {
@@ -238,25 +253,35 @@ body {
 
 .filter{
     width: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    display: block;
+    float: left;
     margin-top: 20px;
+
 }
 
-.filter button {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 17px;
-    height: 55px;
-    width: 142px;
-    background-color: #73649f;
-    opacity: 0.5;
-    color: #fff;
-    border: none;
-    padding: 0 30px;
-    border-radius: 10px;
+.filter span{
+    font-family: inherit;
+    font-size: 14px;
+    margin-right: 30px;
+    background-color: #f3f3f3;
+    padding: 6px;
+    cursor:pointer;
+
+}
+
+span.active-filter{
+    background-color: #dbd4ed;
+}
+
+.filter span:hover{
+    background-color: #dbd4ed;
+
+}
+
+#search_box_wrapper{
+    display: inline-block;
+    float: right;
+    margin-left: auto;
 }
 
 #search_box {
@@ -304,20 +329,39 @@ input#search_input::placeholder {
 #info_table {
     display: table;
     width: inherit;
-    border-collapse: separate;
     box-sizing: border-box;
     text-indent: initial;
-    border-spacing: 2px;
     border-bottom: grey;
+    border-collapse: collapse;
     margin: 0px 20px auto auto;
     background-color: #fff;
 }
 
+table th,
+table td {
+    border-right: 1px black solid;
 
-.thead {
-    font-size: 16px;
-    font-weight: 500;
 }
+
+table td:last-child {
+    border-right: 0;
+}
+/*#info_td  {*/
+
+/*    position: relative;*/
+/*    border-left: 1px solid #dee2e6;*/
+/*}*/
+
+#info_table td:first-child{
+    border-left: 0;
+}
+
+#info_table td:last-child{
+    border-right: 0;
+}
+/*#info_table td:nth-child(2){
+    border-left: 0;
+}*/
 
 .info_td {
     text-align: center;
@@ -325,7 +369,7 @@ input#search_input::placeholder {
     height: 40px;
     line-height: 40px;
     vertical-align: top;
-    border-top: 1px solid #dee2e6;
+    border: 1px solid #dee2e6;
     font-weight: 300;
 }
 
@@ -341,11 +385,25 @@ input#search_input::placeholder {
     font-size: 14px;
 } */
 
-.more{
+.thead {
+    font-size: 16px;
+    font-weight: 500;
+    background-color:#f3f3f3;
+    border-top: 2px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
+    border-right: none;
+    border: none;
+    border-collapse: collapse;
+
+    height: 40px;
+}
+
+button.more {
     border: none;
     outline: none;
-    background:none;
+    background: none;
 }
+
 .admin {
     font-family: inherit;
     height: 60%;
@@ -361,21 +419,16 @@ input#search_input::placeholder {
     font-weight: 400;
 }
 
-.waiting {
-    color:#7c7b7b;
-    font-weight: 500;
+.banned {
+    color: red;
+    font-weight: 400;
 }
 
-.done {
-    color: #18ab18;
-    font-weight: 500;
+.active {
+    color: green;
+    font-weight: 400;
 }
 
-.rejected{
-    color:#e32222;
-    font-weight: 500;
-
-}
 /* button.normal {
     height: 60%;
     padding: 0px 8px;
@@ -392,12 +445,10 @@ button.banned {
 
 div#page_changer_wrapper {
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-flex: 0;
     flex: 0 0 auto;
     width: 100%;
-    margin-top: 88px;
+    margin-top: 64px;
     background-color: white;
 }
 
@@ -432,7 +483,7 @@ button.page {
     width: 40px;
     height: 40px;
     line-height: normal;
-    padding: 0px;
+    padding: 0;
     background-color: white;
     text-align: center;
     cursor: pointer;
@@ -473,3 +524,29 @@ button.next_buttons {
     outline: none;
     border: none;
 }
+
+
+
+.account-modal{
+    width: 0;
+    height: 0;
+}
+
+.account-modal-button{
+    position: relative;
+    font-family: "Cafe24 Ohsquare", "SUIT", "UI Frip", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    z-index: 2000;
+    top: -19px;
+    left: 27px;
+    width: 80px;
+    height: 32px;
+    border: none;
+    outline: none;
+    background-color: rgb(238 238 238);
+}
+
+
+.account-modal button:hover{
+    background-color:#dbd4ed;
+}
+

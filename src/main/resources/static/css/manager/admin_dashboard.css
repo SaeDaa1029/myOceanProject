@@ -152,6 +152,121 @@ button{
     cursor: pointer;
 }
 
+body{
+    background : rgb(238 238 238);
+}
+.totalWrap {
+    width: 1800px;
+    margin: 20px 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1550px;
+    gap: 10px;
+}
+
+.right {
+    width: 1550px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 700px 800px;
+    grid-template-rows: 450px 450px;
+    gap:10px;
+}
+
+.right-left-top-section, .right-left-bottom-section{
+    display: grid;
+    grid-template-rows: 50px 380px;
+}
+
+.right-right-top-section, .right-right-bottom-section{
+    display: grid;
+    grid-template-rows: 50px 380px;
+}
+
+.section {
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    color: #212121;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.title{
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    line-height: 29px;
+    font-weight:700;
+}
+
+.contents{
+    padding: 20px;
+}
+
+
+
+/* 오른쪽 위 */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-table thead tr, .custom-table thead th {
+    border-top: none;
+    border-bottom: none !important;
+}
+
+.custom-table thead tr, .custom-table thead th {
+    border-top: none;
+    border-bottom: none !important;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.custom-table tbody th, .custom-table tbody td {
+    color: #777;
+    font-weight: 300;
+}
+
+
 #header {
     width: 100%;
     height: 50px;
@@ -177,32 +292,7 @@ button{
     margin-right: 47px;
 }
 
-#admin-info {
-    display: flex;
-    align-items: center;
-    float: right;
-    position: relative;
-    left: 1300px;
-}
 
-.admin-info-wrapper {
-    display: block;
-    align-items: center;
-    float: right;
-
-}
-
-#admin-photo {
-    width: 40px;
-    height: 40px;
-    margin-right: 8px;
-}
-
-#admin-photo img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-}
 
 #page_wrapper {
     width: 100%;

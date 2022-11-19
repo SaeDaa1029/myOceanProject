@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,8 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/manager/admin_group_open_request.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700">
 </head>
 
 <body style="overflow-x: hidden">
@@ -79,7 +81,7 @@
         <div class="right">
             <div id="header">
                 <div id="header-wrapper">
-                    <div id="menu-title">모임 개설 신청 목록</div>
+                    <div id="menu-title">회원목록</div>
 
                 </div>
                 <div id="clock"></div>
@@ -88,23 +90,23 @@
                 <div id="content-top-wrapper">
                     <div id="content-top-right">
                         <div class="filter">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span>전체 보기</span>
+                            <span>대기 목록 보기</span>
+                            <span>거절 목록 보기</span>
                         </div>
+                    </div>
+                    <div id="search_box_wrapper">
                         <div id="search_box">
                             <button id="search_button">
                                 <img id="serch_icon"
                                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E %3Cpath stroke='%23AAA' stroke-width='2' d='M11 17c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM15 15l4.95 4.95'/%3E %3C/svg%3E"
                                      alt="" class="MagnifierImg__MagnfierImg-vdfqqy-0 kKRRUP">
                             </button>
-                            <input id="search_input" type="text" placeholder="모임 검색">
+                            <input id="search_input" type="text" placeholder="모임 신청 검색">
                         </div>
-                        <!--                             <div class="filter"><button>게시글 정지</button></div>
-                        <div class="filter"><button>댓글 정지</button></div> -->
                     </div>
                 </div>
-                <div id = "table-wrapper">
+                <div id="table-wrapper">
                     <table id="info_table">
                         <thead>
                         <tr>
@@ -116,7 +118,7 @@
                             <th class="thead">신청 일시</th>
                             <th class="thead">상태</th>
                             <th class="thead">사유</th>
-                            <th class="thead">관리</th>
+                            <th class="thead">상세보기</th>
                         </tr>
                         </thead>
                         <tr>
@@ -126,31 +128,108 @@
                             <td class="info_td">여가/취미</td>
                             <td class="info_td">10</td>
                             <td class="info_td">2022-11-14 19:01:24</td>
-                            <td class="info_td"><span class = "waiting">대기</span></td>
+                            <td class="info_td"><span>대기</span></td>
                             <td class="info_td"></td>
-                            <td class="info_td"><button class="more"><img src="/imgin/more.png" width="15px"></button>
+                            <td class="info_td">상세보기</td>
                         </tr>
                         <tr>
-                            <td class="info_td">2</td>
+                            <td class="info_td">1</td>
                             <td class="info_td">독서모임</td>
                             <td class="info_td">김인영</td>
                             <td class="info_td">여가/취미</td>
                             <td class="info_td">10</td>
                             <td class="info_td">2022-11-14 19:01:24</td>
-                            <td class="info_td"><span class = "done">승인</span></td>
+                            <td class="info_td"><span class = "active">승인</span></td>
                             <td class="info_td"></td>
-                            <td class="info_td"><button class="more"><img src="/imgin/more.png" width="15px"></button>
+                            <td class="info_td">상세보기</td>
                         </tr>
                         <tr>
-                            <td class="info_td">3</td>
+                            <td class="info_td">1</td>
                             <td class="info_td">독서모임</td>
                             <td class="info_td">김인영</td>
                             <td class="info_td">여가/취미</td>
                             <td class="info_td">10</td>
                             <td class="info_td">2022-11-14 19:01:24</td>
-                            <td class="info_td"><span class = "rejected">거절</span></td>
-                            <td class="info_td">혐오성/폭력성</td>
-                            <td class="info_td"><button class="more"><img src="/imgin/more.png" width="15px"></button>
+                            <td class="info_td"><span class = "banned">거절</span></td>
+                            <td class="info_td">폭력성 / 유해성</td>
+                            <td class="info_td">상세보기</td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">독서모임</td>
+                            <td class="info_td">김인영</td>
+                            <td class="info_td">여가/취미</td>
+                            <td class="info_td">10</td>
+                            <td class="info_td">2022-11-14 19:01:24</td>
+                            <td class="info_td"><span class = "active">승인</span></td>
+                            <td class="info_td"></td>
+                            <td class="info_td">상세보기</td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">독서모임</td>
+                            <td class="info_td">김인영</td>
+                            <td class="info_td">여가/취미</td>
+                            <td class="info_td">10</td>
+                            <td class="info_td">2022-11-14 19:01:24</td>
+                            <td class="info_td"><span class = "active">승인</span></td>
+                            <td class="info_td"></td>
+                            <td class="info_td">상세보기</td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">독서모임</td>
+                            <td class="info_td">김인영</td>
+                            <td class="info_td">여가/취미</td>
+                            <td class="info_td">10</td>
+                            <td class="info_td">2022-11-14 19:01:24</td>
+                            <td class="info_td"><span class = "active">승인</span></td>
+                            <td class="info_td"></td>
+                            <td class="info_td">상세보기</td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">독서모임</td>
+                            <td class="info_td">김인영</td>
+                            <td class="info_td">여가/취미</td>
+                            <td class="info_td">10</td>
+                            <td class="info_td">2022-11-14 19:01:24</td>
+                            <td class="info_td"><span class = "active">승인</span></td>
+                            <td class="info_td"></td>
+                            <td class="info_td">상세보기</td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">독서모임</td>
+                            <td class="info_td">김인영</td>
+                            <td class="info_td">여가/취미</td>
+                            <td class="info_td">10</td>
+                            <td class="info_td">2022-11-14 19:01:24</td>
+                            <td class="info_td"><span class = "active">승인</span></td>
+                            <td class="info_td"></td>
+                            <td class="info_td">상세보기</td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">독서모임</td>
+                            <td class="info_td">김인영</td>
+                            <td class="info_td">여가/취미</td>
+                            <td class="info_td">10</td>
+                            <td class="info_td">2022-11-14 19:01:24</td>
+                            <td class="info_td"><span class = "active">승인</span></td>
+                            <td class="info_td"></td>
+                            <td class="info_td">상세보기</td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">독서모임</td>
+                            <td class="info_td">김인영</td>
+                            <td class="info_td">여가/취미</td>
+                            <td class="info_td">10</td>
+                            <td class="info_td">2022-11-14 19:01:24</td>
+                            <td class="info_td"><span class = "active">승인</span></td>
+                            <td class="info_td"></td>
+                            <td class="info_td">상세보기</td>
                         </tr>
                     </table>
                 </div>
@@ -191,11 +270,6 @@
 </div>
 
 </div>
-<div class="account-modal" style="width: 100px; height:100px;visibility: hidden;">
-    <button>계정 정지</button>
-</div>
-
-
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
@@ -218,9 +292,8 @@
     });
 
 
-
-
     var Target = document.getElementById("clock");
+
     function clock() {
         var time = new Date();
 
@@ -238,13 +311,109 @@
             `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 
     }
-    clock();
-    setInterval(clock, 1000); // 1초마다 실행
 
-    var $moreButton = $(".more");
-    $moreButton.click(function () {
-        $(".account-modal").css("visibility", "visible");
+    clock();
+    setInterval(clock, 1000); // 1초마다
+
+
+    // let $accountModalBtn =$(".account-modal");
+    let temp = 0;
+    let $tr = $("#info_table").find('tr');
+    let accountCondition = null;
+
+    // $tr.find('.more').click(function () {
+    //     if (temp == 1) {
+    //         temp--;
+    //         $(this).parent().children('.account-modal').remove();
+    //     } else {
+    //         temp++;
+    //         $(this).parent().append("<div class=\"account-modal\">\n" +
+    //             "    <button class=\"account-modal-button\">계정 정지</button>\n" +
+    //             "</div>")
+    //         $(this).next().children('.account-modal-button').click(function (){
+    //             if($(this).parent().parent().prev().find('.banned')){
+    //                 $(this).parent().parent().prev().find('.banned').removeClass('banned').addClass('active');
+    //                 $(this).parent().parent().prev().find('span').text("정상")
+    //             }else if( $(this).parent().parent().prev().find('.active')){
+    //                 $(this).parent().parent().prev().find('.active').removeClass('active').addClass('banned');
+    //                 $(this).parent().parent().prev().find('span').text("정지")
+    //             }
+    //
+    //
+    //
+    //         })
+    //         }
+    // })
+
+    // 관리 버튼을 클릭했을때
+    // $tr.find('.more').click(function () {
+    //     if(temp == 0){
+    //         temp++;
+    //         //    상태의 html을 보고 계정 정지/계정 복구가 결정됨
+    //         //    만약 상태가 정지라면
+    //         if ($(this).parent().prev().find('.banned').length == 1) {
+    //             //모달창은 계정 복구로 나옴
+    //             $(this).parent().append("<div class=\"account-modal\">\n" +
+    //                 "    <button class=\"account-modal-button\">계정 복구</button>\n" +
+    //                 "</div>")
+    //
+    //             $(this).next().find('.account-modal-button').click(function () {
+    //
+    //                 $(this).parent().parent().prev().find('.banned').removeClass('banned').addClass('active');
+    //                 $(this).parent().parent().prev().find('span').text("정상")
+    //                 $(this).closest('.account-modal').remove()
+    //                 $(this).remove()
+    //                 temp--;
+    //             })
+    //         } else if ($(this).parent().prev().find('.banned').length == 0) {
+    //             $(this).parent().append("<div class=\"account-modal\">\n" +
+    //                 "    <button class=\"account-modal-button\">승인</button>\n" +
+    //                 "    <button class=\"account-modal-button\">거절</button>\n" +
+    //                 "</div>")
+    //             $(this).next().find('.account-modal-button').click(function () {
+    //                 $(this).parent().parent().prev().prev().find('.active').removeClass('active').addClass('banned');
+    //                 $(this).parent().parent().prev().prev().find('span').text("정지")
+    //                 $(this).closest('.account-modal').remove()
+    //                 $(this).remove()
+    //                 temp--;
+    //             })
+    //         }
+    //
+    //     }
+    //     else{
+    //         $(this).find('.account-modal-button').remove();
+    //         $(this).next().remove()
+    //         temp--;
+    //     }
+    // })
+
+    // 하나 클릭하면 나머지는 색 없어짐
+    // 상단 필터 클릭시 색 변화
+
+    $('.filter').children('span').click(function(){
+        $(this).siblings().removeClass('active-filter')
+        $(this).addClass('active-filter');
     })
+
+
+
+    /*  changeAccountCondition = function(condition){
+          if(condition == "정지"){
+              console.log("정지함수들어옴")
+              console.log($(this));
+              console.log($(this).parent().parent().prev());
+
+          }else if(condition = "정상"){
+              console.log("정상함수들어옴")
+              console.log($(this));
+              console.log($(this).parent().parent().prev());
+              $(this).parent().parent().prev().find('.banned').removeClass('active').addClass('remove');
+              $(this).parent().parent().prev().find('span').text("정지")
+          }
+
+      }*/
+
+
 </script>
 
 </html>
