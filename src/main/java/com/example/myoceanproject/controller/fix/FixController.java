@@ -14,6 +14,11 @@ public class FixController {
         return "app/fix/header";
     }
 
+    @GetMapping("/headerModify")
+    public String headerModify(){
+        return "app/fix/headerModify";
+    }
+
     // 풋터 페이지
     @GetMapping("/footer")
     public String footer(){
