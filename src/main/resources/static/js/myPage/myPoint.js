@@ -1,12 +1,8 @@
 const $confirmText = $("input[name=confirm]");
 const $confirmBtn = $("button.kpRdoO");
-const $header = $("#header");
-const $footer = $("#footer");
+const $todayBadgeClick = $("img.FripBadge__BadgeImage-sc-1symmx5-11");
 
-//헤더 푸터 연결
-$header.load("static/fix/header.html");
-$footer.load("static/fix/footer.html");
-
+console.log($todayBadgeClick);
 // 카테고리 크기 미디어쿼리
 checkWidth();
 
@@ -41,3 +37,14 @@ $("input").on("input", function(){
     }
 });
 
+
+// 오늘의 퀘스트 뱃지 눌렀을 때 이미지 색상 변경
+$todayBadgeClick.on("click", function(){
+    if($(this).attr("class").includes("uncheckedBadge")){
+        $("img.FripBadge__BadgeImage-sc-1symmx5-11").attr("class", "FripBadge__BadgeImage-sc-1symmx5-11 fSDzSK");
+        $(".completeWrap").show();
+    } else{
+        $("img.FripBadge__BadgeImage-sc-1symmx5-11").attr("class", "FripBadge__BadgeImage-sc-1symmx5-11 fSDzSK uncheckedBadge");
+        $(".completeWrap").hide();
+    }
+})
