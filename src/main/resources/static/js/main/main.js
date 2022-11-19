@@ -2,7 +2,7 @@
 //====================================
 
 $mainCategory=$(".ShortcutList__NodeListWrapper-p3h6sa-1.hnuhJm");
-console.log($(".hnuhJm").length);
+
 $(window).resize(function(){
     if (window.innerWidth < 769) {
         $("#test").attr("class",".ToastContainer__BottomToastWrapper-sqfjqn-0 .boEfRG");

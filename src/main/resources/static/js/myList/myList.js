@@ -1,11 +1,25 @@
-const $header = $("#header");
-const $footer = $("#footer");
-const $category = $("#category");
+const $categoryMedia = $(".list_filter_wrapper");
+const $categoryOriginal = $("#list_filter_wrapper");
 
+// 카테고리 크기 미디어쿼리
+checkWidth();
 
-//헤더 푸터 연결
-$header.load("/templates/fix/header.html");
-$footer.load("/templates/fix/footer.html");
+$(window).resize(function(){
+    if(window.innerWidth<867){
+        $categoryOriginal.hide();
+        $categoryMedia.show();
+    } else{
+        $categoryOriginal.show();
+        $categoryMedia.hide();
+    }
+})
 
-// 카테고리 연결
-$category.load("/templates/myList/myList.html");
+function checkWidth(){
+    if(window.innerWidth<867){
+        $categoryOriginal.hide();
+        $categoryMedia.show();
+    } else{
+        $categoryOriginal.show();
+        $categoryMedia.hide();
+    }
+}

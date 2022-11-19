@@ -1,5 +1,4 @@
-$header = $("#header");
-$footer = $("#footer");
+
 $contents = $(".FAQEntity__TitleWrapper-cpxlp5-0");
 $category = $(".TabLabels__Tab-sc-1i2f4oa-1");
 
@@ -7,9 +6,6 @@ $category = $(".TabLabels__Tab-sc-1i2f4oa-1");
 FAQEntity__TitleWrapper-cpxlp5-0 ldvBHS*/
 
 
-//헤더 푸터 연결
-$header.load("../fix/header.html");
-$footer.load("../fix/footer.html");
 
 
 //질문 누르면 답변 나오게 하기
@@ -25,19 +21,19 @@ $contents.on("click", function(){
     }
 })
 
-//화면 안깨지게..
-function resizeApply() {
-    var minWidth = 769;
-    var body = document.getElementsByTagName('body')[0];
-    if (window.innerWidth < minWidth) { body.style.zoom = (window.innerWidth / minWidth); }
-    else body.style.zoom = 1;
-}
-
-window.onload = function() {
-    window.addEventListener('resize', function() {
-        resizeApply();
-    });
-}
+// //화면 안깨지게..
+// function resizeApply() {
+//     var minWidth = 769;
+//     var body = document.getElementsByTagName('body')[0];
+//     if (window.innerWidth < minWidth) { body.style.zoom = (window.innerWidth / minWidth); }
+//     else body.style.zoom = 1;
+// }
+//
+// window.onload = function() {
+//     window.addEventListener('resize', function() {
+//         resizeApply();
+//     });
+// }
 
 // 카테고리 변경
 $category.on("click", function(){
