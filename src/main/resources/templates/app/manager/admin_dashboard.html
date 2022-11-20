@@ -2,318 +2,448 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/css/manager/admin_dashboard.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/admin_dashboard.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700">
 </head>
 
 <body style="overflow-x: hidden">
 <div id="page_wrapper">
-    <div class="totalWrap">
-        <div class="left">
-            <div id="menu-service-name">나의 바다</div>
-            <div class="menu">
-                <ul id="side_menubar">
-                    <li><a href="managerMain.html" class="item">
-                        <div>대시보드</div>
-                    </a>
-                    </li>
-                    <li><a href="#" class="item">
-                        <div>회원 관리</div>
-                    </a>
-                        <ul class="middle_item">
-                            <li><a href="admin_user_list.html" class="middle-items">
-                                <div>회원 목록</div>
-                            </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="item">
-                            <div>콘텐츠 관리</div>
-                        </a>
-                        <ul class="middle_item">
-                            <li><a href="admin_free_board.html" class="middle-items">
-                                <div>자유게시판 관리</div>
-                            </a>
-                            </li>
-                            <li><a href="admin_counseling_board.html" class="middle-items">
-                                <div>고민상담 게시판 관리</div>
-                            </a>
-                            </li>
-                            <li><a href="#" class="middle-items">
-                                <div>모임 게시판 관리</div>
-                            </a>
-                            </li>
-                            <li><a href="#" class="middle-items">
-                                <div>퀘스트 관리</div>
-                            </a>
-                            </li>
-                        </ul>
-                    </li>
+  <div class="totalWrap">
+    <div class="left">
+      <div id="menu-service-name">나의 바다</div>
+      <div class="menu">
+        <ul id="side_menubar">
+          <li><a href="managerMain.html" class="item">
+            <div>대시보드</div>
+          </a>
+          </li>
+          <li><a href="#" class="item">
+            <div>회원 관리</div>
+          </a>
+            <ul class="middle_item">
+              <li><a href="admin_user_list.html" class="middle-items">
+                <div>회원 목록</div>
+              </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <div>콘텐츠 관리</div>
+            </a>
+            <ul class="middle_item">
+              <li><a href="admin_free_board.html" class="middle-items">
+                <div>자유게시판 관리</div>
+              </a>
+              </li>
+              <li><a href="admin_counseling_board.html" class="middle-items">
+                <div>고민상담 게시판 관리</div>
+              </a>
+              </li>
+              <li><a href="#" class="middle-items">
+                <div>모임 게시판 관리</div>
+              </a>
+              </li>
+              <li><a href="#" class="middle-items">
+                <div>퀘스트 관리</div>
+              </a>
+              </li>
+            </ul>
+          </li>
 
-                    <li><a href="#" class="item">
-                        <div>페이지 관리</div>
-                    </a>
-                        <ul class="middle_item">
-                            <li><a href="#" class="middle-items">
-                                <div>배너관리</div>
-                            </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="admin_questions.html" class="item">
-                        <div>문의사항</div>
-                    </a></li>
-                    <li><a href="#" class="item">
-                        <div>사이트 바로가기</div>
-                    </a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="right">
-            <div class="right">
-                <div class="right-left-top-section section">
-                    <div class="firstSectionTitle title">방문자 현황</div>
-                    <div class="firstSectionContents contents">
-                        <canvas id="bar-chart" width="600" height="320"></canvas>
-                    </div>
-                </div>
-                <div class="right-right-top-section section">
-                    <div class="secondSectionTitle title">일자별 요약</div>
-                    <div class="secondSectionContents contents">
-                        <div class="table-responsive">
-                            <table class="table custom-table">
-                                <thead>
-                                <tr>
-                                    <th scope="col" style="width: 112px;">일자</th>
-                                    <th scope="col" style="width: 131px;">페이지뷰</th>
-                                    <th scope="col">방문자</th>
-                                    <th scope="col">가입</th>
-                                    <th scope="col">새 글</th>
-                                    <th scope="col">댓글</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>2022-10-04</td>
-                                    <td>183</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>2022-10-03</td>
-                                    <td>286</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>2022-10-02</td>
-                                    <td>182</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>2022-10-01</td>
-                                    <td>183</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>최근 7일 합계</td>
-                                    <td>1024</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>이번달 합계</td>
-                                    <td>1578</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-left-bottom-section section">
-                    <div class="thirdSectionTitle title">가입 · 탈퇴 현황</div>
-                    <div class="thirdSectionContents contents">
-                        <canvas id="line-chart" width="600" height="320"></canvas>
-                    </div>
-                </div>
-                <div class="right-right-bottom-section section">
-                    <div class="fourthSectionTitle title">최근 게시글</div>
-                    <div class="fourthSectionContents contents">
-                        <div class="table-responsive">
-                            <table class="table custom-table">
-                                <thead>
-                                <tr>
-                                    <th scope="col" style="width: 112px;">일자</th>
-                                    <th scope="col" style="width: 220px;">제목</th>
-                                    <th scope="col">아이디</th>
-                                    <th scope="col">게시판명</th>
-                                    <th scope="col">조회수</th>
-                                    <th scope="col">댓글 수</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>2022-10-04</td>
-                                    <td>183</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>2022-10-03</td>
-                                    <td>286</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>2022-10-02</td>
-                                    <td>182</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>2022-10-01</td>
-                                    <td>183</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>최근 7일 합계</td>
-                                    <td>1024</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>이번달 합계</td>
-                                    <td>1578</td>
-                                    <td>14</td>
-                                    <td>3</td>
-                                    <td>7</td>
-                                    <td>12</td>
-                                </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <li><a href="#" class="item">
+            <div>페이지 관리</div>
+          </a>
+            <ul class="middle_item">
+              <li><a href="#" class="middle-items">
+                <div>배너관리</div>
+              </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="admin_questions.html" class="item">
+            <div>문의사항</div>
+          </a></li>
+          <li><a href="#" class="item">
+            <div>사이트 바로가기</div>
+          </a></li>
+        </ul>
+      </div>
     </div>
+    <div class="right">
+      <div id="header">
+        <div id="header-wrapper">
+          <div id="menu-title">대시보드</div>
+        </div>
+        <div id="clock"></div>
+      </div>
+      <div id="content">
+        <div class="dashboard-grid 1">
+          <table id="info_table">
+            <caption>활동량</caption>
+            <thead>
+            <th></th>
+            <th>회원이름</th>
+            <th>게시글 수</th>
+            <th>댓글 수</th>
+            <th>보유 포인트</th>
+            <th>획득 뱃지</th>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>김인영</td>
+              <td>5</td>
+              <td>14</td>
+              <td>192</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>김인영</td>
+              <td>5</td>
+              <td>14</td>
+              <td>192</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>김인영</td>
+              <td>5</td>
+              <td>14</td>
+              <td>192</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>김인영</td>
+              <td>5</td>
+              <td>14</td>
+              <td>192</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>김인영</td>
+              <td>5</td>
+              <td>14</td>
+              <td>192</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>김인영</td>
+              <td>5</td>
+              <td>14</td>
+              <td>192</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>김인영</td>
+              <td>5</td>
+              <td>14</td>
+              <td>192</td>
+              <td>5</td>
+            </tr>
+          </table>
+        </div>
+        <div class="dashboard-grid 2">
+          <table id="info_table">
+            <caption>대기중인 문의사항</caption>
+            <thead>
+            <th></th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>카테고리</th>
+            <th>작성일시</th>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>교환을 여러번 할 수 없나요?</td>
+              <td>김인영</td>
+              <td>교환일기</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>교환을 여러번 할 수 없나요?</td>
+              <td>김인영</td>
+              <td>교환일기</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>교환을 여러번 할 수 없나요?</td>
+              <td>김인영</td>
+              <td>교환일기</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>교환을 여러번 할 수 없나요?</td>
+              <td>김인영</td>
+              <td>교환일기</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>교환을 여러번 할 수 없나요?</td>
+              <td>김인영</td>
+              <td>교환일기</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>교환을 여러번 할 수 없나요?</td>
+              <td>김인영</td>
+              <td>교환일기</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>교환을 여러번 할 수 없나요?</td>
+              <td>김인영</td>
+              <td>교환일기</td>
+              <td>2022-11-20</td>
+            </tr>
+          </table>
+        </div>
+        <div class="dashboard-grid 3">
+          <table id="info_table">
+            <caption>최근 등록 댓글</caption>
+            <thead>
+            <th></th>
+            <th>게시판 종류</th>
+            <th>댓글 내용</th>
+            <th>작성자</th>
+            <th>게시글 제목</th>
+            <th>작성일시</th>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>고민상담 게시판</td>
+              <td>힘내세요 작성자분ㅠㅠ</td>
+              <td>김인영</td>
+              <td>힘드네요....</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>자유게시판</td>
+              <td>무계획이 계획입니다</td>
+              <td>김인영</td>
+              <td>오늘 계획이 어떻게 되시나요??</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>고민상담 게시판</td>
+              <td>힘내세요 작성자분ㅠㅠ</td>
+              <td>김인영</td>
+              <td>힘드네요....</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>고민상담 게시판</td>
+              <td>힘내세요 작성자분ㅠㅠ</td>
+              <td>김인영</td>
+              <td>힘드네요....</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>고민상담 게시판</td>
+              <td>힘내세요 작성자분ㅠㅠ</td>
+              <td>김인영</td>
+              <td>힘드네요....</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>고민상담 게시판</td>
+              <td>힘내세요 작성자분ㅠㅠ</td>
+              <td>김인영</td>
+              <td>힘드네요....</td>
+              <td>2022-11-20</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>고민상담 게시판</td>
+              <td>힘내세요 작성자분ㅠㅠ</td>
+              <td>김인영</td>
+              <td>힘드네요....</td>
+              <td>2022-11-20</td>
+            </tr>
+          </table>
+        </div>
+        <div class="dashboard-grid 4">
+          <table id="info_table">
+            <caption>최근 등록 게시글</caption>
+            <thead>
+            <th></th>
+            <th>게시판 종류</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일시</th>
+            <th>조회수</th>
+            <th>댓글</th>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>고민상담 게시판</td>
+              <td>오늘 저녁은 뭐먹을까요?</td>
+              <td>김인영</td>
+              <td>2022-11-20</td>
+              <td>22</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>고민상담 게시판</td>
+              <td>오늘 저녁은 뭐먹을까요?</td>
+              <td>김인영</td>
+              <td>2022-11-20</td>
+              <td>22</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>고민상담 게시판</td>
+              <td>오늘 저녁은 뭐먹을까요?</td>
+              <td>김인영</td>
+              <td>2022-11-20</td>
+              <td>22</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>고민상담 게시판</td>
+              <td>오늘 저녁은 뭐먹을까요?</td>
+              <td>김인영</td>
+              <td>2022-11-20</td>
+              <td>22</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>고민상담 게시판</td>
+              <td>오늘 저녁은 뭐먹을까요?</td>
+              <td>김인영</td>
+              <td>2022-11-20</td>
+              <td>22</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>고민상담 게시판</td>
+              <td>오늘 저녁은 뭐먹을까요?</td>
+              <td>김인영</td>
+              <td>2022-11-20</td>
+              <td>22</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>고민상담 게시판</td>
+              <td>오늘 저녁은 뭐먹을까요?</td>
+              <td>김인영</td>
+              <td>2022-11-20</td>
+              <td>22</td>
+              <td>38</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 </div>
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
-    // html dom 이 다 로딩된 후 실행된다.
-    $(document).ready(function () {
-        // menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
-        $("#side_menubar>li").click(function () {
-            var submenu = $(this).children("ul");
+  // html dom 이 다 로딩된 후 실행된다.
+  $(document).ready(function () {
+    // menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
+    $("#side_menubar>li").click(function () {
+      var submenu = $(this).children("ul");
 
 
-            // submenu 가 화면상에 보일때는 위로 보드랍게 접고 아니면 아래로 보드랍게 펼치기
-            if (submenu.is(":visible")) {
-                submenu.slideUp();
-            } else if (!submenu) {
-            } else {
-                submenu.slideDown();
+      // submenu 가 화면상에 보일때는 위로 보드랍게 접고 아니면 아래로 보드랍게 펼치기
+      if (submenu.is(":visible")) {
+        submenu.slideUp();
+      } else if (!submenu) {
+      } else {
+        submenu.slideDown();
 
-            }
-        });
+      }
     });
+  });
 
 
-    var Target = document.getElementById("clock");
+  var Target = document.getElementById("clock");
 
-    function clock() {
-        var time = new Date();
+  function clock() {
+    var time = new Date();
 
-        var month = time.getMonth();
-        var date = time.getDate();
-        var day = time.getDay();
-        var week = ['일', '월', '화', '수', '목', '금', '토'];
+    var month = time.getMonth();
+    var date = time.getDate();
+    var day = time.getDay();
+    var week = ['일', '월', '화', '수', '목', '금', '토'];
 
-        var hours = time.getHours();
-        var minutes = time.getMinutes();
-        var seconds = time.getSeconds();
+    var hours = time.getHours();
+    var minutes = time.getMinutes();
+    var seconds = time.getSeconds();
 
-        Target.innerText =
+    Target.innerText =
             `${month + 1}월 ${date}일 ${week[day]}요일 ` +
             `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 
+  }
+
+  clock();
+  setInterval(clock, 1000); // 1초마다
+
+
+  // let $accountModalBtn =$(".account-modal");
+  let temp = 0;
+  let $tr = $("#info_table").find('tr');
+  let accountCondition = null;
+
+  $tr.find('.more').click(function () {
+    if (temp == 1) {
+      temp--;
+      $(this).parent().children('.account-modal').remove();
+    } else {
+      temp++;
+      $(this).parent().append("<div class=\"account-modal\">\n" +
+              "    <button class=\"account-modal-button\">삭제</button>\n" +
+              "</div>")
+      $(this).next().find('.account-modal-button').click(function () {
+        $(this).closest('.account-modal').remove()
+        $(this).remove()
+        temp--;
+      })
     }
-
-    clock();
-    setInterval(clock, 1000); // 1초마다
-
-
-    // let $accountModalBtn =$(".account-modal");
-    let temp = 0;
-    let $tr = $("#info_table").find('tr');
-    let accountCondition = null;
-
-    $tr.find('.more').click(function () {
-        if (temp == 1) {
-            temp--;
-            $(this).parent().children('.account-modal').remove();
-        } else {
-            temp++;
-            $(this).parent().append("<div class=\"account-modal\">\n" +
-                "    <button class=\"account-modal-button\">삭제</button>\n" +
-                "</div>")
-            $(this).next().find('.account-modal-button').click(function () {
-                $(this).closest('.account-modal').remove()
-                $(this).remove()
-                temp--;
-            })
-            }
-    })
+  })
 
 
 
-    // 상단 필터 클릭시 색 변화
-    // 하나 클릭하면 나머지는 색 없어짐
-    $('.filter').children('span').click(function(){
-        $(this).siblings().removeClass('active-filter')
-        $(this).addClass('active-filter');
-    })
+  // 상단 필터 클릭시 색 변화
+  // 하나 클릭하면 나머지는 색 없어짐
+  $('.filter').children('span').click(function () {
+    $(this).siblings().removeClass('active-filter')
+    $(this).addClass('active-filter');
+  })
 
 
 
