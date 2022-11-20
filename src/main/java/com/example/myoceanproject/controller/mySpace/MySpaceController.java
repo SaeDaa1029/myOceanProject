@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MySpaceController {
     // 나만의 공간 페이지
     @GetMapping("/index")
-    public String myspace(){
+    public String mySpace(){
         return "app/mySpace/mySpace";
     }
 
