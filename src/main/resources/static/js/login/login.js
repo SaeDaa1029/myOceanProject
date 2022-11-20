@@ -27,7 +27,6 @@ $(loginForm.password).on("blur",function(e){
 /* 아이디 입력박스 입력값이 입력될 때마다 검사 */
 $(loginForm.email).on("change input",function(e){
     console.log($emailCheck.value);
-    var emailRegex=/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
     if(!emailRegex.test($emailCheck.value)){
         $(".bViOzS").text("올바른 이메일 형식이 아닙니다.");
         $(".bViOzS").css("color","rgb(222,28,34)");

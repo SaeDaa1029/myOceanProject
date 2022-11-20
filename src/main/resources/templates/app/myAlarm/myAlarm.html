@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>나의 알람</title>
@@ -14,17 +14,15 @@
 <body>
 <header th:replace="/app/fix/header.html :: header"></header>
 <div>
-  <header class="PcTop__Wrapper-sc-1mni0hl-0 jhIEWm">
     <div class="PcTop__Content-sc-1mni0hl-1 iKjpvd">
       <div class="PcTop__Title-sc-1mni0hl-2 epAnZX">내가 받은 알람</div>
     </div>
-  </header>
   <div class="PageWrapper-sc-1w87j10-0 bScXKt">
     <div class="Padded-sc-1mbfr4n-0 KOZDF">
       <label class="MyEnergy__EnergyLogLabel-sc-3e7d9b-1 cdbJvn">알람 내역은 14일간 저장되며, 이후 삭제됩니다.</label>
       <hr size="40" type="Line" class="Border-sc-1bzcz1p-0 cOSlxV">
       <div>
-        <a href="/mylist/myexchangediary">
+        <a href="/myList/myExchangeDiary">
           <div class="EnergyLog__Wrapper-sc-19yls83-0 hrLllS">
             <div class="EnergyLog__CreateDate-sc-19yls83-1 ckxegI">10월 16일</div>
             <div class="EnergyLog__ContentWrapper-sc-19yls83-2 fmfynV messageLine">
@@ -35,7 +33,7 @@
             </div>
           </div>
         </a>
-        <a href="/questionboard/index">
+        <a href="/questionBoard/index">
           <div class="EnergyLog__Wrapper-sc-19yls83-0 hrLllS">
             <div class="EnergyLog__CreateDate-sc-19yls83-1 ckxegI">10월 16일</div>
             <div class="EnergyLog__ContentWrapper-sc-19yls83-2 fmfynV messageLine">

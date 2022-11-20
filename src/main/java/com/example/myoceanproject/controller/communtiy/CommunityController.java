@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CommunityController {
     // 커뮤니티 페이지
     @GetMapping("/index")
-    public String anonymous(){
+    public String Community(){
         return "app/community/community";
     }
 

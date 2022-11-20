@@ -8,50 +8,50 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/manager/*")
 public class ManagerController {
     // 고민상담 게시글 관리
-    @GetMapping("/counselingboard")
-    public String counselingboard(){
+    @GetMapping("/counselingBoard")
+    public String counselingBoard(){
         return "app/manager/admin_counseling_board";
     }
 
     // 고민상담 댓글 관리
-    @GetMapping("/counselingreply")
-    public String counselingreply(){
+    @GetMapping("/counselingReply")
+    public String counselingReply(){
         return "app/manager/admin_counseling_board_reply";
     }
 
     // 자유게시판 게시글 관리
-    @GetMapping("/freeboard")
-    public String freeboard(){
+    @GetMapping("/freeBoard")
+    public String freeBoard(){
         return "app/manager/admin_free_board";
     }
 
     // 자유게시판 댓글 관리
-    @GetMapping("/freereply")
-    public String freereply(){
+    @GetMapping("/freeReply")
+    public String freeReply(){
         return "app/manager/admin_free_board_reply";
     }
 
     //  모임 개설 신청 관리
-    @GetMapping("/groupopenrequest")
-    public String groupopenrequest(){
+    @GetMapping("/groupOpenRequest")
+    public String groupopenRequest(){
         return "app/manager/admin_group_open_request";
     }
 
-    //  레이아웃 ( 이건 확인해보아야함)
-    @GetMapping("/layout")
-    public String layout(){
-        return "app/manager/admin_layout";
+    //  대쉬보드
+    @GetMapping("/index")
+    public String layOut(){
+        return "app/manager/admin_dashboard";
     }
 
     //  배너 관리
-    @GetMapping("/pagebanner")
-    public String pagebanner(){
+    @GetMapping("/pageBanner")
+    public String pageBanner(){
         return "app/manager/admin_page_banner";
     }
 
     //  퀘스트 관리
-    @GetMapping("/questlist")
-    public String questlist(){
+    @GetMapping("/questList")
+    public String questList(){
         return "app/manager/admin_quest_list";
     }
 
@@ -62,8 +62,8 @@ public class ManagerController {
     }
 
     //  회원 목록
-    @GetMapping("/userlist")
-    public String userlist(){
+    @GetMapping("/userList")
+    public String userList(){
         return "app/manager/admin_user_list";
     }
 

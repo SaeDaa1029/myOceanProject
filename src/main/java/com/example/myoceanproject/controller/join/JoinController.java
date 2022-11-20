@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/join/*")
 public class JoinController {
     // 첫번째 회원가입 페이지
-    @GetMapping("/joinone")
-    public String joinone(){
+    @GetMapping("/joinOne")
+    public String joinOne(){
         return "app/Join/before_join";
     }
 
     // 두번째 회원가입 페이지
-    @GetMapping("/jointwo")
-    public String jointwo(){
+    @GetMapping("/joinTwo")
+    public String joinTwo(){
         return "app/Join/join_in";
     }
 
     // 세번째 회원가입 페이지
-    @GetMapping("/jointhree")
-    public String jointhree(){
+    @GetMapping("/joinThree")
+    public String joinThree(){
         return "app/Join/join_in_second";
     }
 
