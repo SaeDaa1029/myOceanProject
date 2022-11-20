@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/mypage/*")
+@RequestMapping("/myPage/*")
 public class MyPageController {
     // 마이 페이지
     @GetMapping("/index")
@@ -14,7 +14,7 @@ public class MyPageController {
     }
 
     // 비밀번호 변경 페이지
-    @GetMapping("/passwordchange")
+    @GetMapping("/passwordChange")
     public String passwordchange(){
         return "app/myPage/passwordChange";
     }

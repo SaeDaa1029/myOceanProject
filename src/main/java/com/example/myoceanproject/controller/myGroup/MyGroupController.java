@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/mygroup/*")
+@RequestMapping("/myGroup/*")
 public class MyGroupController {
     // 내가 참여한 모임 페이지
-    @GetMapping("/joingroup")
+    @GetMapping("/joinGroup")
     public String joingroup(){
         return "app/myGroup/myJoinGroup";
     }
 
     // 내가 오픈한 모임 페이지
-    @GetMapping("/opengroup")
+    @GetMapping("/openGroup")
     public String opengroup(){
         return "app/myGroup/myOpenGroup";
     }

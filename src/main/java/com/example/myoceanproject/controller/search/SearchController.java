@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/search/*")
 public class SearchController {
     // 통합 검색 페이지
-    @GetMapping("/totalsearch")
+    @GetMapping("/totalSearch")
     public String totalsearch(){
         return "app/Search/Search";
     }
 
     // 통합 검색이 없을때 페이지
-    @GetMapping("/nototalsearch")
+    @GetMapping("/noTotalSearch")
     public String nototalsearch(){
         return "app/Search/NoSearch";
     }
