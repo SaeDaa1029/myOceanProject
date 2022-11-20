@@ -2228,3 +2228,26 @@ tr th[data-v-52931a0e] {
 .week td:last-child div.text-gray{
     color: #7a29fa !important;
 }
+.float-left {
+    float: left!important;
+}
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.p-1 {
+    padding: 0.25rem!important;
+}
+.mb-2, .my-2 {
+    margin-bottom: 0.5rem!important;
+}
+.mt-2, .my-2 {
+    margin-top: 0.5rem!important;
+}
+.rounded {
+    border-radius: 0.375rem!important;
+}
+.bg-frip-primary-50 {
+    background-color: #e3d1ff!important;
+}
