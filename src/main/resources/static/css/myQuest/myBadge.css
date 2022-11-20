@@ -316,7 +316,7 @@ svg:not(:root) {
     -webkit-box-pack: justify;
     justify-content: space-between;
     padding: 32px 30px;
-    height: 181px;
+    height: 144px;
     background-color: rgb(253, 253, 253);
 }
 
@@ -362,7 +362,7 @@ svg:not(:root) {
 .iialDB {
     position: relative;
     width: 80px;
-    height: 117px;
+    height: 85px;
     margin-right: 24px;
     cursor: pointer;
 }
@@ -566,4 +566,8 @@ svg:not(:root) {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
     animation: 0.3s ease 0s 1 normal none running jBcSpD;
+}
+
+.uncheckedBadge{
+    filter: grayscale(100%);
 }
