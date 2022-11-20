@@ -276,6 +276,12 @@ button, select {
 	margin-top: 44px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
 /* js에서 사용되는 스타일 */
 .hYhAPw::placeholder {
 	color: rgb(170, 170, 170);
