@@ -48,6 +48,16 @@ $profilePicture.on("click", function(){
     $(".fSxFPc").click();
 })
 
+// 프로필 사진 썸네일 띄우기
+$(".fSxFPc").on("change", function(event) {
+    console.log("asdfsdf");
+    let file = event.target.files[0];
+    let reader = new FileReader();
+    reader.onload = function(e) {
+        $(".gFQPgt").attr("src", e.target.result);
+    }
+    reader.readAsDataURL(file);
+});
 
 // 내 정보 저장
 $(".jMUPmW").on("click", function(){
