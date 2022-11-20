@@ -493,3 +493,7 @@ a, area, button, input, label, select, textarea, [tabindex] {
     padding: 0px 20px;
     min-height: 1px;
 }
+
+.hoverclick:hover {
+    background-color: #b3d4fc;
+}

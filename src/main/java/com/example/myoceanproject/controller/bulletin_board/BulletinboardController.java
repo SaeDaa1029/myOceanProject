@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/bulletinboard/*")
+@RequestMapping("/bulletinBoard/*")
 public class BulletinboardController {
 
     //모임 목록 페이지

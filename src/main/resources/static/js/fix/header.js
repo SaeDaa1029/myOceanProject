@@ -46,3 +46,17 @@ $(window).resize(function() {
         $section.show();
     }
 });
+
+/* 카테고리 숨김 / 보이기 버튼  */
+function toggleBtn1() {
+    // 토글 할 버튼 선택 (serachshowone)
+    const btn1 = document.getElementById('serachshowone');
+    // serachshowone 숨기기 (display: none)
+    if(serachshowone.style.display !== 'none') {
+        serachshowone.style.display = 'none';
+    }
+    // serachshowone 보이기 (display: block)
+    else {
+        serachshowone.style.display = 'block';
+    }
+}

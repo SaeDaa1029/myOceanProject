@@ -8,31 +8,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/manager/*")
 public class ManagerController {
     // 고민상담 게시글 관리
-    @GetMapping("/counselingboard")
+    @GetMapping("/counselingBoard")
     public String counselingboard(){
         return "app/manager/admin_counseling_board";
     }
 
     // 고민상담 댓글 관리
-    @GetMapping("/counselingreply")
+    @GetMapping("/counselingReply")
     public String counselingreply(){
         return "app/manager/admin_counseling_board_reply";
     }
 
     // 자유게시판 게시글 관리
-    @GetMapping("/freeboard")
+    @GetMapping("/freeBoard")
     public String freeboard(){
         return "app/manager/admin_free_board";
     }
 
     // 자유게시판 댓글 관리
-    @GetMapping("/freereply")
+    @GetMapping("/freeReply")
     public String freereply(){
         return "app/manager/admin_free_board_reply";
     }
 
     //  모임 개설 신청 관리
-    @GetMapping("/groupopenrequest")
+    @GetMapping("/groupOpenRequest")
     public String groupopenrequest(){
         return "app/manager/admin_group_open_request";
     }
@@ -44,13 +44,13 @@ public class ManagerController {
     }
 
     //  배너 관리
-    @GetMapping("/pagebanner")
+    @GetMapping("/pageBanner")
     public String pagebanner(){
         return "app/manager/admin_page_banner";
     }
 
     //  퀘스트 관리
-    @GetMapping("/questlist")
+    @GetMapping("/questList")
     public String questlist(){
         return "app/manager/admin_quest_list";
     }
@@ -62,7 +62,7 @@ public class ManagerController {
     }
 
     //  회원 목록
-    @GetMapping("/userlist")
+    @GetMapping("/userList")
     public String userlist(){
         return "app/manager/admin_user_list";
     }
