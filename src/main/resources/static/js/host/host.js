@@ -11,6 +11,31 @@ $('.noticeEx').css('display', '');
 
 
 //다이어리
+// 임시 데이터
+const data = [
+    { date: '2022-10-15', startTime: '' },
+    { date: '2022-10-03', startTime: '테스트2' },
+    { date: '2022-10-15', startTime: '테스트3' },
+    { date: '2022-10-26', startTime: '테스트4' },
+    { date: '2022-10-21', startTime: '테스트5' },
+    { date: '2022-11-21', startTime: '18:48' },
+    { date: '2022-11-03', startTime: '12:00' },
+    { date: '2022-11-15', startTime: '13:00' },
+    { date: '2022-11-20', startTime: '16:00' },
+];
+
+// 데이터 가공
+const calendarList = data.reduce(
+    (acc, v) =>
+        ({ ...acc, [v.date]: [...(acc[v.date] || []), v.startTime] })
+    , {}
+);
+
+// pad method ( 2 -> 02 )
+Number.prototype.pad = function() {
+    return this > 9 ? this : '0' + this;
+}
+
 const makeCalendar = (date) => {
     const currentYear = new Date(date).getFullYear();
     const currentMonth = new Date(date).getMonth() + 1;
@@ -44,7 +69,10 @@ const makeCalendar = (date) => {
     }
 
     for (let i = 1; i <= lastDay; i++) {
-        console.log(count + "시작")
+
+        const date = `${currentYear}-${currentMonth.pad()}-${i.pad()}`;
+        console.log(date);
+
         if (count % 7 === 0) {
             count = 0;
             htmlDummy += `<tr data-v-1e397a0c="" class="week">`;
@@ -53,14 +81,25 @@ const makeCalendar = (date) => {
         htmlDummy += `<div data-v-3655f65c="" data-v-1e397a0c="" class="day">`;
         htmlDummy += `<div data-v-3655f65c="" class="clearfix px-2 pt-2">`;
         htmlDummy += `<div data-v-3655f65c="" class="float-left">`;
-        htmlDummy += `<div data-v-3655f65c="" class="day-btn">+</div>`;
+        htmlDummy += `<div data-v-3655f65c="" class="day-btn" data-date="${date}">+</div>`;
         htmlDummy += `</div>`;
         htmlDummy += `<div data-v-3655f65c="" class="text-gray float-right">`;
         htmlDummy += `<!----> ${i}일`;
+        // htmlDummy += ` <p>${calendarList[date]?.join('</p><p>') || ''}</p>`;
         htmlDummy += `</div>`;
         htmlDummy += `</div>`;
+        htmlDummy += `<div data-v-3655f65c="" class="px-2">`;
+        if(calendarList[date]){
+            console.log(calendarList[date].startTime);
+            console.log(calendarList[date]);
+            htmlDummy += `<div data-v-3655f65c="" class="bg-frip-primary-50 text-frip-primary rounded p-1 my-2 wg-100" style="cursor: pointer;">`;
+            htmlDummy += `<div class="clearfix">`;
+            htmlDummy += `<div class="float-left">${calendarList[date]}</div>`;
+            htmlDummy += `<div class="float-right">  </div>`;
+            htmlDummy += `</div>`;
+            htmlDummy += `</div>`;
+        }
         htmlDummy += `</div>`;
-        htmlDummy += `<div data-v-3655f65c="" class="px-2"></div>`;
         htmlDummy += `</div>`;
         htmlDummy += `</td>`;
         if (count % 7 === 0 && count !== 0) {
@@ -250,11 +289,26 @@ $('#placeAddress').on('blur', function(){
 
 
 // 일정 추가 버튼 클릭 -> 모달창 열기
+
 $('.day-btn').on('click', function(){
     $('#__BVID__287___BV_modal_outer_').show();
     $('#__BVID__287___BV_modal_content_').hide();
     $('#__BVID__1216___BV_modal_content_').show();
+
+    $('input[type=date]').val($(this).attr('data-date'));
 });
+
+//일정 등록
+$('.createPlan').on('click', function(){
+    //이거 백엔드에서 DB일정 등록하시고 rest로 달력이랑 같이 로딩하시면 됨,
+    // 내용은 알아서 변경해주세요 대충 뼈대만 이해하시라고 코드 남깁니다
+    let plan = {date : $('input[type=date]').val(), content : '테스트123' };
+    console.log(data);
+    $('#__BVID__287___BV_modal_outer_').hide();
+    $('#__BVID__1216___BV_modal_content_').hide();
+});
+
+
 
 // 주차장 옵션 버튼 눌렀을때, 주차옵션이 있다면 메모를 할 수 있게함
 $('#parkingOption .custom-radio').on('click', function(){
@@ -295,6 +349,7 @@ $('.plusThumb').on('change', function(){
 
 //섬네일 삭제
 $('.removeImg').on('click', function(){
+    $('.image-header').hide();
     $('.img-box').attr('src', '');
 });
 
@@ -396,13 +451,8 @@ $(function() {
 // });
 
 
-
+//인원 설정 시 유료성검사.
 $('.number1').bind('keyup mouseup', function (){
-    console.log('ㅇ');
-    console.log($('.recruitment').next().text());
-    console.log($('.number1').val());
-    console.log($('.number1').select());
-    console.log($('.number1').val() > $('.number2').val());
     if($('.number1').val() > $('.number2').val()){
         $('form .invalid-feedback').css('display', 'block');
         $('.recruitment').next().show();
@@ -423,41 +473,6 @@ $('.number2').bind('keyup mouseup', function (){
     }
 });
 
-// $('.el-select .el-input').on('click', function(){
-//     $('.el-select-dropdown__wrap').css('')
-// });
+//
 
-// 임시 데이터
-const data = [
-    { date: '2022-10-15', content: '테스트1' },
-    { date: '2022-10-03', content: '테스트2' },
-    { date: '2022-10-15', content: '테스트3' },
-    { date: '2022-10-26', content: '테스트4' },
-    { date: '2022-10-21', content: '테스트5' },
-];
-
-// 데이터 가공
-const calendarList = data.reduce(
-    (acc, v) =>
-        ({ ...acc, [v.date]: [...(acc[v.date] || []), v.content] })
-    , {}
-);
-
-// pad method ( 2 -> 02 )
-Number.prototype.pad = function() {
-    return this > 9 ? this : '0' + this;
-}
-
-// 이번달 날짜 표시하기
-for (let i = 1; i <= lastDay; i++) {
-    // 날짜 지정 (YYYY-MM-DD)
-    const date = `${currentYear}-${currentMonth.pad()}-${i.pad()}`;
-
-    htmlDummy += `
-    <div>
-      ${i}
-      <p>${calendarList[date]?.join('</p><p>') || ''}</p>
-    </div>
-  `;
-}
 
