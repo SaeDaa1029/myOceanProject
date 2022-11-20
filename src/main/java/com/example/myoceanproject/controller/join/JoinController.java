@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class JoinController {
     // 첫번째 회원가입 페이지
     @GetMapping("/joinOne")
-    public String joinone(){
+    public String joinOne(){
         return "app/Join/before_join";
     }
 
     // 두번째 회원가입 페이지
     @GetMapping("/joinTwo")
-    public String jointwo(){
+    public String joinTwo(){
         return "app/Join/join_in";
     }
 
     // 세번째 회원가입 페이지
     @GetMapping("/joinThree")
-    public String jointhree(){
+    public String joinThree(){
         return "app/Join/join_in_second";
     }
 

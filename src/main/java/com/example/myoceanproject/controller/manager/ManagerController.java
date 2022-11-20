@@ -9,49 +9,49 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ManagerController {
     // 고민상담 게시글 관리
     @GetMapping("/counselingBoard")
-    public String counselingboard(){
+    public String counselingBoard(){
         return "app/manager/admin_counseling_board";
     }
 
     // 고민상담 댓글 관리
     @GetMapping("/counselingReply")
-    public String counselingreply(){
+    public String counselingReply(){
         return "app/manager/admin_counseling_board_reply";
     }
 
     // 자유게시판 게시글 관리
     @GetMapping("/freeBoard")
-    public String freeboard(){
+    public String freeBoard(){
         return "app/manager/admin_free_board";
     }
 
     // 자유게시판 댓글 관리
     @GetMapping("/freeReply")
-    public String freereply(){
+    public String freeReply(){
         return "app/manager/admin_free_board_reply";
     }
 
     //  모임 개설 신청 관리
     @GetMapping("/groupOpenRequest")
-    public String groupopenrequest(){
+    public String groupopenRequest(){
         return "app/manager/admin_group_open_request";
     }
 
     //  대쉬보드
     @GetMapping("/index")
-    public String layout(){
+    public String layOut(){
         return "app/manager/admin_dashboard";
     }
 
     //  배너 관리
     @GetMapping("/pageBanner")
-    public String pagebanner(){
+    public String pageBanner(){
         return "app/manager/admin_page_banner";
     }
 
     //  퀘스트 관리
     @GetMapping("/questList")
-    public String questlist(){
+    public String questList(){
         return "app/manager/admin_quest_list";
     }
 
@@ -63,7 +63,7 @@ public class ManagerController {
 
     //  회원 목록
     @GetMapping("/userList")
-    public String userlist(){
+    public String userList(){
         return "app/manager/admin_user_list";
     }
 

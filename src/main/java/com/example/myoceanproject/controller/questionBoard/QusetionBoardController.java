@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class QusetionBoardController {
     // 자주 묻는 질문 페이지
     @GetMapping("/index")
-    public String questionboard(){
+    public String questionBoard(){
         return "app/questionBoard/questionBoard";
     }
 }
