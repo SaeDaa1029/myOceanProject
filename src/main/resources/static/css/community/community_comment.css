@@ -34,7 +34,7 @@ body {
     max-width: 808px;
     width: 100%;
     padding: 0px 0px 75px;
-    min-height: 100vh;
+    min-height: 78vh;
 }
 
 .hcLOFI {
@@ -274,6 +274,8 @@ textarea {
     letter-spacing: -0.5px;
     padding: 0px;
     color: rgb(139, 187, 236);
+    cursor: not-allowed;
+
 }
 
 button, input, select, textarea {
@@ -292,4 +294,96 @@ button, input, select, textarea {
 *, ::before, ::after {
     background-repeat: no-repeat;
     box-sizing: inherit;
+}
+
+.htiyxZ {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3000;
+}
+
+.dCXZYJ {
+    margin: 0px 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ibqqJA {
+    padding: 20px;
+    font-size: 13px;
+    word-break: keep-all;
+    line-height: 22px;
+}
+
+.bZEORB {
+    display: flex;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+.jZuxbV {
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.jZuxbV p{
+    margin: 0px;
+}
+
+.kXWQPc {
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    padding: 16px 32px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    color: black;
+    font-size: 14px;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+.bQKwTd {
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    padding: 16px 32px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    color: rgb(255, 102, 102);
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    border-left: 1px solid rgb(230, 230, 230);
+}
+
+.kXWQPc:hover{
+    background-color:#F6FAFE;
+}
+
+.bQKwTd:hover{
+    background-color:#F6FAFE;
+}
+
+#modal-root{
+    display: none;
+
 }
