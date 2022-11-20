@@ -104,7 +104,7 @@ p, label {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    padding: 46px 20px 0px;
+    padding: 0px 20px 0px;
 }
 
 .fmHjaT > div {
@@ -281,4 +281,8 @@ hr {
     font-size: 20px;
     text-align: right;
     color: rgb(51, 151, 255);
+}
+
+.kpRdoO:hover {
+    background: #ecfdfc;
 }

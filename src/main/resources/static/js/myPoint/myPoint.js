@@ -11,11 +11,13 @@ checkWidth();
 /*console.log(window.location.pathname);*/
 
 function checkWidth(){
+
     if(window.innerWidth<564){
         $(".ijXgoc > *").css("margin", "0 auto");
-
+        $(".epAnZX").css("padding-left", "20px");
     } else{
         $(".ijXgoc > *").css("margin", "0 20px 0 0");
+        $(".epAnZX").css("padding-left", "0px");
     }
 }
 
@@ -23,8 +25,10 @@ function checkWidth(){
 $(window).resize(function(){
     if(window.innerWidth<564){
         $(".ijXgoc > *").css("margin", "0 auto");
+        $(".epAnZX").css("padding-left", "20px");
     } else{
         $(".ijXgoc > *").css("margin", "0 20px 0 0");
+        $(".epAnZX").css("padding-left", "0px");
     }
 })
 
