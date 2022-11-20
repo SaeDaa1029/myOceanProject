@@ -1,6 +1,6 @@
 # MyQceanProject 공지사항
 
-# 업데이트 : 2022-11-19
+# 업데이트 : 2022-11-20
   
 #  포트 설정 : 15000
     1. 전체 페이지 주소!
@@ -182,6 +182,14 @@
     
     2.통합 검색이 없을때 페이지
     http://localhost:15000/search/nototalsearch
+    
+    @law
+    
+    1. 이용약관 페이지
+    http://localhost:15000/law/termsofService
+    
+    2. 개인정보 처리방침 페이지
+    http://localhost:15000/law/privacyPolicy
 
 
     2.새로운 페이지 생성할시 추가해야 하는 부분!
@@ -205,4 +213,4 @@
     
     
     
-    1
+    

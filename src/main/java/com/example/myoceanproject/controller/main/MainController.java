@@ -10,7 +10,7 @@ public class MainController {
 
     // 메인 페이지
     @GetMapping("/index")
-    public String counseling(){
+    public String main(){
         return "app/main/main";
     }
 }
