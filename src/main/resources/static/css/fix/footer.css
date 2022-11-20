@@ -357,3 +357,44 @@ footer {
     margin-left: 20px;
 }
 
+
+.eBDrIh {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 5px 16px 4px;
+    color: rgb(250, 250, 250);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    font-family: "Cafe24 Ohsquare";
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    animation-name: bZnxhs;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+ .eBDrIh::after {
+     content: "";
+     position: absolute;
+     display: block;
+     height: 7px;
+     width: 7px;
+     margin: 0px auto;
+     border-radius: 2px 0px 12px;
+     background-color: rgb(51, 51, 51);
+     top: -3px;
+     right: 18px;
+     transform: rotate(45deg);
+ }
+
+ @keyframes bZnxhs {
+     0% {
+         transform: translateY(-3px);
+     }
+
+     100% {
+         transform: translateY(4px);
+     }
+ }

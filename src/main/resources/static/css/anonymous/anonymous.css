@@ -648,3 +648,237 @@ html, body{
 .hnfyOW {
     display: block;
 }
+
+/*페이지소개*/
+.jgFMVr {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3000;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.cyEVkt {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto -100px;
+    padding-bottom: 100px;
+    z-index: 3001;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    animation: 0.3s ease 0s 1 normal none running gDIGGC;
+}
+
+.eCzJv {
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    animation: 0.3s ease 0s 1 normal none running jBcSpD;
+}
+
+.dNCiPY {
+    position: relative;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.dNCiPY::before {
+    content: "";
+    position: absolute;
+    width: 37px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(221, 221, 221);
+    top: 18px;
+    left: auto;
+    right: auto;
+}
+
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+.bBEXIV {
+    padding: 0px 20px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(78, 89, 104);
+}
+
+.cUlkXY:last-child {
+    border-bottom: initial;
+}
+
+.cUlkXY {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+button {
+    cursor: pointer;
+}
+
+.eCzJv {
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    animation: 0.3s ease 0s 1 normal none running jBcSpD;
+}
+
+
+.htiyxZ {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3000;
+}
+
+.dCXZYJ {
+    margin: 0px 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ibqqJA {
+    padding: 20px;
+    font-size: 13px;
+    word-break: keep-all;
+    line-height: 22px;
+}
+
+.bZEORB {
+    display: flex;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+.jZuxbV {
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.jZuxbV p{
+    margin: 0px;
+}
+
+.kXWQPc {
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    padding: 16px 32px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    color: black;
+    font-size: 14px;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+.bQKwTd {
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    padding: 16px 32px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    color: rgb(255, 102, 102);
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    border-left: 1px solid rgb(230, 230, 230);
+}
+
+.kXWQPc:hover{
+    background-color:#F6FAFE;
+}
+
+.bQKwTd:hover{
+    background-color:#F6FAFE;
+}
+
+#modal-root{
+    display: none;
+}
+
+.dPJHWR{
+    padding: 35px 20px 0px;
+    font-size: 22px;
+    line-height: 30px;
+    color: rgb(51, 61, 75);
+    font-weight: bold;
+}
+.kNwzQK {
+    padding: 35px 20px 0px;
+    font-size: 22px;
+    line-height: 30px;
+    color: rgb(51, 61, 75);
+    font-weight: bold;
+}
+
+.kYigqi {
+    max-width: 768px;
+    margin-bottom: 48px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cblWvR {
+    padding: 30px 20px 40px;
+    line-height: 25px;
+}
+
+.bAnoxg {
+    font-size: 16px;
+    color: rgb(88, 88, 101);
+    font-weight: bolder;
+}
+
+.dkImul {
+    font-size: 16px;
+    color: rgb(78, 89, 104);
+    margin: 10px 0px;
+}
+
+.cMDWip {
+    font-size: 14px;
+    color: rgb(142, 151, 163);
+}
+#modal-page{
+    display: none;
+}

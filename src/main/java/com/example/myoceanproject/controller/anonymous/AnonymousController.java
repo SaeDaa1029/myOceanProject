@@ -13,7 +13,4 @@ public class AnonymousController {
     public String anonymous(){
         return "app/anonymous/anonymous";
     }
-
-
-
 }

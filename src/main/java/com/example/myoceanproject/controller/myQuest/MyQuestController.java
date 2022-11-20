@@ -5,23 +5,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/myquest/*")
+@RequestMapping("/myQuest/*")
 public class MyQuestController {
     // 완료한 퀘스트 페이지
-    @GetMapping("/completequest")
-    public String completequest(){
+    @GetMapping("/completeQuest")
+    public String completeQuest(){
         return "app/myQuest/completeQuest";
     }
 
     // 획득한 벳지 페이지
-    @GetMapping("/mybadge")
-    public String mybadge(){
+    @GetMapping("/myBadge")
+    public String myBadge(){
         return "app/myQuest/myBadge";
     }
 
     // 오늘의 퀘스트 페이지
-    @GetMapping("/todayquest")
-    public String todayquest(){
+    @GetMapping("/todayQuest")
+    public String todayQuest(){
         return "app/myQuest/todayQuest";
     }
 

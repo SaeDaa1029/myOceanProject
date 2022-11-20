@@ -292,3 +292,73 @@ audio, canvas, iframe, img, svg, video {
 	overflow: hidden;
 }
 
+/* 미디어 쿼리 적용 스타일 */
+
+.egtVMY {
+	height: 278px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	-moz-box-pack: center;
+	justify-content: center;
+	-moz-box-align: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hsSkXH {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	-moz-box-pack: center;
+	justify-content: center;
+	-moz-box-align: center;
+	align-items: center;
+}
+
+.hoYWgp {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.fMxjfF {
+	position: absolute;
+	width: 100%;
+	transform: scale(1.05);
+	opacity: 0;
+	transition: transform 2.8s ease-in-out 0s, opacity 0.8s ease-in-out 0s;
+}
+
+.hpebkH {
+	position: absolute;
+	width: 100%;
+	transform: scale(1);
+	opacity: 1;
+	transition: transform 2.8s ease-in-out 0s, opacity 0.8s ease-in-out 0s;
+}
+
+.geOdYS {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+.geOdYS img {
+	width: 118px;
+	margin-bottom: 5px;
+}
+
+.geOdYS p {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.48px;
+}
+
+/* 미디어 쿼리 적용 스타일 */
