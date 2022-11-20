@@ -136,10 +136,10 @@
     http://localhost:15000/myList/myListMovie
     
     10. 게시글 없는 페이지 표시 할 때!
-    http://localhost:15000/mylist/myListNocontents
+    http://localhost:15000/myList/myListNocontents
     
     11. 내가 쓴 게시글 (전체)
-    http://localhost:15000/mylist/myListTotal
+    http://localhost:15000/myList/myListTotal
     
     @myPage
     
