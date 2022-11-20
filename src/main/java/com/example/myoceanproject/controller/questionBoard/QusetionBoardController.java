@@ -12,4 +12,10 @@ public class QusetionBoardController {
     public String questionBoard(){
         return "app/questionBoard/questionBoard";
     }
+
+    @GetMapping("myQuestion")
+    public String myQuestionBoard(){return "app/questionBoard/myQuestion";}
+
+    @GetMapping("managerAnswer")
+    public String managerAnswer(){return "app/questionBoard/managerAnswer";}
 }
