@@ -16,6 +16,9 @@ public class QusetionBoardController {
     @GetMapping("myQuestion")
     public String myQuestionBoard(){return "app/questionBoard/myQuestion";}
 
+    @GetMapping("myQuestionWrite")
+    public String myQuestionWrite(){return "app/questionBoard/myQuestionWrite";}
+
     @GetMapping("managerAnswer")
     public String managerAnswer(){return "app/questionBoard/managerAnswer";}
 }
