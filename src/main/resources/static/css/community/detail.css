@@ -1035,6 +1035,9 @@ dd {
 .PvHzG > .product-description {
     height: auto;
 }
+.PvHzG {
+    margin: 0px 0px 82px;
+}
 
 .product-description {
     padding: 0 20px;

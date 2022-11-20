@@ -31,6 +31,13 @@ public class CommunityController {
         return "app/community/detail";
     }
 
+    /* 고민상담 게시판 */
+    @GetMapping("/anonymous")
+    public String anonymous(){ return "app/anonymous/anonymous"; }
+
+    /* 모임 목록 */
+    @GetMapping("/bulletin")
+    public String bulletin(){ return "app/bulletin_board/bulletin_board"; }
 
 
 }
