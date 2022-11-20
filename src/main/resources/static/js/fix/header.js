@@ -11,6 +11,7 @@ function checkWidth(){
         $(".fqlSHx").hide(); //카테고리 가리기
         $(".cRoOrU").hide(); //카테고리 옆 선 가리기
         $(".kiAeGP").hide(); //피드/저장/마이 가리기
+        $(".ierGsl").hide(); //알람 상태 메세지 가리기
         $nav.css("display", "flex");
         $nav.show();
         //$section.hide();
@@ -20,6 +21,7 @@ function checkWidth(){
         $(".fqlSHx").show(); //카테고리
         $(".cRoOrU").show(); //카테고리 옆 선 가리기
         $(".kiAeGP").show(); //피드/저장/마이
+        $(".ierGsl").show(); //알람 상태 메세지 나타나기
         $(".lQqkn").show();
         $nav.hide();
         $section.show();
@@ -32,6 +34,7 @@ $(window).resize(function() {
         $(".fqlSHx").hide(); //카테고리 가리기
         $(".cRoOrU").hide(); //카테고리 옆 선 가리기
         $(".kiAeGP").hide(); //피드/저장/마이 가리기
+        $(".ierGsl").hide(); //알람 상태 메세지 가리기
         $nav.css("display", "flex");
         $nav.show();
         //$section.hide();
@@ -41,6 +44,7 @@ $(window).resize(function() {
         $(".fqlSHx").show(); //카테고리
         $(".cRoOrU").show(); //카테고리 옆 선 가리기
         $(".kiAeGP").show(); //피드/저장/마이
+        $(".ierGsl").show(); //알람 상태 메세지 나타나기
         $(".lQqkn").show();
         $nav.hide();
         $section.show();

@@ -497,3 +497,10 @@ a, area, button, input, label, select, textarea, [tabindex] {
 .hoverclick:hover {
     background-color: #b3d4fc;
 }
+
+.ierGsl {
+    position: absolute;
+    bottom: -35px;
+    right: 22px;
+    z-index: 100;
+}
