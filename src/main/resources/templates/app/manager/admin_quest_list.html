@@ -94,8 +94,32 @@
                         </div>
                     </div>
                 </div>
+                <div id = "quest-register-wrapper">
+                    <table class="info_table register">
+                        <thead>
+                        <tr>
+                            <th class="thead">이름</th>
+                            <th class="thead">카테고리</th>
+                            <th class="thead">내용</th>
+                            <th class="thead">포인트</th>
+                            <th class="thead">뱃지</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td class="info_td"><input type="text"></td>
+                            <td class="info_td"><input type="text"></td>
+                            <td class="info_td"><input type="text"></td>
+                            <td class="info_td"><input type="text"></td>
+                            <td class="info_td"><input type="file"></td>
+                        </tr>
+                    </table>
+                    <div class = "register-button-wrapper">
+                        <button class = "register-buttons close">닫기</button>
+                        <button class = "register-buttons regist">등록</button>
+                    </div>
+                </div>
                 <div id="table-wrapper">
-                    <table id="info_table">
+                    <table class="info_table">
                         <thead>
                         <tr>
                             <th class="thead"></th>
@@ -125,9 +149,21 @@
                             <td class="info_td">회원가입 퀘스트</td>
                             <td class="info_td">활동</td>
                             <td class="info_td">회원가입을 하면 포인트와 뱃지가 제공됨</td>
-                            <td class="info_td">203</td>
+                            <td class="info_td">103</td>
                             <td class="info_td"><span><img src="/imgin/admin_badge_1.png" width="30px"></span></td>
-                            <td class="info_td">2022-10-12</td>
+                            <td class="info_td">2022-10-11</td>
+                            <td class="info_td">
+                                <button class="more"><img src="/imgin/more.png" width="15px"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="info_td">1</td>
+                            <td class="info_td">회원가입 퀘스트</td>
+                            <td class="info_td">활동</td>
+                            <td class="info_td">회원가입을 하면 포인트와 뱃지가 제공됨</td>
+                            <td class="info_td">183</td>
+                            <td class="info_td"><span><img src="/imgin/admin_badge_1.png" width="30px"></span></td>
+                            <td class="info_td">2022-10-10</td>
                             <td class="info_td">
                                 <button class="more"><img src="/imgin/more.png" width="15px"></button>
                             </td>
@@ -139,19 +175,7 @@
                             <td class="info_td">회원가입을 하면 포인트와 뱃지가 제공됨</td>
                             <td class="info_td">203</td>
                             <td class="info_td"><span><img src="/imgin/admin_badge_1.png" width="30px"></span></td>
-                            <td class="info_td">2022-10-12</td>
-                            <td class="info_td">
-                                <button class="more"><img src="/imgin/more.png" width="15px"></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="info_td">1</td>
-                            <td class="info_td">회원가입 퀘스트</td>
-                            <td class="info_td">활동</td>
-                            <td class="info_td">회원가입을 하면 포인트와 뱃지가 제공됨</td>
-                            <td class="info_td">203</td>
-                            <td class="info_td"><span><img src="/imgin/admin_badge_1.png" width="30px"></span></td>
-                            <td class="info_td">2022-10-12</td>
+                            <td class="info_td">2022-10-19</td>
                             <td class="info_td">
                                 <button class="more"><img src="/imgin/more.png" width="15px"></button>
                             </td>
@@ -238,6 +262,8 @@
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
+    let Target = document.getElementById("clock");
+    let temp = 0;
     // html dom 이 다 로딩된 후 실행된다.
     $(document).ready(function () {
         // menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
@@ -257,7 +283,7 @@
     });
 
 
-    var Target = document.getElementById("clock");
+
 
     function clock() {
         var time = new Date();
@@ -280,37 +306,77 @@
     clock();
     setInterval(clock, 1000); // 1초마다
 
+    $('#quest-register-wrapper').hide()
 
-    // let $accountModalBtn =$(".account-modal");
-    let temp = 0;
-    let $tr = $("#info_table").find('tr');
-    let accountCondition = null;
+    $('.filter span').click(function (){
+        if(temp == 0) {
+            console.log(temp);
+            temp++;
+            $('#quest-register-wrapper').show()
+/*            $(this).next('span').click(function (){
+                temp--;
+                $('#quest-register-wrapper').hide();
+                console.log($(this))
+                $(this).remove()
+                alert("퀘스트가 등록됐습니다.")
+            })*/
+            console.log(temp);
+        }else{
+            console.log(temp);
+            temp--;
+            $('#quest-register-wrapper').hide();
+/*            $(this).text('퀘스트 등록')
+            $(this).next('span').remove()*/
+            console.log(temp);
+        }
+
+    })
+
+    let moreButtonTemp = 0;
+    let $tr = $(".info_table").find('tr');
+    console.log($tr)
+    console.log($tr.find('.more'))
 
     $tr.find('.more').click(function () {
-        if (temp == 1) {
-            temp--;
+        if (moreButtonTemp == 1) {
+            moreButtonTemp--;
             $(this).parent().children('.account-modal').remove();
         } else {
-            temp++;
+            moreButtonTemp++;
+            //수정 모달 버튼 띄우기
             $(this).parent().append("<div class=\"account-modal\">\n" +
-                "    <button class=\"account-modal-button\">삭제</button>\n" +
+                "    <button class=\"account-modal-button\">수정</button>\n" +
                 "</div>")
+
+            //수정 모달 버튼 클릭시
             $(this).next().find('.account-modal-button').click(function () {
+                //상단에 수정창 만들기
+                $('#quest-register-wrapper').show();
+                //수정창에 수정할 정보 넣기
+                $('.register td:nth-child(1)').text(($(this).closest('tr').children('td:eq(1)')).text())
+                $('.register td:nth-child(2)').text(($(this).closest('tr').children('td:eq(2)')).text())
+                $('.register td:nth-child(3)').text(($(this).closest('tr').children('td:eq(3)')).text())
+                $('.register td:nth-child(4)').text(($(this).closest('tr').children('td:eq(4)')).text())
+                $('.register td:nth-child(5)').text(($(this).closest('tr').children('td:eq(5)')).text())
+                //수정 모달창과 버튼 삭제
                 $(this).closest('.account-modal').remove()
                 $(this).remove()
-                temp--;
+                moreButtonTemp--;
+
             })
         }
     })
 
+    $('.close').click(function (){
+        $('#quest-register-wrapper').hide();
+        temp--;
+    })
+    $('.regist').click(function (){
+        alert("퀘스트가 등록됐습니다.")
+        $('#quest-register-wrapper').hide();
+        temp--;
+    })
 
-
-/*    // 상단 필터 클릭시 색 변화
-    // 하나 클릭하면 나머지는 색 없어짐
-    $('.filter').children('span').click(function(){
-        $(this).siblings().removeClass('active-filter')
-        $(this).addClass('active-filter');
-    })*/
 
 
 
