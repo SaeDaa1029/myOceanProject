@@ -67,23 +67,23 @@
     
     @manager
     
-    1. 고민상담 게시글 관리
+    1. 관리자 페이지 메인
+    http://localhost:15000/manager/index
+    
+    2. 고민상담 게시글 관리
     http://localhost:15000/manager/counselingBoard
     
-    2. 고민상담 댓글 관리
+    3. 고민상담 댓글 관리
     http://localhost:15000/manager/counselingReply
     
-    3. 자유게시판 게시글 관리
+    4. 자유게시판 게시글 관리
     http://localhost:15000/manager/freeBoard
     
-    4. 자유게시판 댓글 관리
+    5. 자유게시판 댓글 관리
     http://localhost:15000/manager/freeReply
     
-    5. 모임 개설 신청 관리
+    6. 모임 개설 신청 관리
     http://localhost:15000/manager/groupOpenRequest
-    
-    6. 레이아웃 ( 이건 확인해 보아야함)
-    http://localhost:15000/manager/layout
     
     7. 배너 관리 
     http://localhost:15000/manager/pageBanner

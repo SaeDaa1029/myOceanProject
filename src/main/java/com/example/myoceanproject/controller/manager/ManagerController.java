@@ -37,10 +37,10 @@ public class ManagerController {
         return "app/manager/admin_group_open_request";
     }
 
-    //  레이아웃 ( 이건 확인해보아야함)
-    @GetMapping("/layout")
+    //  대쉬보드
+    @GetMapping("/index")
     public String layout(){
-        return "app/manager/admin_layout";
+        return "app/manager/admin_dashboard";
     }
 
     //  배너 관리
