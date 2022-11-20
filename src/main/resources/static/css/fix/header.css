@@ -504,3 +504,53 @@ a, area, button, input, label, select, textarea, [tabindex] {
     right: 22px;
     z-index: 100;
 }
+
+.guFmbA {
+    position: absolute;
+    top: -31px;
+    right: 11px;
+}
+
+.doyyOD {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 5px 10px 4px;
+    color: rgb(250, 250, 250);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    font-family: "Cafe24 Ohsquare";
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    animation-name: bZnxhs;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.doyyOD::after {
+    position: absolute;
+    display: block;
+    height: 7px;
+    width: 7px;
+    margin: 0px auto;
+    border-radius: 2px 0px 12px;
+    background-color: rgb(51, 51, 51);
+    transform: rotate(225deg);
+    right: 27px;
+}
+
+.eBDrIh::after {
+    position: absolute;
+    display: block;
+    height: 7px;
+    width: 7px;
+    margin: 0px auto;
+    border-radius: 2px 0px 12px;
+    background-color: rgb(51, 51, 51);
+    top: -3px;
+    right: 18px;
+    transform: rotate(45deg);
+}
+

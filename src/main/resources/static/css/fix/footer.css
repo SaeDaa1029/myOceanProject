@@ -375,19 +375,7 @@ footer {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
- .eBDrIh::after {
-     content: "";
-     position: absolute;
-     display: block;
-     height: 7px;
-     width: 7px;
-     margin: 0px auto;
-     border-radius: 2px 0px 12px;
-     background-color: rgb(51, 51, 51);
-     top: -3px;
-     right: 18px;
-     transform: rotate(45deg);
- }
+
 
  @keyframes bZnxhs {
      0% {

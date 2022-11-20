@@ -1,8 +1,20 @@
 # MyQceanProject 공지사항
 
-# 업데이트 : 2022-11-20
+# 포트 설정 : 15000
   
-#  포트 설정 : 15000
+#  업데이트 : 2022-11-21
+
+주소 4개 추가!
+
+// 자주 묻는 질문 중 나의 질문 페이지 http://localhost:15000/questionBoard/myQuestion
+
+// 문의 사항 작성 페이지 http://localhost:15000/questionBoard/myQuestionWrite
+
+// 유저 문의 사항 http://localhost:15000/questionBoard/managerAnswer
+
+// 카테고리 페이지 http://localhost:15000/category/index
+
+
     1. 전체 페이지 주소!
     
     http://localhost:15000/
@@ -172,8 +184,17 @@
     
     @questionBoard
     
-    1.자주 묻는 질문 페이지
+    1.자주 묻는 질문 중 나의 질문 페이지
     http://localhost:15000/questionBoard/index
+    
+    2.문의 사항 작성 페이지
+    http://localhost:15000/questionBoard/myQuestion
+    
+    3.문의 사항 작성 페이지
+    http://localhost:15000/questionBoard/myQuestionWrite
+    
+    4.유저 문의 사항
+    http://localhost:15000/questionBoard/managerAnswer
     
     @search
     
@@ -190,6 +211,11 @@
     
     2. 개인정보 처리방침 페이지
     http://localhost:15000/law/privacyPolicy
+
+    @cagegory
+    
+    1. 카테고리 페이지 
+    http://localhost:15000/category/index
 
 
     2.새로운 페이지 생성할시 추가해야 하는 부분!
