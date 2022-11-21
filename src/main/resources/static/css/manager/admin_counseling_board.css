@@ -13,11 +13,16 @@
     font-family: "Cafe24 Ohsquare", "SUIT", "UI Frip", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: #212121;
+}
+
 .menu {
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 919px;
     background-color: #333333;
     color: #fff;
     transition: all 0.5s ease;
