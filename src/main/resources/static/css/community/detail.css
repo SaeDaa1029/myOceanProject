@@ -16,6 +16,7 @@ html, body {
     word-break: normal;
     overflow-wrap: break-word;
     line-height: 1.5;
+    margin: 0;
 }
 
 .CijWU {
@@ -1288,9 +1289,9 @@ a {
 }
 
 a:-webkit-any-link {
-    color: -webkit-link;
     cursor: pointer;
 }
+
 
 h5 {
     display: block;
