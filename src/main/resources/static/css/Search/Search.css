@@ -493,3 +493,40 @@ lcsYvn > * {
     width: calc(50% - 7.5px);
     margin-bottom: 30px;
 }
+
+.gRNDCb {
+    width: auto;
+    height: 18px;
+    line-height: 18px;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 7px;
+}
+
+.kJEnf {
+    width: auto;
+    height: auto;
+    line-height: 14px;
+    padding: 11px 30px 11px 20px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    color: rgb(51, 151, 255);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hWBKQE {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
