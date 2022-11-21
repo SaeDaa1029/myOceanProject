@@ -19,5 +19,9 @@ public class LawController {
         return "app/law/privacypolicy";
     }
 
+    // 위치기반 서비스 이용약관 페이지
+    @GetMapping("/locationBasedService")
+    public String lawlocationBasedService(){ return "app/law/locationBasedService"; }
+
 
 }
