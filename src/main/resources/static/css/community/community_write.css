@@ -64,3 +64,129 @@ html,body{
         font-size: 24px;*/
     margin-right: 6px;
 }
+
+.filter_wrapper{
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+/*셀렉트박스*/
+.selectBox2 * { box-sizing: border-box; }
+.selectBox2 {
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid #eef5fa;
+    background: url(/imgin/community/arrowS.png) calc(100% - 12px) center no-repeat;
+    background-size: 10px;
+    cursor: pointer;
+}
+
+
+.selectBox2:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    background: #eef5fa;
+}
+
+.selectBox2 .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.selectBox2 .optionList {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    background: #eef5fa;
+    color :black;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+}
+
+.selectBox2.active .optionList {
+    max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+    border-bottom: 1px dashed rgb(170, 72, 72);
+    padding: 5px 15px 5px;
+    transition: .1s;
+}
+
+.selectBox2 .optionItem:hover {
+    background: rgb(175, 93, 93);
+}
+
+.selectBox2 .optionItem:last-child {
+    border-bottom: 0 none;
+}
+
+
+   .selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+
+/*셀렉트 박스*/
+
+.gRnEmw > * {
+    margin-right: 16px;
+}
+
+.gymLjt {
+    display: flex;
+}
+
+.NVKNq {
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.fFBpBV {
+    width: auto;
+    height: auto;
+    line-height: 14px;
+    padding: 11px 20px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    color: initial;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.diary_filter_1h{
+    display: none;
+}
+
+.exchange_filter_1h{
+    display: none;
+}
