@@ -346,13 +346,19 @@ input#search_input::placeholder {
 /*    border-left: 1px solid #dee2e6;*/
 /*}*/
 
-#info_table td:first-child, #info_table td:last-child{
+/*#info_td  {*/
+
+/*    position: relative;*/
+/*    border-left: 1px solid #dee2e6;*/
+/*}*/
+
+#info_table td:first-child{
     border-left: 0;
+}
+/*#info_table td:last-child{
     border-right: 0;
-}
-#info_table td:nth-child(2){
-    border-left: 0;
-}
+  }*/
+
 
 .info_td {
     text-align: center;
