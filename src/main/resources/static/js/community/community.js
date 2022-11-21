@@ -43,3 +43,42 @@ $(".pageIntroduce_modalContainer_1h").click(function (e) {
         $pageIntroduceModal.css("display","none");
     }
 })
+
+
+// 반응형
+checkMedia()
+$(window).resize(function(){
+    if(window.innerWidth<785){
+        $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 media");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 categoryMedia");
+        $(".writeBtn").css("right", "0px");
+        if(window.innerWidth<575){
+            $(".jIjcTX").css("margin", "");
+        } else{
+            $(".jIjcTX").css("margin", "auto");
+        }
+    } else{
+        $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 ciajVR");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 gRnEmw");
+        $(".jIjcTX").css("margin", "");
+        $(".writeBtn").css("right", "-196px");
+    }
+})
+
+function checkMedia(){
+    if(window.innerWidth<785){
+        $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 media");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 categoryMedia");
+        $(".writeBtn").css("right", "0px");
+        if(window.innerWidth<575){
+            $(".jIjcTX").css("margin", "");
+        } else{
+            $(".jIjcTX").css("margin", "auto");
+        }
+    } else{
+        $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 ciajVR");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 gRnEmw");
+        $(".jIjcTX").css("margin", "");
+        $(".writeBtn").css("right", "-196px");
+    }
+}

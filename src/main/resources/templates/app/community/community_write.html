@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>h.hyeoniya 커뮤니티 글작성</title>
     <link rel="stylesheet" href="/css/community/community_write.css">
-    <link rel="stylesheet" href="/css/fix/header.css">
-    <link rel="stylesheet" href="/css/fix/footer.css">
+
 <!--    <link rel="stylesheet" href="https://codex.so/public/build/codex.bundle.css?v=1647866282">-->
     <link rel="stylesheet" href="/css/community/bundle.css">
+    <link rel="stylesheet" href="/css/fix/header.css">
+    <link rel="stylesheet" href="/css/fix/footer.css">
     <!--    <script>-->
     <!--        /**-->
     <!--         * Tiny wrapper for Hawk service initializing-->
@@ -38,14 +39,54 @@
 </head>
 <body>
 <header th:replace="/app/fix/header.html :: header"></header>
+<form onsubmit="return false;">
     <div class="SocialFeedPage__Wrapper-ky5ymg-0 fzBbGO">
         <div class="SocialFeedPage__Header-ky5ymg-1 jIjcTX">
             <div style="padding-left: 20px; padding-right: 20px;">
-                <span class="SocialFeedPage__Title-ky5ymg-2 gVPyuz">마음껏 작성해 주세요</span>
+                <input type="text" class="SocialFeedPage__Title-ky5ymg-2 gVPyuz" placeholder="제목을 작성해 주세요" style="border: none">
+<!--                <span class="SocialFeedPage__Title-ky5ymg-2 gVPyuz">마음껏 작성해 주세요</span>-->
             </div>
         </div>
     </div>
     <div style="padding: 30px 0">
+        <div class="filter_wrapper">
+
+            <div class="selectBox2 post_filter ">
+                <button class="label">요리</button>
+                <ul class="optionList">
+                    <input type="hidden" class="post_filter_input" value="요리">
+                    <li class="optionItem">요리</li>
+                    <li class="optionItem">운동</li>
+                    <li class="optionItem">영화</li>
+                    <li class="optionItem">책</li>
+                    <li class="optionItem">일기</li>
+                </ul>
+            </div>
+
+            <div class="selectBox2 diary_filter_1h ">
+                <button class="label">공개</button>
+                <ul class="optionList">
+                    <input type="hidden" class="diary_filter_input" value="공개">
+                    <li class="optionItem">공개</li>
+                    <li class="optionItem">비공개</li>
+                </ul>
+            </div>
+
+            <div class="selectBox2 exchange_filter_1h ">
+                <button class="label">교환 일기</button>
+                <ul class="optionList">
+                    <input type="hidden" class="exchange_filter_input" value="교환 일기">
+                    <li class="optionItem">교환 일기</li>
+                    <li class="optionItem">나의 일기</li>
+                </ul>
+            </div>
+            <div class="FilterAll__Wrapper-tqa6fq-0 jJIWoq">
+                <div class="FilterOpenButton__Wrapper-sc-91gci-0 NVKNq">
+                    <button height="auto" color="initial" font-size="14px" font-weight="500" class="Button-bqxlp0-0 fFBpBV">등록</button>
+                </div>
+            </div>
+        </div>
+
         <div class="editor-landing__demo" data-module="editorLanding">
                 <textarea name="module-settings" hidden="">            {
                         "output_id" : "output",
@@ -61,6 +102,7 @@
 
         </div>
     </div>
+</form>
 <footer th:replace="/app/fix/footer.html :: footer"></footer>
 
 </body>
@@ -72,4 +114,15 @@
 <script onload = "codex.init();" src="/js/community/communityEdit.js" th:defer></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/fix/header.js"></script>
+<script>
+    const $labelBtn = $(".label");
+    $labelBtn.click(function () {
+        if( $(this).parent().hasClass('active')){
+            $(this).parent().removeClass('active');
+        }else{
+            $(this).parent().addClass('active');
+        }
+    })
+</script>
+<script src="/js/community/communityWrite.js"></script>
 </html>
