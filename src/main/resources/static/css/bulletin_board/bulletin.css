@@ -408,5 +408,10 @@ button, input, select, textarea {
     margin: 0;
 }
 
-
+.media > * {
+    margin-right: 15px;
+    margin-bottom: 30px;
+    width: calc(50% - 19.5px) !important;
+    display: inline-flex;
+}
 
