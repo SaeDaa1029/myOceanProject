@@ -16,7 +16,49 @@ $(window).resize(function(){
     if(window.innerWidth<1905){
         $(".e1k52epl0").css("font-size", "12px");
         $(".dateText").css("font-size", "12px");
-    } else{
+        if(window.innerWidth<1650){
+            $(".wholeWrap").removeAttr("style");
+            $(".dateForm").removeAttr("style");
+            $(".e12i9j8n0").removeAttr("style");
+            $(".css-16df71f").removeAttr("style");
+            $("#list_page_wrapper").removeAttr("style");
+
+            $(".wholeWrap").css({"display":"flex", "flex-direction":"column"});
+            $(".dateForm").css("width","98%");
+            $(".e12i9j8n0").css({"width":"95%", "margin": "0 auto"});
+            $(".e1k52epl0").css({"width":"32%"});
+            $(".css-16df71f").css("float","none");
+            $(".css-zr1uxp").css("height", "391px");
+            $(".css-klg5aa").css("top", "-14px");
+            $(".css-1kz857u").css("top", "-20px");
+            $(".css-oys1qn").css("text-align", "center");
+            $(".dayText").css({"top": "-25px", "position": "relative"});
+            $(".dayTextArrow").css({"position":"relative", "top": "-20px"});
+            $("#list_page_wrapper").css("margin", "0 auto");
+        } else{
+            $(".wholeWrap").removeAttr("style");
+            $(".dateForm").removeAttr("style");
+            $(".e12i9j8n0").removeAttr("style");
+            $(".css-16df71f").removeAttr("style");
+            $(".dateForm").removeAttr("style");
+            $("#list_page_wrapper").removeAttr("style");
+
+
+            $(".wholeWrap").css({"display":"grid", "grid-template-columns":"28% 72%", "grid-gap":"10px"});
+            $(".dateForm").css("grid-template-rows","74px 450px");
+            $(".e12i9j8n0").css({"width":"48%", "margin-top": "30px"});
+            $(".e1k52epl0").css("width", "48%");
+            $(".css-16df71f").css({"flex":"1 1 0%", "margin-bottom":"20px", "float":"right"});
+            $(".css-zr1uxp").css("height", "519px");
+            $(".css-klg5aa").css("top", "0px");
+            $(".css-1kz857u").css("top", "0px");
+            $(".css-oys1qn").css("text-align", "none");
+            $(".dayText").css({"top": "0px", "position": "relative"});
+            $(".dayTextArrow").css({"position":"relative", "top": "0px"});
+            $("#list_page_wrapper").css("margin", "0px");
+        }
+    }
+    else{
         $(".e1k52epl0").css("font-size", "17px");
         $(".dateText").css("font-size", "14px");
     }
@@ -27,7 +69,49 @@ function checkCalendar(){
     if(window.innerWidth<1905){
         $(".e1k52epl0").css("font-size", "12px");
         $(".dateText").css("font-size", "12px");
-    } else{
+        if(window.innerWidth<1650){
+            $(".wholeWrap").removeAttr("style");
+            $(".dateForm").removeAttr("style");
+            $(".e12i9j8n0").removeAttr("style");
+            $(".css-16df71f").removeAttr("style");
+            $("#list_page_wrapper").removeAttr("style");
+
+            $(".wholeWrap").css({"display":"flex", "flex-direction":"column"});
+            $(".dateForm").css("width","98%");
+            $(".e12i9j8n0").css({"width":"95%", "margin": "0 auto"});
+            $(".e1k52epl0").css({"width":"32%"});
+            $(".css-16df71f").css("float","none");
+            $(".css-zr1uxp").css("height", "391px");
+            $(".css-klg5aa").css("top", "-14px");
+            $(".css-1kz857u").css("top", "-20px");
+            $(".css-oys1qn").css("text-align", "center");
+            $(".dayText").css({"top": "-25px", "position": "relative"});
+            $(".dayTextArrow").css({"position":"relative", "top": "-20px"});
+            $("#list_page_wrapper").css("margin", "0 auto");
+        } else{
+            $(".wholeWrap").removeAttr("style");
+            $(".dateForm").removeAttr("style");
+            $(".e12i9j8n0").removeAttr("style");
+            $(".css-16df71f").removeAttr("style");
+            $(".dateForm").removeAttr("style");
+            $("#list_page_wrapper").removeAttr("style");
+
+
+            $(".wholeWrap").css({"display":"grid", "grid-template-columns":"28% 72%", "grid-gap":"10px"});
+            $(".dateForm").css("grid-template-rows","74px 450px");
+            $(".e12i9j8n0").css({"width":"48%", "margin-top": "30px"});
+            $(".e1k52epl0").css("width", "48%");
+            $(".css-16df71f").css({"flex":"1 1 0%", "margin-bottom":"20px", "float":"right"});
+            $(".css-zr1uxp").css("height", "519px");
+            $(".css-klg5aa").css("top", "0px");
+            $(".css-1kz857u").css("top", "0px");
+            $(".css-oys1qn").css("text-align", "none");
+            $(".dayText").css({"top": "0px", "position": "relative"});
+            $(".dayTextArrow").css({"position":"relative", "top": "0px"});
+            $("#list_page_wrapper").css("margin", "0px");
+        }
+    }
+    else{
         $(".e1k52epl0").css("font-size", "17px");
         $(".dateText").css("font-size", "14px");
     }

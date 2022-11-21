@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>관리자-퀘스트 목록</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,7 +21,7 @@
             <div id="menu-service-name">나의 바다</div>
             <div class="menu">
                 <ul id="side_menubar">
-                    <li><a href="managerMain.html" class="item">
+                    <li><a href="/manager/index" class="item">
                         <div>대시보드</div>
                     </a>
                     </li>
@@ -29,7 +29,7 @@
                         <div>회원 관리</div>
                     </a>
                         <ul class="middle_item">
-                            <li><a href="admin_user_list.html" class="middle-items">
+                            <li><a href="/manager/userList" class="middle-items">
                                 <div>회원 목록</div>
                             </a>
                             </li>
@@ -40,29 +40,29 @@
                             <div>콘텐츠 관리</div>
                         </a>
                         <ul class="middle_item">
-                            <li><a href="admin_free_board.html" class="middle-items">
+                            <li><a href="/manager/freeBoard" class="middle-items">
                                 <div>자유게시판 관리</div>
                             </a>
                             </li>
-                            <li><a href="admin_counseling_board.html" class="middle-items">
+                            <li><a href="/manager/counselingBoard" class="middle-items">
                                 <div>고민상담 게시판 관리</div>
                             </a>
                             </li>
-                            <li><a href="#" class="middle-items">
+                            <li><a href="/manager/groupOpenRequest" class="middle-items">
                                 <div>모임 게시판 관리</div>
                             </a>
                             </li>
-                            <li><a href="#" class="middle-items">
+                            <li><a href="/manager/questList" class="middle-items">
                                 <div>퀘스트 관리</div>
                             </a>
                             </li>
                         </ul>
                     </li>
 
-                    <li><a href="admin_questions.html" class="item">
+                    <li><a href="/manager/questions" class="item">
                         <div>문의사항</div>
                     </a></li>
-                    <li><a href="#" class="item">
+                    <li><a href="/main/index" class="item">
                         <div>사이트 바로가기</div>
                     </a></li>
                 </ul>
@@ -110,7 +110,9 @@
                             <td class="info_td"><input type="text"></td>
                             <td class="info_td"><input type="text"></td>
                             <td class="info_td"><input type="text"></td>
-                            <td class="info_td"><input type="file"></td>
+                            <td class="info_td">
+                                <input class = "badge" type="file">
+                                <img id = "preview" src="/imgin/admin_file.png" onclick ="onClickUpload()" style="width:30px;" ></td>
                         </tr>
                     </table>
                     <div class = "register-button-wrapper">
@@ -309,25 +311,13 @@
     $('#quest-register-wrapper').hide()
 
     $('.filter span').click(function (){
-        if(temp == 0) {
-            console.log(temp);
+        if(temp === 0) {
             temp++;
             $('#quest-register-wrapper').show()
-/*            $(this).next('span').click(function (){
-                temp--;
-                $('#quest-register-wrapper').hide();
-                console.log($(this))
-                $(this).remove()
-                alert("퀘스트가 등록됐습니다.")
-            })*/
-            console.log(temp);
         }else{
-            console.log(temp);
             temp--;
             $('#quest-register-wrapper').hide();
-/*            $(this).text('퀘스트 등록')
-            $(this).next('span').remove()*/
-            console.log(temp);
+
         }
 
     })
@@ -338,7 +328,7 @@
     console.log($tr.find('.more'))
 
     $tr.find('.more').click(function () {
-        if (moreButtonTemp == 1) {
+        if (moreButtonTemp === 1) {
             moreButtonTemp--;
             $(this).parent().children('.account-modal').remove();
         } else {
@@ -353,11 +343,15 @@
                 //상단에 수정창 만들기
                 $('#quest-register-wrapper').show();
                 //수정창에 수정할 정보 넣기
-                $('.register td:nth-child(1)').text(($(this).closest('tr').children('td:eq(1)')).text())
-                $('.register td:nth-child(2)').text(($(this).closest('tr').children('td:eq(2)')).text())
-                $('.register td:nth-child(3)').text(($(this).closest('tr').children('td:eq(3)')).text())
-                $('.register td:nth-child(4)').text(($(this).closest('tr').children('td:eq(4)')).text())
-                $('.register td:nth-child(5)').text(($(this).closest('tr').children('td:eq(5)')).text())
+                // $('.register td:nth-child(1)').attr("value", $(this).closest('tr').children('td:eq(1)').text())
+                console.log($(this).closest('tr').children('td:eq(1)').text())
+                $('.register td:nth-child(1) input').val($(this).closest('tr').children('td:eq(1)').text())
+                $('.register td:nth-child(2) input').val($(this).closest('tr').children('td:eq(2)').text())
+                $('.register td:nth-child(3) input').val($(this).closest('tr').children('td:eq(3)').text())
+                $('.register td:nth-child(4) input').val($(this).closest('tr').children('td:eq(4)').text())
+                console.log( $(this).closest('tr').children('td:eq(5)').find('img'))
+                console.log($(this).closest('tr').children('td:eq(5)').find('img').attr('src'))
+                $('#preview').attr('src', $(this).closest('tr').children('td:eq(5)').find('img').attr('src'))
                 //수정 모달창과 버튼 삭제
                 $(this).closest('.account-modal').remove()
                 $(this).remove()
@@ -369,17 +363,47 @@
 
     $('.close').click(function (){
         $('#quest-register-wrapper').hide();
-        temp--;
+        $('.register td:nth-child(1) input').val('')
+        $('.register td:nth-child(2) input').val('')
+        $('.register td:nth-child(3) input').val('')
+        $('.register td:nth-child(4) input').val('')
+        $('#preview').attr('src', '/imgin/admin_file.png')
+        if(temp === 1){
+            temp--;}else if (moreButtonTemp === 1){
+            moreButtonTemp--;
+        }
     })
     $('.regist').click(function (){
         alert("퀘스트가 등록됐습니다.")
         $('#quest-register-wrapper').hide();
-        temp--;
+        $('.register td:nth-child(1) input').val('')
+        $('.register td:nth-child(2) input').val('')
+        $('.register td:nth-child(3) input').val('')
+        $('.register td:nth-child(4) input').val('')
+        $('#preview').attr('src', '/imgin/admin_file.png')
+        if(temp === 1){
+        temp--;}else if (moreButtonTemp === 1){
+            moreButtonTemp--;
+        }
+
     })
 
+    // 첨부파일 이미지 클릭시 파일 찾기 창 열림
+    function onClickUpload(){
+        let fileInput = $('input[type = file]')
+        fileInput.click();
+    }
 
 
-
+    // 뱃지 이미지 썸네일 띄우기
+    $(".badge").on("change", function(event) {
+        let file = event.target.files[0];
+        let reader = new FileReader();
+        reader.onload = function(e) {
+            $("#preview").attr("src", e.target.result);
+        }
+        reader.readAsDataURL(file);
+    });
 
 </script>
 
