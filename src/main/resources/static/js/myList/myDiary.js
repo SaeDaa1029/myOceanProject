@@ -25,7 +25,11 @@ $(window).resize(function(){
 
             $(".wholeWrap").css({"display":"flex", "flex-direction":"column"});
             $(".dateForm").css("width","98%");
-            $(".e12i9j8n0").css({"width":"95%", "margin": "0 auto"});
+            if(window.innerWidth>867){
+                $(".e12i9j8n0").css({"width":"768px", "margin": "0 auto"});
+            } else{
+                $(".e12i9j8n0").css({"width":"95%", "margin": "0 auto"});
+            }
             $(".e1k52epl0").css({"width":"32%"});
             $(".css-16df71f").css("float","none");
             $(".css-zr1uxp").css("height", "391px");
@@ -62,7 +66,6 @@ $(window).resize(function(){
         $(".e1k52epl0").css("font-size", "17px");
         $(".dateText").css("font-size", "14px");
     }
-
 })
 
 function checkCalendar(){
@@ -78,7 +81,11 @@ function checkCalendar(){
 
             $(".wholeWrap").css({"display":"flex", "flex-direction":"column"});
             $(".dateForm").css("width","98%");
-            $(".e12i9j8n0").css({"width":"95%", "margin": "0 auto"});
+            if(window.innerWidth>867){
+                $(".e12i9j8n0").css({"width":"768px", "margin": "0 auto"});
+            } else{
+                $(".e12i9j8n0").css({"width":"95%", "margin": "0 auto"});
+            }
             $(".e1k52epl0").css({"width":"32%"});
             $(".css-16df71f").css("float","none");
             $(".css-zr1uxp").css("height", "391px");
