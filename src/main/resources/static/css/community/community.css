@@ -98,7 +98,7 @@ img {
 }
 
 .fFBpBV {
-    width: auto;
+    width: 70px;
     height: auto;
     line-height: 14px;
     padding: 11px 20px;
@@ -885,8 +885,6 @@ button {
 
 
 .faWmEE {
-    osition: absolute;
-    right: 20px;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -901,6 +899,47 @@ button {
     bottom: calc(34px + env(safe-area-inset-bottom));
 }
 
+
+
 .faWmEE img {
     width: 14px;
+}
+
+
+/*반응형*/
+.media{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.media > div{
+    max-width: 450px !important;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.categoryMedia{
+    display: flex;
+    padding-bottom: 15px;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.categoryMedia > *{
+    margin-right: 9px;
+    margin-top: 7px;
+}
+
+.writeBtn {
+    right:-196px;
 }
