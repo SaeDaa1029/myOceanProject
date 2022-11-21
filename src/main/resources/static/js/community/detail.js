@@ -13,3 +13,4 @@ $detailBtn.click(function () {
     }
 
 })
+
