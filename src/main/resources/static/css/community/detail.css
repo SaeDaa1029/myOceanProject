@@ -1709,7 +1709,42 @@ button:disabled {
     color: black !important;
 }
 
-
+.loungeCardContentsComponents_loungeContentsMoreButtonBox__2jERo {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #dfe3e4;
+    border-radius: 4px;
+    min-width: 100px;
+    right: 0px;
+    display: -moz-inline-box;
+    display: inline-flex;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    padding: 8px 6px;
+    grid-gap: 10px;
+    gap: 10px;
+    /*display: none;*/
+}
+.loungeCardContentsComponents_loungeContentsMoreButtonBox__2jERo button {
+    position: relative;
+}
+.buttonComponents_button__1hvQa {
+    font-size: 14px;
+    line-height: 16px;
+    display: -moz-inline-box;
+    display: inline-flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: row;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    color: #202224;
+    grid-gap: 4px;
+    gap: 4px;
+}
 
 
 
