@@ -202,7 +202,7 @@
     http://localhost:15000/search/totalSearch
     
     2.통합 검색이 없을때 페이지
-    http://localhost:15000/search/nototalsearch
+    http://localhost:15000/search/noTotalSearch
     
     @law
     

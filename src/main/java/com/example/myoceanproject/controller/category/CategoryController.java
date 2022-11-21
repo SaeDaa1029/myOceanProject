@@ -10,7 +10,9 @@ public class CategoryController {
 
     //카테고리 페이지
     @GetMapping("/index")
-    public String bulletinBoard(){
+    public String Category(){
         return "app/category/category";
     }
+
+
 }
