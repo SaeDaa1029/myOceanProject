@@ -70,7 +70,7 @@ html {
     -webkit-box-align: center;
     align-items: center;
     padding: 20px;
-    border-bottom: 1px solid rgb(238, 238, 238);
+
 }
 .gVPyuz {
     color: rgb(51, 61, 75);
@@ -412,3 +412,122 @@ a{
     height: 850px;
     overflow-y: scroll;
 }
+.inputWrap{
+    padding-top: 0px!important;
+    padding: 20px;
+}
+
+.inputWrap input:last-child{
+    border-radius: 10px;
+}
+.inputWrap input:first-child{
+    color: #6faac7;
+    /*border-radius: 10px;*/
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    color: #6faac7;
+}
+
+.gRnEmw {
+    display: flex;
+    padding-bottom: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.gRnEmw > * {
+    margin-right: 16px;
+}
+.NVKNq {
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.fFBpBV {
+    width: auto;
+    height: auto;
+    line-height: 14px;
+    padding: 11px 20px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    color: initial;
+    font-size: 14px;
+    font-weight: 500;
+}
+.fFBpBV:hover {
+    background-color: #F6FAFE ;
+}
+.fFBpBV:active {
+    background-color: #F6FAFE ;
+}
+.fFBpBV.selected {
+    background-color: #d9dde1 ;
+}
+.sendBtn{
+    width: auto;
+    height: auto;
+    line-height: 14px;
+    padding: 11px 20px;
+    background-color: #d9dde1 ;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    color: initial;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 790px) {
+    .ciajVR{
+        display: block;
+    }
+}
+@media (max-width: 790px){
+    .ciajVR .active{
+        margin: auto;
+    }
+}
+/*@media (max-width: 790px) {*/
+/*    !*.month{*!*/
+/*    !*    display: none !important;*!*/
+/*    !*}*!*/
+/*}*/
+@media (max-width: 790px){
+    .inputWrap{
+        border-bottom: none;
+    }
+}
+@media (max-height: 600px){
+    .noticeListWrap{
+        height: 500px;
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 790px){
+    .ciajVR > div {
+        max-width: 411px;
+        width: 100%;
+        margin: auto;
+    }
+}
+@media (max-width: 790px){
+    .month {
+        margin: auto;
+        max-width: 411px;
+        width: 100%;
+    }
+}
+@media (max-width: 790px) {
+    .inputWrap input:last-child{
+        width: 354px;
+    }
+}
+
