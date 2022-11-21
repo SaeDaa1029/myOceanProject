@@ -1,8 +1,8 @@
-# MyQceanProject 공지사항
+# MyQceanProject notice
 
-# 포트 설정 : 15000
+#  port : 15000
   
-#  업데이트 : 2022-11-21
+# Update : 2022-11-21
 
 주소 4개 추가!
 
