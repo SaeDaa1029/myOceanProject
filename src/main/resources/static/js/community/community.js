@@ -16,7 +16,7 @@ $filterBtn.click(function () {
 })
 
 //모달
-//
+
 const $modal = $("#modal-root")
 const $modalCancelBtn = $(".kXWQPc");
 $(".lbwitP").click(function () {
