@@ -50,7 +50,6 @@ $profilePicture.on("click", function(){
 
 // 프로필 사진 썸네일 띄우기
 $(".fSxFPc").on("change", function(event) {
-    console.log("asdfsdf");
     let file = event.target.files[0];
     let reader = new FileReader();
     reader.onload = function(e) {
