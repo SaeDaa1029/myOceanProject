@@ -17,7 +17,7 @@
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 919px;
     background-color: #333333;
     color: #fff;
     transition: all 0.5s ease;
@@ -226,7 +226,7 @@ button{
 }
 
 #content {
-    height: 100%;
+    height: 876px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -333,10 +333,10 @@ input#search_input::placeholder {
     margin: auto;
 }
 
-#info_table {
+.info_table {
     display: table;
     width: 100%;
-    height: 100%;
+    height: 310px;
     box-sizing: border-box;
     text-align: center;
     vertical-align: middle;
@@ -348,7 +348,7 @@ input#search_input::placeholder {
     background-color: #fff;
 }
 
-#info_table caption{
+.info_table caption{
     text-align: start;
     margin-bottom: 10px;
     font-size: 18px;
@@ -368,14 +368,14 @@ table td:last-child, th:last-child {
 /*    border-left: 1px solid #dee2e6;*/
 /*}*/
 
-#info_table td:first-child{
+.info_table td:first-child{
     border-left: 0;
 }
 
-#info_table td:last-child{
+.info_table td:last-child{
     border-right: 0;
 }
-/*#info_table td:nth-child(2){
+/*.info_table td:nth-child(2){
     border-left: 0;
 }*/
 
