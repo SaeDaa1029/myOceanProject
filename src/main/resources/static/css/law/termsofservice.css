@@ -1,4 +1,14 @@
-@charset "UTF-8";
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    color: #000000;
+    text-shadow: none;
+}
+
 html, body {
     width: 100%;
     font-size: 14px;
@@ -16,41 +26,80 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-::before, ::after {
-    text-decoration: inherit;
-    vertical-align: inherit;
-}
-
-*, ::before, ::after {
-    background-repeat: no-repeat;
-    box-sizing: inherit;
-}
-
-::before, ::after {
-    text-decoration: inherit;
-    vertical-align: inherit;
-}
-
-*, ::before, ::after {
-    background-repeat: no-repeat;
-    box-sizing: inherit;
-}
-
-::selection {
-    background-color: #b3d4fc;
-    color: #000000;
-    text-shadow: none;
-}
-
-*, ::before, ::after {
-    background-repeat: no-repeat;
-    box-sizing: inherit;
-}
-
 * {
     outline: none;
     font-family: inherit;
 }
+
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+body.fontLoaded {
+    font-family: "SUIT", "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: "SUIT", "UI Frip", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+#app {
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.idXWQn {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+.hKZUBk {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 88px;
+    padding: 48px 0px 16px;
+    background-color: rgb(2, 74, 149);
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 4000;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: top 100ms linear 0s;
+}
+
+.boEfOZ {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    z-index: 4000;
+    bottom: 34px;
+}
+
+.eskQgv {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
 .bjvWMa {
     display: flex;
     flex-flow: column nowrap;
@@ -62,19 +111,27 @@ html {
     min-height: 1px;
     text-align: center;
 }
+
 .eDUhkf {
     margin: 0px auto;
     max-width: 770px;
     text-align: left;
 }
-.jlyXCe {
-    margin: 0px 0px 40px;
+
+.hYFpAb {
+    margin: 40px 0px 50px;
     width: 100%;
     line-height: 20px;
     font-size: 20px;
     font-weight: bold;
     text-align: left;
 }
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
 .hjgygv {
     color: rgb(155, 155, 155);
     line-height: 18px;
@@ -82,3 +139,4 @@ html {
     word-break: break-all;
     white-space: pre-wrap;
 }
+

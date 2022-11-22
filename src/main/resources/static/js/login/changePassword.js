@@ -3,11 +3,11 @@ var $password=passwordForm.password;
 var $passwordCheck=passwordForm.passwordConfirm;
 var passwordRegex=/^(?=.*?[A-Z]{0})(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{10,}$/;
 var $emailuuid=new URL(location.href).searchParams.get("verificationCode");
-var $dbuuid="0b2957c5-e47d-4c66-88ac-9998595e6c1f";
+var $dbuuid="32392a41-3013-4346-b459-b3368f610d3c";
 
 /* 현재 시간과 db 시간값 차이를 확인하기 위한 변수 및 계산식(밀리초로 표현) */
 const now=new Date();
-const firstDay=new Date("2022-11-20 18:50:00");
+const firstDay=new Date("2022-11-21 16:00:00");
 
 const tonow=now.getTime();
 passedTime=firstDay.getTime();
