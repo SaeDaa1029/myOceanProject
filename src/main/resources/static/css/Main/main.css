@@ -289,10 +289,11 @@ button, input, select, textarea {
 
 .VUNpu {
     display: initial;
-    border-radius: 5px;
+    border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: #2bd8ff;
 }
 
 .fFzchN > span {
@@ -388,13 +389,7 @@ button, input, select, textarea {
     display: none !important;
 }
 
-.VUNpu {
-    display: initial;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 
 .SNJNR {
     position: absolute;

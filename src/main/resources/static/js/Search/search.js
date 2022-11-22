@@ -4,16 +4,20 @@ checkMedia();
 $(window).resize(function(){
     if(window.innerWidth<769){
         $(".ProductList__ProductWrapper-sc-1lo0q2y-0").attr("class", "ProductList__ProductWrapper-sc-1lo0q2y-0 lcsYvn");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-12").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-12 hWBKQE12");
     } else{
         $(".ProductList__ProductWrapper-sc-1lo0q2y-0").attr("class", "ProductList__ProductWrapper-sc-1lo0q2y-0 jjtvVw");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-12").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-12 gRnEmw");
     }
 })
 
 function checkMedia(){
     if(window.innerWidth<769){
         $(".ProductList__ProductWrapper-sc-1lo0q2y-0").attr("class", "ProductList__ProductWrapper-sc-1lo0q2y-0 lcsYvn");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-12").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-12 hWBKQE12");
     } else{
         $(".ProductList__ProductWrapper-sc-1lo0q2y-0").attr("class", "ProductList__ProductWrapper-sc-1lo0q2y-0 jjtvVw");
+        $(".Filter__FilterButtonWrapper-sc-1buujtg-12").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-12 gRnEmw");
     }
 
 }
@@ -34,3 +38,4 @@ $filterBtn.click(function () {
                 </div>`)
     }
 })
+
