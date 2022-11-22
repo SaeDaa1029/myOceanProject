@@ -470,7 +470,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     background-color: #d9dde1 ;
 }
 .sendBtn{
-    width: auto;
+    width: 70px;
     height: auto;
     line-height: 14px;
     padding: 11px 20px;
@@ -482,6 +482,12 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     color: initial;
     font-size: 14px;
     font-weight: 500;
+}
+
+@media (max-width: 390px) {
+    .sendBtn{
+        width: 80px;
+    }
 }
 
 @media (max-width: 790px) {
@@ -525,9 +531,26 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
         width: 100%;
     }
 }
-@media (max-width: 790px) {
+/*
+@media (max-width: 740px) {
     .inputWrap input:last-child{
-        width: 354px;
+        width: 570px!important;
     }
 }
+@media (max-width: 705px) {
+    .inputWrap input:last-child{
+        width: 456px!important;
+    }
+}
+@media (max-width: 605px) {
+    .inputWrap input:last-child{
+        width: 356px!important;
+    }
+}
+@media (max-width: 480px) {
+    .inputWrap input:last-child{
+        width: 256px!important;
+    }
+}
+*/
 
