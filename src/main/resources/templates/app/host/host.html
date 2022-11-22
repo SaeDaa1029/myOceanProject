@@ -254,7 +254,7 @@
 																							</div>
 																						</legend>
 																						<div class="col-lg-10">
-																							<div class="">
+																							<div class="difficulty">
 																								<div class="my-2 radio-col col-lg-6 align-self-stretch">
 																									<div class="custom-control custom-radio custom-control-inline mt-3">
 																										<input type="radio" class="custom-control-input" value="NONE" id="__BVID__639">
@@ -331,33 +331,29 @@
 																									<!---->
 																								</div>
 																								<div data-v-217c2c81="">
-																									<div data-v-52931a0e="" data-v-217c2c81="" class="my-3">
+																									<div data-v-52931a0e="" data-v-217c2c81="" class="my-3 placTableBtn">
 																										<div data-v-52931a0e="">
 																											<div data-v-52931a0e="" class="clearfix">
 																												<div data-v-52931a0e="" class="float-left text-muted mt-3">
 																													<i data-v-52931a0e="" class="fas fa-bars"></i>
 																												</div>
 																												<div data-v-52931a0e="" class="float-right">
-																													<button data-v-52931a0e="" type="button" class="btn frip-button p-2 btn-outline-frip-default">
+																													<button data-v-52931a0e="" type="button" class="clearPlace btn frip-button p-2 btn-outline-frip-default">
 																														<!---->
 																														<img data-v-52931a0e="" src="https://frip.host/img/delete.6d6ddd61.svg" width="24" height="24">
 																													</button>
 																												</div>
 																											</div>
 																										</div>
-																										<div data-v-52931a0e="" class="my-2">
+																										<div data-v-52931a0e="" class="my-2 placeTable">
 																											<table data-v-52931a0e="" class="table table-sm border bg-white">
 																												<tr data-v-52931a0e="">
 																													<th data-v-52931a0e="" class="border text-muted text-center" style="width: 30%;"> 장소명 </th>
-																													<td data-v-52931a0e="" class="border text-wrap">xfcSzds</td>
+																													<td data-v-52931a0e="" class="placeName border text-wrap">xfcSzds</td>
 																												</tr>
 																												<tr data-v-52931a0e="">
 																													<th data-v-52931a0e="" class="border text-muted text-center" style="width: 30%;"> 주소 </th>
-																													<td data-v-52931a0e="" class="border text-wrap">서울 강남구 강남대로 328</td>
-																												</tr>
-																												<tr data-v-52931a0e="">
-																													<th data-v-52931a0e="" class="border text-muted text-center" style="width: 30%;"> 좌표 </th>
-																													<td data-v-52931a0e="" class="border text-wrap"> 위도37.487244 경도127.032781 </td>
+																													<td data-v-52931a0e="" class="placeAddr border text-wrap">서울 강남구 강남대로 328</td>
 																												</tr>
 																											</table>
 																										</div>
@@ -455,11 +451,7 @@
 																						</div>
 																						<div data-v-1e397a0c="" class="col">
 																							<div data-v-1e397a0c="" class="text-right mx-3">
-																								<a data-v-1e397a0c="" href="/product/list/undefined/schedules" class="btn frip-button btn-outline-frip-default" target="_self">
-																									<!---->
-																									모든 일정 확인하기
-																								</a>
-																								<button data-v-1e397a0c="" type="button" class="btn frip-button btn-outline-frip-primary">
+																								<button data-v-1e397a0c="" onclick="$('.day-btn').click();" type="button" class="btn frip-button btn-outline-frip-primary">
 																									<!---->
 																									일정 추가
 																								</button>
@@ -1055,14 +1047,13 @@
 														<!----> 일정 <!---->
 													</div>
 												</div>
-												<div class="col-lg-10">
+												<div class="col-lg-10" >
 													<div>
 														<div data-v-3b98bc42="">
 															<div data-v-3b98bc42="" class="el-select">
 																<!---->
 																<div class="el-input el-input--suffix">
 																	<!---->
-																	<input type="text" readonly="readonly" autocomplete="off" placeholder="" class="el-input__inner" value="반복없음">
 																	<!---->
 																	<span class="el-input__suffix">
 																		<span class="el-input__suffix-inner">
@@ -1074,33 +1065,9 @@
 																	</span>
 																	<!---->
 																</div>
-																<div class="el-select-dropdown el-popper" style="display: none; min-width: 227px;">
-																	<div class="el-scrollbar" style="">
-																		<div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
-																			<ul class="el-scrollbar__view el-select-dropdown__list">
-																				<!---->
-																				<li data-v-3b98bc42="" class="el-select-dropdown__item selected">
-																					<span>반복 없음</span>
-																				</li>
-																				<li data-v-3b98bc42="" class="el-select-dropdown__item">
-																					<span>매일</span>
-																				</li>
-																				<li data-v-3b98bc42="" class="el-select-dropdown__item">
-																					<span>매주</span>
-																				</li>
-																			</ul>
-																		</div>
-																		<div class="el-scrollbar__bar is-horizontal">
-																			<div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
-																		</div>
-																		<div class="el-scrollbar__bar is-vertical">
-																			<div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
-																		</div>
-																	</div>
 																	<!---->
 																</div>
 															</div>
-															<div data-v-3b98bc42="" class="text-muted text-sm my-2"> 일정 반복 기간을 입력해주세요. </div>
 															<!---->
 														</div>
 														<div data-v-3b98bc42="" class="mt-2">
@@ -1120,7 +1087,7 @@
 														<!---->
 													</div>
 												</div>
-												<div class="col-lg-10">
+												<div class="col-lg-10" style="margin-left: 5%;">
 													<div>
 														<div data-v-3b98bc42="">
 															<div data-v-3b98bc42="">
@@ -1544,7 +1511,6 @@
 													<div class="ml-3">
 														<div data-v-13e47d58="">
 															<div data-v-13e47d58="" class="row no-gutters">
-																<div data-v-13e47d58="" class="col-lg-5 selectBox"> 프립캡틴 </div>
 																<div data-v-13e47d58="" class="col-lg-5 selectBox"> 와이파이 </div>
 																<div data-v-13e47d58="" class="col-lg-5 selectBox"> 샤워시설 </div>
 																<div data-v-13e47d58="" class="col-lg-5 selectBox"> 휴대폰충전 </div>
@@ -1591,5 +1557,24 @@
 	$('.place').hide();
 	$('.image-header').hide();
 	$('.img-box').hide();
+	$('.placTableBtn').hide();
+	$('.my-2.placeTable').hide();
+
+	//반응형
+	function resizeApply() {
+		var minWidth = 1350;
+		var calender = document.getElementsByClassName('m-3')[1];
+		console.log(calender);
+		if (window.innerWidth < minWidth) { calender.style.zoom = (window.innerWidth / minWidth); }
+		else calender.style.zoom = 1;
+	}
+
+	window.onload = function() {
+		window.addEventListener('resize', function() {
+			resizeApply();
+		});
+	}
+
+	resizeApply();
 </script>
 </html>
