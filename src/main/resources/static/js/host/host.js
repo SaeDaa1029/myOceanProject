@@ -253,8 +253,12 @@ function findPlace(){
     $('#__BVID__1216___BV_modal_content_').hide();
 }
 
+let checkedLegion = false;
 //국내 || 해외 선택
 $('.countryOption .custom-radio').on('click', function(){
+    checkedLegion = true;
+        $('.countryOption .custom-radio').attr('value', 'false');
+        $(this).attr('value', 'true');
     if($(this).attr('data-value') != 'country'){
         $('.findBtn').hide();
     }else{
@@ -262,23 +266,46 @@ $('.countryOption .custom-radio').on('click', function(){
     }
 });
 
+//장소 등록 삭제
+$('.clearPlace').on('click', function(){
+    $('.placTableBtn').hide();
+    $('.my-2.placeTable').hide();
+});
+
+//난이도 선택
+$('.difficulty input[type=radio]').on('click', function(){
+    if($(this).is(':checked')){
+        $('.difficulty input[type=radio]').prop('checked',false);
+        $(this).prop('checked',true);
+    }
+});
 
 // 진행 장소 등록 버튼 클릭 이벤트막기
 $('.container .btn-frip-primary').on('click', function(e){
     if($('input[data-v-72dffd28]').eq(2).val() == ""){
         $('input[data-v-72dffd28]').eq(2).blur();
     }
+
+    if(!checkedLegion){
+        alert('해외장소 여부를 선택해주세요');
+    }
+
     if($('#placeAddress').val() == ""){
         e.preventDefault();
         $('#placeAddress').blur();
     }
+
     if($('input[data-v-72dffd28]').eq(2).val() != "" && $('#placeAddress').val() != ""){
         e.preventDefault();
+
+        $('.placeTable .placeName').text($('input[data-v-72dffd28]').eq(2).val());
+        $('.placeTable .placeAddr').text($('#placeAddress').val());
+        $('.my-2.placeTable').show();
+        $('.placTableBtn').show();
 
         closeModal();
     }
 });
-
 $('#placeAddress').on('blur', function(){
     if(!$(this).val()){
         $(this).attr('class', 'form-control is-invalid');
@@ -298,6 +325,8 @@ $('.day-btn').on('click', function(){
     $('input[type=date]').val($(this).attr('data-date'));
 });
 
+
+
 //일정 등록
 $('.createPlan').on('click', function(){
     //이거 백엔드에서 DB일정 등록하시고 rest로 달력이랑 같이 로딩하시면 됨,
@@ -313,10 +342,12 @@ $('.createPlan').on('click', function(){
 // 주차장 옵션 버튼 눌렀을때, 주차옵션이 있다면 메모를 할 수 있게함
 $('#parkingOption .custom-radio').on('click', function(){
     if($(this).children('input').attr('id') != 'parkingOption_BV_option_0'){
-        $(this).val('true');
+        console.log('proptrue');
         $('#parkingOption_BV_option_0').val('false')
+        $('#textarea').val('');
         $('#textarea').prop('disabled', true);
     }else{
+        console.log('propfalse');
         $('#parkingOption_BV_option_0').val('true')
         $('#textarea').prop('disabled', false);
     }
@@ -463,7 +494,6 @@ $('.number1').bind('keyup mouseup', function (){
 });
 
 $('.number2').bind('keyup mouseup', function (){
-    console.log('ㅇ');
     if($('.number1').val() > $('.number2').val()){
         $('.recruitment').next().css('display', 'block');
         $('.recruitment').next().show();
