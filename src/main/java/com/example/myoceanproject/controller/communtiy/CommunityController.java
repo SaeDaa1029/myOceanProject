@@ -20,10 +20,15 @@ public class CommunityController {
     }
 
     // 커뮤니티 글쓰기 페이지
-    @GetMapping("/write")
-    public String write(){
-        return "app/community/community_write";
+    @GetMapping("/register")
+    public String register(){
+        return "app/community/community_register";
     }
+
+//    @GetMapping("/write2")
+//    public String write2(){
+//        return "app/community/community_write2";
+//    }
 
     // 커뮤니티 상세보기 페이지
     @GetMapping("/detail")
