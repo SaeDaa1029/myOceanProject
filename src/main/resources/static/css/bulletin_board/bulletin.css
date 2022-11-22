@@ -64,7 +64,6 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
 }
 
 .koasSX {
-    width: auto;
     height: auto;
     transition: opacity 200ms ease-in-out 0s;
     display: none;
@@ -410,8 +409,9 @@ button, input, select, textarea {
 
 .media > * {
     margin-right: 15px;
+    margin-left: 10px;
     margin-bottom: 30px;
-    width: calc(50% - 19.5px) !important;
+    width: calc(100% - 19.5px) !important;
     display: inline-flex;
 }
 
