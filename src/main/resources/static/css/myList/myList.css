@@ -49,7 +49,7 @@ div#list_page_wrapper {
     overflow: auto;
 }
 
-#list_filter_wrapper, .list_filter_wrapper {
+#list_filter_wrapper {
     border-bottom: 1px solid rgb(238, 238, 238);
     padding: 20px 0px;
     width: auto;
@@ -60,6 +60,31 @@ div#list_page_wrapper {
     margin-bottom: 20px;
 }
 
+.list_filter_wrapper{
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 20px 0px;
+    width: auto;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.list_filter_wrapper .filter{
+    width: 111px;
+    border-radius: 5px;
+    height: 30px;
+    border: solid 1px #72b1ef;
+    text-align:center;
+    line-height: 1.9;
+    margin: 0 auto;
+}
+
+.filter:hover{
+    background: rgb(54, 85, 211);
+    color:white;
+}
 
 a {
     color: inherit;
