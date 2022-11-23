@@ -1,86 +1,13 @@
 @charset "utf-8";
 
-*{
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-::before, ::after {
-    background-repeat: no-repeat;
-    box-sizing: inherit;
-}
-
-html, body {
-    width: 100%;
-    font-size: 14px !important;
-    color: black;
-    word-break: normal;
-    overflow-wrap: break-word;
-    line-height: 1.5;
-}
-
-h2.title{
-    text-align: center;
-}
-html,body{
-    margin:0;
-    padding: 0;
-}
-
-.fzBbGO {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 768px;
-    margin: 0px auto;
-}
-
-.jIjcTX {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    line-height: 20px;
-    padding: 20px 0px;
-    font-size: 20px;
-    font-weight: bold;
-    height: 66px;
-}
-
-.koasSX {
-    width: auto;
-    height: auto;
-    transition: opacity 200ms ease-in-out 0s;
-    display: none;
-    opacity: 0;
-    min-width: 0px;
-    min-height: 1px;
-}
-
-.gVPyuz {
-    /*    color: rgb(51, 61, 75);
-        font-weight: bold;
-        font-size: 24px;*/
-    margin-right: 6px;
-}
-
-.filter_wrapper{
-    max-width: 768px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin-bottom: 10px;
-}
 
 /*셀렉트박스*/
 
-/*border-bottom: 1px solid rgb(238, 238, 238);*/
 .selectBox2 * { box-sizing: border-box; }
 .selectBox2 {
     position: relative;
     width: 150px;
-    height: 35px;
+    height: 38px;
     border-radius: 4px;
     border: 2px solid #eef5fa;
     background: url(/imgin/community/arrow.png) calc(100% - 12px) center no-repeat;
@@ -115,7 +42,7 @@ html,body{
 
 .selectBox2 .optionList {
     position: absolute;
-    top: 22px;
+    top: 24px;
     left: 0;
     width: 100%;
     background: #eef5fa;
@@ -133,13 +60,15 @@ html,body{
 }
 
 .selectBox2 .optionItem {
-    border-bottom: 1px dashed rgb(170, 72, 72);
+    border-bottom: 1px dashed rgb(255, 255, 255);
     padding: 5px 15px 5px;
     transition: .1s;
 }
 
 .selectBox2 .optionItem:hover {
-    background: rgb(175, 93, 93);
+    /*background: rgb(80, 80, 93);*/
+    background: #F6FAFE;
+    color: black;
 }
 
 .selectBox2 .optionItem:last-child {
@@ -154,11 +83,12 @@ html,body{
 
 /*셀렉트 박스*/
 .filter_wrapper{
-
+    display: flex;
+    gap: 16px;
 }
 
 .gRnEmw > * {
-    margin-right: 16px;
+    margin-right: 0px;
 }
 
 .gymLjt {
@@ -193,4 +123,38 @@ html,body{
 
 .exchange_filter_1h{
     display: none;
+}
+.gRnEmw {
+    display: flex;
+    z-index: 0;
+    justify-content: space-between;
+    overflow-x: unset;
+    padding-bottom: 15px;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.label{
+    font-weight: bold;
+}
+.optionList{
+    font-weight: bold;
+}
+
+.NVKNq button{
+    font-weight: bold;
+}
+
+.gVPyuz::placeholder{
+    /*font-weight: bold;*/
+}
+
+@media (max-width: 769px) {
+
+    .filter_wrapper{
+        display: flex;
+        gap: 16px;
+    }
 }
