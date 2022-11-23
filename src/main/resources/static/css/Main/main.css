@@ -289,12 +289,18 @@ button, input, select, textarea {
 
 .VUNpu {
     display: initial;
-    border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: #2bd8ff;
 }
+
+.mainCategory {
+    border-radius: 50%;
+    background: #323351;
+    width:100%;
+    height:100%;
+}
+
 
 .fFzchN > span {
     white-space: nowrap;
@@ -322,7 +328,7 @@ button, input, select, textarea {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     line-height: 18px;
     font-size: 14px;
 }
@@ -422,7 +428,7 @@ button, input, select, textarea {
 
 
 .iDZoyW {
-    padding: 10px 13px 0px 11px;
+    padding: 10px 5px 0px 0px;
 }
 
 .hgalyK {
@@ -467,7 +473,6 @@ button, input, select, textarea {
 
 .gsopHh {
     display: block;
-    margin: 0px 0px 0px 4px;
     color: rgb(51, 51, 51);
     font-size: 10px;
     font-weight: 400;
@@ -1091,9 +1096,17 @@ p, label {
 
 
 /* --------------------------------------------------------- */
+/*채팅창*/
+.chat{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    cursor:pointer;
+}
 
-
-
-
+.chatImg{
+    width: 45px;
+    height: 50px;
+}
 
 
