@@ -179,7 +179,8 @@ p, label {
 .butSez {
     margin: 17px 0px 17px 20px;
     width: 32px;
-    height: 24px;
+    height: 32px;
+    margin-top: 12px;
 }
 
 .dNvbrl {
