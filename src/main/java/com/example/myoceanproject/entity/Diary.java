@@ -22,6 +22,9 @@ public class Diary extends Period{
     private User user;
     private String diaryTitle;
     private String diaryContent;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
+    private User receiver;
 //extend period
 
 }

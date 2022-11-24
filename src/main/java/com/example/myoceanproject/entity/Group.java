@@ -20,12 +20,14 @@ public class Group extends Period{
     @JoinColumn(name = "USER_ID")
     private User user; //FK
     private String groupName;
-    private String groupCategory; //Enum
+    private String groupCategory; //직접 입력임. 선택x
     private String groupContent;
     private int groupPoint;
     private String groupLocation;
     private String groupLocationType; //Enum
     private String groupStatus; //Enum
+    private String thumbNailPath;
+    private String thumbNailOriginName;
 //extend period
 
 }

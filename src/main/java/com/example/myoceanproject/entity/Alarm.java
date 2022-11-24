@@ -23,6 +23,5 @@ public class Alarm extends Period{
     private String alarmContent;
     private LocalDateTime alarmDate;
     private String alarmStatus; //Enum
-//extend period
 
 }

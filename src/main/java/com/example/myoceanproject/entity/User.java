@@ -24,6 +24,8 @@ public class User extends Period{
     private String userNickname;
     private String userName;
     private String userStatus; //Enum으로 사용
+    private String userFilePath;
+    private String userFileOriginName;
 //extend period
 
 
