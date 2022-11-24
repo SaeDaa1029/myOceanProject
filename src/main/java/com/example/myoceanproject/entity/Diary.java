@@ -18,13 +18,13 @@ public class Diary extends Period{
     @GeneratedValue
     private Long diaryId; //PK
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_ID")
-    private User user;
+    @JoinColumn
+    private User senderUser;
     private String diaryTitle;
     private String diaryContent;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_ID")
-    private User receiver;
+    @JoinColumn
+    private User receiverUser;
 //extend period
 
 }
