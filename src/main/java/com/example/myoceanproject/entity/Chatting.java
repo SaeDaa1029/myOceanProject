@@ -19,6 +19,10 @@ public class Chatting extends Period{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "GROUP_ID")
     private Group group;//FK
+
+    private String chattingContent;
+
+    private String chattingReadStatus;
 //extend period
 
 
