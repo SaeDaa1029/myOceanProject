@@ -1,4 +1,4 @@
-package com.example.myoceanproject.mybatis;
+package com.example.advanced.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
