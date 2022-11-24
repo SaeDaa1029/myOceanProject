@@ -1713,7 +1713,6 @@ button:disabled {
 .loungeCardContentsComponents_loungeContentsMoreButtonBox__2jERo {
     position: absolute;
     background-color: #fff;
-    border: 1px solid #dfe3e4;
     border-radius: 4px;
     min-width: 100px;
     top: 53px;
@@ -1748,12 +1747,100 @@ button:disabled {
     gap: 4px;
 }
 
+.postUpdate_1j:hover{
+    background-color:#F6FAFE;
+}
+
+.postDelete_1j:hover{
+    background-color:#F6FAFE;
+}
 
 
+/*셀렉트박스*/
+
+.selectBox2 * { box-sizing: border-box; }
+.selectBox2 {
+    position: relative;
+    width: 150px;
+    height: 38px;
+    border-radius: 4px;
+    border: 2px solid #eef5fa;
+    background: url(/imgin/community/arrow.png) calc(100% - 12px) center no-repeat;
+    background-size: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
 
 
+.selectBox2:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    background: #eef5fa;
+}
+
+.selectBox2 .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.selectBox2 .optionList {
+    position: absolute;
+    top: -27px;
+    left: 36%;
+    width: 100px;
+    background: #fff;
+    color :black;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+    visibility: visible;
+    border: 1px solid rgb(190 187 187);
+}
+
+.selectBox2.active .optionList {
+    max-height: 500px;
+    text-align: center;
+}
+
+.selectBox2 .optionItem {
+    border-bottom: 1px dashed rgb(255, 255, 255);
+    padding: 5px 15px 5px;
+    transition: .1s;
+}
+
+.selectBox2 .optionItem:hover {
+    /*background: rgb(80, 80, 93);*/
+    background: #F6FAFE;
+    color: black;
+}
+
+.selectBox2 .optionItem:last-child {
+    border-bottom: 0 none;
+}
 
 
+.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+
+/*셀렉트 박스*/
 
 
 

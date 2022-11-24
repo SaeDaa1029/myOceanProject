@@ -7,6 +7,7 @@
     <title>h.hyeoniya 커뮤니티 글작성</title>
     <link rel="stylesheet" href="/css/community/community.css">
     <link rel="stylesheet" href="/css/community/community_write2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
 <!--    <link rel="stylesheet" href="https://codex.so/public/build/codex.bundle.css?v=1647866282">-->
     <link rel="stylesheet" href="/css/community/bundle.css">
@@ -19,15 +20,26 @@
     .scroll-up.show {
         opacity: 0;
     }
+    *{
+        font-family: "Noto Sans KR" !important;
+    }
 </style>
 <body>
 <header th:replace="/app/fix/header.html :: header"></header>
 <form onsubmit="return false;">
     <div class="SocialFeedPage__Wrapper-ky5ymg-0 fzBbGO">
+        <div class="highWrapper">
         <div class="SocialFeedPage__Header-ky5ymg-1 jIjcTX">
             <div style="padding-left: 20px; padding-right: 20px;">
                 <input type="text" class="SocialFeedPage__Title-ky5ymg-2 gVPyuz" placeholder="제목을 작성해 주세요" style="border: none">
             </div>
+        </div>
+        <div class="FilterAll__Wrapper-tqa6fq-0 jJIWoq until650px">
+
+            <div class="FilterOpenButton__Wrapper-sc-91gci-0 NVKNq">
+                <button height="auto" color="initial" font-size="14px" font-weight="500" class="Button-bqxlp0-0 fFBpBV">등록</button>
+            </div>
+        </div>
         </div>
         <!-- 카테고리 필터 -->
         <div class="Filter__FilterButtonWrapper-sc-1buujtg-1 gRnEmw">
@@ -63,14 +75,14 @@
                 </div>
             </div>
             <!-- 글등록 버튼 -->
-            <div class="FilterAll__Wrapper-tqa6fq-0 jJIWoq">
+            <div class="FilterAll__Wrapper-tqa6fq-0 jJIWoq registerBtn_1h">
 
                 <div class="FilterOpenButton__Wrapper-sc-91gci-0 NVKNq">
                     <button height="auto" color="initial" font-size="14px" font-weight="500" class="Button-bqxlp0-0 fFBpBV">등록</button>
                 </div>
             </div>
         </div>
-    <div style="padding: 30px 0;z-index: -10;">
+    <div style="padding: 30px 0;">
 
         <div class="editor-landing__demo" data-module="editorLanding">
                 <textarea name="module-settings" hidden="">            {

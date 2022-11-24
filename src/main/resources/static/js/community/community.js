@@ -174,17 +174,26 @@ $(window).resize(function(){
     if(window.innerWidth<785){
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 media");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 categoryMedia");
+        $("a.down785px").show();
+        $("a.until785px").hide();
         // $(".writeBtn").parent().css("position", "relative");
         // $(".writeBtn").parent().css("right", "0px");
-        if(window.innerWidth<575){
+        if(window.innerWidth<594){
+            $(".filter_wrapper_3l").css("content","center");
             $(".jIjcTX").css("margin", "");
+            $(".categoryMedia >div").css("justify-content", "start");
         } else{
+            $(".filter_wrapper_3l").css("content","start");
             $(".jIjcTX").css("margin", "auto");
+            $(".categoryMedia >div").css("justify-content", "center");
         }
     } else{
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 ciajVR");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 gRnEmw");
         $(".jIjcTX").css("margin", "");
+        $("a.down785px").hide();
+        $("a.until785px").show();
+        $(".categoryMedia >div").css("justify-content", "start");
         // $(".writeBtn").parent().css("right", "-196px");
         // $(".writeBtn").parent().css("right", "29.5%");
         // $(".writeBtn").parent().css("position", "absolute");
@@ -192,21 +201,30 @@ $(window).resize(function(){
 })
 
 function checkMedia(){
+
     if(window.innerWidth<785){
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 media");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 categoryMedia");
-
+        $("a.down785px").show();
+        $("a.until785px").hide();
         // $(".writeBtn").parent().css("position", "relative");
         // $(".writeBtn").parent().css("right", "0px");
-        if(window.innerWidth<575){
+        if(window.innerWidth<594){
+            $(".filter_wrapper_3l").css("content","center");
             $(".jIjcTX").css("margin", "");
+            $(".categoryMedia >div").css("justify-content", "start");
         } else{
+            $(".filter_wrapper_3l").css("content","start");
             $(".jIjcTX").css("margin", "auto");
+            $(".categoryMedia >div").css("justify-content", "center");
         }
     } else{
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 ciajVR");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 gRnEmw");
         $(".jIjcTX").css("margin", "");
+        $("a.down785px").hide();
+        $("a.until785px").show();
+        $(".categoryMedia >div").css("justify-content", "start");
         // $(".writeBtn").parent().css("right", "-196px");
         // $(".writeBtn").parent().css("right", "29.5%");
         // $(".writeBtn").parent().css("position", "absolute");
