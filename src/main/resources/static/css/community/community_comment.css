@@ -387,3 +387,22 @@ button, input, select, textarea {
     display: none;
 
 }
+.gjVRLr{
+    position:fixed;
+    bottom: -14px;
+}
+
+@media only screen and (max-width: 784px) {
+    .gjVRLr{
+        position:fixed;
+        bottom: 40px;
+    }
+
+}
+@media only screen and (min-width: 769px) and (max-width: 784px){
+    .gjVRLr{
+        position:fixed;
+        bottom: -14px;
+    }
+
+}
