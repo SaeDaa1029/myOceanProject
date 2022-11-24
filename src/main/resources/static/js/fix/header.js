@@ -7,7 +7,7 @@ checkWidth();
 
 function checkWidth(){
     if($windowWidth<769){
-        $("header").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 bHgsOZ");
+        $("GlobalNavigationBar__Wrapper-og74wb-0").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 bHgsOZ");
         $(".fqlSHx").hide(); //카테고리 가리기
         $(".cRoOrU").hide(); //카테고리 옆 선 가리기
         $(".kiAeGP").hide(); //피드/저장/마이 가리기
@@ -17,7 +17,7 @@ function checkWidth(){
         //$section.hide();
         $section.css("display", "none");
     } else{
-        $("header").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 dPJHWR");
+        $("GlobalNavigationBar__Wrapper-og74wb-0").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 dPJHWR");
         $(".fqlSHx").show(); //카테고리
         $(".cRoOrU").show(); //카테고리 옆 선 가리기
         $(".kiAeGP").show(); //피드/저장/마이
@@ -30,7 +30,7 @@ function checkWidth(){
 
 $(window).resize(function() {
     if (window.innerWidth < 769) {
-        $("header").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 bHgsOZ");
+        $("GlobalNavigationBar__Wrapper-og74wb-0").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 bHgsOZ");
         $(".fqlSHx").hide(); //카테고리 가리기
         $(".cRoOrU").hide(); //카테고리 옆 선 가리기
         $(".kiAeGP").hide(); //피드/저장/마이 가리기
@@ -40,7 +40,7 @@ $(window).resize(function() {
         //$section.hide();
         $section.css("display", "none");
     } else{
-        $("header").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 dPJHWR");
+        $("GlobalNavigationBar__Wrapper-og74wb-0").attr("class", "GlobalNavigationBar__Wrapper-og74wb-0 dPJHWR");
         $(".fqlSHx").show(); //카테고리
         $(".cRoOrU").show(); //카테고리 옆 선 가리기
         $(".kiAeGP").show(); //피드/저장/마이
