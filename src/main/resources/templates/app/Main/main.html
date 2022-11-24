@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="/css/Main/swiper.css">
+    <link rel="stylesheet" href="/css/fix/chatting.css">
 
     <style>
         html,
@@ -81,7 +82,7 @@
 </head>
 <body>
 <header th:replace="/app/fix/header.html :: header"></header>
-
+<div th:replace="/app/fix/chattingAll.html:: chattingAll"></div>
 <div id="app">
     <div class="App__AppWrapper-nc5ti6-0 idXWQn">
         <div class="Top__TopToastMessage-boaj4f-0 ToastContainer__ExtendedTopToastMessage-sqfjqn-2 hKZUBk" style="top: -88px;"></div>
@@ -107,9 +108,6 @@
                                             <!-- Swiper -->
                                             <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events">
                                                 <div class="swiper-wrapper" id="swiper-wrapper-f10ba2ab650a99373" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-4788px, 0px, 0px);">
-                                                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" role="group" aria-label="5 / 5" style="width: 768px; margin-right: 30px;">
-                                                        <img src="../../imgin/슬라이드배너2.png">
-                                                    </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 100%; margin-right: 30px;">
                                                         <img src="/imgin/main/mainbanner/mainbanner_001.png" style="width:100%;" class="slidePic">
                                                     </div>
@@ -172,9 +170,6 @@
                                             <!-- Swiper -->
                                             <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events">
                                                 <div class="swiper-wrapper" id="swiper-wrapper-f10ba2ab650a993733" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-4788px, 0px, 0px);">
-                                                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" role="group" aria-label="5 / 5" style="width: 768px; margin-right: 30px;">
-                                                        <img src="../../imgin/슬라이드배너2.png">
-                                                    </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 100%; margin-right: 30px;">
                                                         <img src="/imgin/main/mainbanner/mainbanner_media_001.png" style="width:100%;" class="slidePic">
                                                     </div>
@@ -235,7 +230,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/일기.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/diary.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -252,7 +247,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/요리.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/cook.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -269,7 +264,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/영화.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/movie.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -286,7 +281,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/운동.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/sports.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -302,7 +297,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/책.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/book.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -318,7 +313,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/자유게시판.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/freeboard.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -335,7 +330,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/고민상담.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/consulting.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -351,7 +346,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/모임.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/group.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -367,7 +362,7 @@
                                         <div class="Ratio " style="display: block;">
                                             <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                 <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                    <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/퀘스트.png">
+                                                    <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/quest.png">
                                                 </div>
                                             </div>
                                         </div>
@@ -384,7 +379,7 @@
                                             <div class="Ratio " style="display: block;">
                                                 <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
                                                     <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/투두리스트.png">
+                                                        <img class="Image__StyledImage-v97gyx-1 VUNpu mainCategory" width="60" height="60" src="/imgin/main/todolist.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -459,7 +454,7 @@
                                             <span class="CardProduct__Location-a817d1-7 hgalyK">성동/광진</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">[원데이/성수동] 조물조물 칼라 클레이 플레이트 만들기 _도자기 공예 (예약 가능)</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 57</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 57</span>
                                             </div>
                                             <hr type="Line" size="16" class="Border-sc-1bzcz1p-0 eXQzbT">
                                             <div class="CardProduct__PriceContainer-a817d1-11 gyjVwY">
@@ -490,7 +485,7 @@
                                             <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">마포/서대문/은평</span>
                                                 <div class="CardProduct__Title-a817d1-8 kxyGXE">[망원] 스콘2종(플레인/커피초코칩) 16~20개 만들기 (예약 가능)</div>
                                                 <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                    <span class="CardProduct__Review-a817d1-10 gsopHh">후기 488</span>
+                                                    <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 488</span>
                                                 </div>
                                                 <hr type="Line" size="16" class="Border-sc-1bzcz1p-0 eXQzbT">
                                                 <div class="CardProduct__PriceContainer-a817d1-11 gyjVwY">
@@ -521,7 +516,7 @@
                                             <span class="CardProduct__Location-a817d1-7 hgalyK">성동/광진</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">[프립단독 | 티마카세] 예술적인 공간, 예술같은 티 코스</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 55</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 55</span>
                                             </div>
                                             <hr type="Line" size="16" class="Border-sc-1bzcz1p-0 eXQzbT">
                                             <div class="CardProduct__PriceContainer-a817d1-11 gyjVwY">
@@ -536,125 +531,10 @@
                         </section>
                     </div>
                 </div>
-                <div class="BannerWrapper__HomeBannerWrapper-sc-17qp9bv-0 ljXeaB">
-                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                        <div class="BannerImageSlider__Wrapper-sc-2prw1h-0 eivtx">
-                            <div class="ImageSlider__SliderWrapper-sc-1obm2ug-0 dueCVJ">
-                                <div class="slick-slider ImageSlider__StyledSlider-sc-1obm2ug-1 pFyVo slick-initialized" dir="ltr">
-                                    <div class="slick-list">
-                                        <div class="slick-track" style="opacity: 1; transform: translate3d(-768px, 0px, 0px); width: 5376px;">
-                                            <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 768px;">
-                                                <div><a class="withLink__StyledLink-zuberk-0 lQqkn" href="/magazines/10157133">
-                                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF"><img class="Image__StyledImageLoader-v97gyx-2 bUFcfh" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                        <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                                                            <div class="Ratio " style="display: block;">
-                                                                <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 12.9032%;">
-                                                                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                        <img alt="서브배너 이미지" class="Image__StyledImage-v97gyx-1 VUNpz" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a></div>
-                                            </div>
-                                            <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 768px;">
-                                                <div><a class="withLink__StyledLink-zuberk-0 lQqkn" href="/magazines/10157173">
-                                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF"><img class="Image__StyledImageLoader-v97gyx-2 bUFcfh" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                        <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                                                            <div class="Ratio " style="display: block;">
-                                                                <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 12.9032%;">
-                                                                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                        <img alt="서브배너 이미지" class="Image__StyledImage-v97gyx-1 VUNpz" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a></div>
-                                            </div>
-                                            <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 768px;">
-                                                <div><a href="https://www.instagram.com/frip_korea/" target="_blank" class="withLink__StyledA-zuberk-1 jfPgNj">
-                                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF"><img class="Image__StyledImageLoader-v97gyx-2 bUFcfh" width="768" src="https://res.cloudinary.com/frientrip/image/upload/ar_31:4,c_fill,dpr_2,f_auto,q_auto,w_930/Web_1860x240%20(5)_1be0a758a39c802c8a553316b07066a413d814b7540fe17da8e3682d789b7300">
-                                                        <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                                                            <div class="Ratio " style="display: block;">
-                                                                <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 12.9032%;">
-                                                                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                        <img alt="서브배너 이미지" class="Image__StyledImage-v97gyx-1 VUNpz" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a></div>
-                                            </div>
-                                            <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 768px;">
-                                                <div><a class="withLink__StyledLink-zuberk-0 lQqkn" href="/magazines/10157133">
-                                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF"><img class="Image__StyledImageLoader-v97gyx-2 bUFcfh" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                        <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                                                            <div class="Ratio " style="display: block;">
-                                                                <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 12.9032%;">
-                                                                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                        <img alt="서브배너 이미지" class="Image__StyledImage-v97gyx-1 VUNpz" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a></div>
-                                            </div>
-                                            <div data-index="3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 768px;">
-                                                <div><a class="withLink__StyledLink-zuberk-0 lQqkn" href="/magazines/10157173">
-                                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF"><img class="Image__StyledImageLoader-v97gyx-2 bUFcfh" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                        <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                                                            <div class="Ratio " style="display: block;">
-                                                                <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 12.9032%;">
-                                                                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                        <img alt="서브배너 이미지" class="Image__StyledImage-v97gyx-1 VUNpz" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a></div>
-                                            </div>
-                                            <div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 768px;">
-                                                <div><a href="https://www.instagram.com/frip_korea/" target="_blank" class="withLink__StyledA-zuberk-1 jfPgNj">
-                                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF"><img class="Image__StyledImageLoader-v97gyx-2 bUFcfh" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                        <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                                                            <div class="Ratio " style="display: block;">
-                                                                <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 12.9032%;">
-                                                                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                        <img alt="서브배너 이미지" class="Image__StyledImage-v97gyx-1 VUNpz" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a></div>
-                                            </div>
-                                            <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 768px;">
-                                                <div><a class="withLink__StyledLink-zuberk-0 lQqkn" href="/magazines/10157133">
-                                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF"><img class="Image__StyledImageLoader-v97gyx-2 bUFcfh" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                        <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                                                            <div class="Ratio " style="display: block;">
-                                                                <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 12.9032%;">
-                                                                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                        <img alt="서브배너 이미지" class="Image__StyledImage-v97gyx-1 VUNpz" width="768" src="/imgin/main/brandbanner/brandbanner_001.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href="/myQuest/todayQuest" target="_blank" class="HostBanner__Wrapper-sc-15wm6s2-0 ikopRC">
+                    <img src="/imgin/main/brandbanner/brandbanner_quest.png" class="HostBanner__BannerImage-sc-15wm6s2-1 eaJzkp">
+                    <img src="/imgin/main/brandbanner/brandbanner_quest.png" class="HostBanner__BannerImage-sc-15wm6s2-1 eaJzkp" style="display:none;">
+                </a>
                 <div class="ProductList__Wrapper-sc-1pj7ods-0 kqydUo">
                     <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
                         <section class="CardGroupProduct__Wrapper-sc-1uq4zjb-0 jUxAIa">
@@ -684,7 +564,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">경기 전체</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">[11/13(일) 출발확정] 나는솔로 촬영지💕 니지모리스튜디오+산사원</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 59</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 59</span>
                                             </div>
                                         </div>
                                     </div>
@@ -708,7 +588,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">제주시</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">[제주] 쿨대니의 Barn Party! 말목장에서 자연인이 되어보자 (예약 가능)</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 24</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 24</span>
                                             </div>
                                         </div>
                                     </div>
@@ -732,7 +612,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">종로/중구</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">고궁 및 서울 사진명소에서 함께 출사를 통해 뷰포인트와 구도를 배워봅니다 (예약 가능)</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 235</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 235</span>
                                             </div>
                                         </div>
                                     </div>
@@ -756,7 +636,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">제주시</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">[제주살기] 구도심 속 힙한 호스텔 in 탑동 #베드라디오 (예약 가능)</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 10</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 10</span>
                                             </div>
                                         </div>
                                     </div>
@@ -782,44 +662,50 @@
                                             <!-- Swiper -->
                                             <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events" style="height: 180;">
                                                 <div class="swiper-wrapper" id="swiper-wrapper-f10ba2ab650a993723" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-4788px, 0px, 0px);">
-                                                    <a href="http://localhost:15000/community/index">
-                                                        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" role="group" aria-label="9 / 9" style="width: 768px; margin-right: 30px;">
-                                                            <img src="/imgin/main/영화메인배너.png" style="width:100%;">
-                                                        </div>
-                                                    </a>
                                                     <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <a href="http://localhost:15000/community/index">
-                                                            <img src="/imgin/main/자유게시판메인배너.png" style="width:100%;">
+                                                        <a href="/community/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_freeboard.png" style="width:100%;">
                                                         </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <a href="http://localhost:15000/community/index">
-                                                            <img src="/imgin/main/운동메인배너.png" style="width:100%;">
+                                                        <a href="/community/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_exercise.png" style="width:100%;">
                                                         </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/main/영화메인배너.png" style="width:100%;">
+                                                        <a href="/community/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_cook.png" style="width:100%;">
+                                                        </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/슬라이드배너3.png" style="width:100%;">
+                                                        <a href="/community/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_diary.png" style="width:100%;">
+                                                        </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="4" role="group" aria-label="5 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/슬라이드배너2.png" style="width:100%;">
+                                                        <a href="/community/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_movie.png" style="width:100%;">
+                                                        </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="5" role="group" aria-label="6 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/슬라이드배너3.png" style="width:100%;">
+                                                        <a href="/community/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_book.png" style="width:100%;">
+                                                        </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="6" role="group" aria-label="7 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/슬라이드배너2.png" style="width:100%;">
+                                                        <a href="/community/anonymous">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_consulting.png" style="width:100%;">
+                                                        </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="7" role="group" aria-label="8 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/슬라이드배너3.png" style="width:100%;">
+                                                        <a href="/myspace/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_todolist.png" style="width:100%;">
+                                                        </a>
                                                     </div>
                                                     <div class="swiper-slide" data-swiper-slide-index="8" role="group" aria-label="9 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/슬라이드배너2.png" style="width:100%;">
-                                                    </div>
-                                                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 768px; margin-right: 30px;">
-                                                        <img src="/imgin/슬라이드배너2.png" style="width:100%;">
+                                                        <a href="/bulletineBoard/index">
+                                                            <img src="/imgin/main/sidebanner/sidebanner_gettogether.png" style="width:100%;">
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f10ba2ab650a99373" style="
@@ -828,11 +714,23 @@
                                                 <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-f10ba2ab650a99373" style="
     color: white;
 "></div>
-                                                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 6" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
-                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-
+                                                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
+                                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 6" aria-current="true"></span>
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span>
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span>
+                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span>
+                                                </div>
+                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                            </div>
                                             <!--여기가 두번쨰 끝점-->
-
                                         </div>
 
                                     </div>
@@ -968,7 +866,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">강서/금천/양천</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">[동반할인] 쫀득쫀득한 찹쌀 브라우니(예약 가능)</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 24</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 24</span>
                                             </div>
                                         </div>
                                     </div>
@@ -992,7 +890,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">노원/강북/도봉/중랑</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">[서울/쌍문/노원]퓨전떡케이크 쌀베이킹 클래스</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 17</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 17</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1016,7 +914,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">영등포/구로</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">전통주&amp;안주 만들고 나누는 모임 </div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 2</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 2</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1040,7 +938,7 @@
                                         <div class="CardProduct__DetailContainer-a817d1-6 iDZoyW"><span class="CardProduct__Location-a817d1-7 hgalyK">성동/광진</span>
                                             <div class="CardProduct__Title-a817d1-8 kxyGXE">오페라 떡케이크 만들기 (예약 가능)</div>
                                             <div class="CardProduct__ReviewContainer-a817d1-9 ftUvAC">
-                                                <span class="CardProduct__Review-a817d1-10 gsopHh">후기 4</span>
+                                                <span class="CardProduct__Review-a817d1-10 gsopHh">댓글 4</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1085,7 +983,7 @@
                                                     <div class="Ratio " style="display: block;">
                                                         <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 79.2079%;">
                                                             <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
-                                                                <img alt="이달의 우수후기 [음악] 썸네일" class="Image__StyledImage-v97gyx-1 VUNpz" width="256" src="https://res.cloudinary.com/frientrip/image/upload/ar_101:80,c_fill,dpr_2,f_auto,q_auto,w_310/product_banner_1667811253897_52776">
+                                                                <img alt="이달의 우수댓글 [음악] 썸네일" class="Image__StyledImage-v97gyx-1 VUNpz" width="256" src="https://res.cloudinary.com/frientrip/image/upload/ar_101:80,c_fill,dpr_2,f_auto,q_auto,w_310/product_banner_1667811253897_52776">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1093,9 +991,9 @@
                                             </div>
                                         </div>
                                         <div class="CardMagazine__InfoWrapper-sc-1v8lgcg-1 fghRNM">
-                                            <div class="CardMagazine__Title-sc-1v8lgcg-2 iyvDaS">이달의 우수후기 [음악]
+                                            <div class="CardMagazine__Title-sc-1v8lgcg-2 iyvDaS">이달의 우수댓글 [음악]
                                             </div>
-                                            <div>(10월) 다섯 크루의 우수후기를 소개합니다!</div>
+                                            <div>(10월) 다섯 크루의 우수댓글를 소개합니다!</div>
                                         </div>
                                     </div>
                                 </a></div>
@@ -1222,14 +1120,11 @@
                         </section>
                     </div>
                 </div>
-                <a href="https://team.frip.co.kr/joinhost" target="_blank" class="HostBanner__Wrapper-sc-15wm6s2-0 ikopRC">
+                <a href="" target="_blank" class="HostBanner__Wrapper-sc-15wm6s2-0 ikopRC">
                     <img src="/imgin/main/brandbanner/brandbanner_002.png" class="HostBanner__BannerImage-sc-15wm6s2-1 eaJzkp">
-                    <img src="https://www.frip.co.kr/8fd85b28f6451ccae91240ec780b280d.png" class="HostBanner__BannerImage-sc-15wm6s2-1 eaJzkp" style="display:none;">
+                    <img src="/imgin/main/brandbanner/brandbanner_001.png" class="HostBanner__BannerImage-sc-15wm6s2-1 eaJzkp" style="display:none;">
                 </a>
             </div>
-        </div>
-        <div class="chat">
-            <img src="/imgin/chat/chat.png" class="chatImg">
         </div>
     </div>
 </div>
@@ -1243,6 +1138,7 @@
 <!--<script src="/js/fix/fix.js"></script>-->
 <script src="/js/main/main.js"></script>
 <script src="/js/fix/header.js"></script>
+<script src="/js/fix/chatting.js"></script>
 <script type="text/javascript">
     /* 카테고리 숨김 / 보이기 버튼  */
 

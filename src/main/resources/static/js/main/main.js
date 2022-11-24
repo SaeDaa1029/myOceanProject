@@ -55,6 +55,8 @@ $(window).resize(function(){
         //채팅 위치 조절
         $(".chat").css("bottom", "90px");
 
+        //채팅 아이콘 위치 조절
+        $(".chattingWrap2").css("bottom","95px");
     }
     else{
         $("#test").attr("class", ".ToastContainer__BottomToastWrapper-sqfjqn-0 .boEfOZ");
@@ -108,6 +110,8 @@ $(window).resize(function(){
         //채팅 위치 조절
         $(".chat").css("bottom", "30px");
 
+        //채팅 아이콘 위치 조절
+        $(".chattingWrap2").css("bottom","30px");
     }
 }).resize();
 

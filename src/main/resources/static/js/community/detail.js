@@ -14,3 +14,17 @@ $detailBtn.click(function () {
 
 })
 
+const $updateAndDeleteModal = $(".loungeCardContentsComponents_loungeContentsMoreButtonBox__2jERo");
+let modalCheck = false
+$(".fOXNjA").on("click",function () {
+    if(!modalCheck){
+        $updateAndDeleteModal.css("display","inline-flex");
+        modalCheck = true;
+    }else{
+        $updateAndDeleteModal.hide();
+        modalCheck=false;
+    }
+
+
+})
+

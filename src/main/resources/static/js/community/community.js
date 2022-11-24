@@ -1,19 +1,142 @@
 
-const $filterBtn = $(".jJIWoq")
+const $filterBtn = $(".childFilter");
+const $allBtn = $(".allFilter");
 
-$filterBtn.click(function () {
-    let text= $(this).text().trim();
-    if($(this).find("button").hasClass('fFBpBV')) {
+const $cook = $(".cookFilter");
+const $exercise = $(".exerciseFilter")
+const $movie = $(".movieFilter")
+const $book = $(".bookFilter")
+const $diary = $(".diaryFilter")
+
+//요리
+$cook.on("click",function () {
+    if($(this).find("button").hasClass("fFBpBV")){
         $(this).find("button").removeClass('fFBpBV').addClass("kJEnf");
-        $(this).children().append('<button height="18px" class="Button-bqxlp0-0 FilterOpenButton__CloseButton-sc-91gci-1 gRNDCb"><img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'18\' height=\'18\' viewBox=\'0 0 18 18\'%3E %3Cg fill=\'none\' fill-rule=\'nonzero\' stroke=\'%23DDD\' stroke-linecap=\'square\'%3E %3Cpath d=\'M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172\'/%3E %3C/g%3E %3C/svg%3E" class="FilterOpenButton__CloseIcon-sc-91gci-2 hnfyOW"></button>')
-
+        $(this).find(".gRNDCb").show()
     }else{
-        $(this).empty();
-        $(this).append(`<div class="FilterOpenButton__Wrapper-sc-91gci-0 NVKNq">
-                    <button height="auto" color="initial" font-size="14px" font-weight="500" class="Button-bqxlp0-0 fFBpBV">`+text+`</button>
-                </div>`)
+        $(this).find("button").removeClass('kJEnf').addClass("fFBpBV");
+        $(this).find(".gRNDCb").hide()
+    }
+
+    if($filterBtn.find(".kJEnf").length==10){
+        allCheck()
+    }else{
+        allCheckCancel()
     }
 })
+
+//운동
+$movie.on("click",function () {
+    if($(this).find("button").hasClass("fFBpBV")){
+        $(this).find("button").removeClass('fFBpBV').addClass("kJEnf");
+        $(this).find(".gRNDCb").show()
+    }else{
+        $(this).find("button").removeClass('kJEnf').addClass("fFBpBV");
+        $(this).find(".gRNDCb").hide()
+    }
+    if($filterBtn.find(".kJEnf").length==10){
+        allCheck()
+    }else{
+        allCheckCancel()
+    }
+})
+
+//영화
+$exercise.on("click",function () {
+    if($(this).find("button").hasClass("fFBpBV")){
+        $(this).find("button").removeClass('fFBpBV').addClass("kJEnf");
+        $(this).find(".gRNDCb").show()
+    }else{
+        $(this).find("button").removeClass('kJEnf').addClass("fFBpBV");
+        $(this).find(".gRNDCb").hide()
+    }
+    if($filterBtn.find(".kJEnf").length==10){
+        allCheck()
+    }else{
+        allCheckCancel()
+    }
+})
+
+//책
+$book.on("click",function () {
+    if($(this).find("button").hasClass("fFBpBV")){
+        $(this).find("button").removeClass('fFBpBV').addClass("kJEnf");
+        $(this).find(".gRNDCb").show()
+    }else{
+        $(this).find("button").removeClass('kJEnf').addClass("fFBpBV");
+        $(this).find(".gRNDCb").hide()
+    }
+    if($filterBtn.find(".kJEnf").length==10){
+        allCheck()
+    }else{
+        allCheckCancel()
+    }
+})
+//다이어리
+$diary.on("click",function () {
+    if($(this).find("button").hasClass("fFBpBV")){
+        $(this).find("button").removeClass('fFBpBV').addClass("kJEnf");
+        $(this).find(".gRNDCb").show()
+    }else{
+        $(this).find("button").removeClass('kJEnf').addClass("fFBpBV");
+        $(this).find(".gRNDCb").hide()
+    }
+    if($filterBtn.find(".kJEnf").length==10){
+        allCheck()
+    }else{
+        allCheckCancel()
+    }
+})
+
+function allCheck(){
+    $allBtn.find("button").removeClass('fFBpBV').addClass("kJEnf");
+    $allBtn.find(".gRNDCb").show()
+}
+
+function allCheckCancel(){
+    $allBtn.find("button").removeClass('kJEnf').addClass("fFBpBV");
+    $allBtn.find(".gRNDCb").hide()
+}
+
+
+
+$allBtn.on("click",function () {
+    
+  if($(this).find("button").hasClass("fFBpBV")){
+      allCheck();
+      $filterBtn.each((i,item)=>{
+          $(item).find("button").removeClass('fFBpBV').addClass("kJEnf");
+          $(item).find(".gRNDCb").show()
+      })
+  }else{
+      allCheckCancel();
+      $filterBtn.each((i,item)=>{
+          $(item).find("button").removeClass('kJEnf').addClass("fFBpBV");
+          $(item).find(".gRNDCb").hide()
+      })
+  }
+
+})
+
+
+
+// $filterBtn.click(function () {
+//     let text= $(this).text().trim();
+//     if($(this).find("button").hasClass('fFBpBV')) {
+//         $(this).find("button").removeClass('fFBpBV').addClass("kJEnf");
+//         $('.gRNDCb').show();
+//     }else{
+//         $(this).empty();
+//         $(this).append(`<div class="FilterOpenButton__Wrapper-sc-91gci-0 NVKNq">
+//                     <button height="auto" color="initial" font-size="14px" font-weight="500" class="Button-bqxlp0-0 fFBpBV">`+text+`</button>
+//                 </div>`)
+//     }
+// })
+
+
+
+
+
 
 //모달
 
@@ -51,7 +174,8 @@ $(window).resize(function(){
     if(window.innerWidth<785){
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 media");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 categoryMedia");
-        $(".writeBtn").css("right", "0px");
+        // $(".writeBtn").parent().css("position", "relative");
+        // $(".writeBtn").parent().css("right", "0px");
         if(window.innerWidth<575){
             $(".jIjcTX").css("margin", "");
         } else{
@@ -61,7 +185,9 @@ $(window).resize(function(){
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 ciajVR");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 gRnEmw");
         $(".jIjcTX").css("margin", "");
-        $(".writeBtn").css("right", "-196px");
+        // $(".writeBtn").parent().css("right", "-196px");
+        // $(".writeBtn").parent().css("right", "29.5%");
+        // $(".writeBtn").parent().css("position", "absolute");
     }
 })
 
@@ -69,7 +195,9 @@ function checkMedia(){
     if(window.innerWidth<785){
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 media");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 categoryMedia");
-        $(".writeBtn").css("right", "0px");
+
+        // $(".writeBtn").parent().css("position", "relative");
+        // $(".writeBtn").parent().css("right", "0px");
         if(window.innerWidth<575){
             $(".jIjcTX").css("margin", "");
         } else{
@@ -79,6 +207,8 @@ function checkMedia(){
         $(".view__FeedListWrapper-sc-1fff32g-0").attr("class", "view__FeedListWrapper-sc-1fff32g-0 ciajVR");
         $(".Filter__FilterButtonWrapper-sc-1buujtg-1").attr("class", "Filter__FilterButtonWrapper-sc-1buujtg-1 gRnEmw");
         $(".jIjcTX").css("margin", "");
-        $(".writeBtn").css("right", "-196px");
+        // $(".writeBtn").parent().css("right", "-196px");
+        // $(".writeBtn").parent().css("right", "29.5%");
+        // $(".writeBtn").parent().css("position", "absolute");
     }
 }
