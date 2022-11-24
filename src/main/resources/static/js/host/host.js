@@ -144,6 +144,19 @@ $(`.nextDay`).on('click', function(){
     makeCalendar(new Date(date.setMonth(date.getMonth() + 1)));
 });
 
+//일정 등록 날짜
+$('input[type=date]').on('change', function(){
+    new Date(this.value) < date ? $('.dateNotice').css('display', ''): $('.dateNotice').css('display', 'none');
+});
+
+//신청가능 날짜
+$('input[type=number].period').bind('keyup mouseup', function (){
+    let selDate = new Date($('input[type=date]').val());
+    console.log(selDate);
+    selDate = new Date(selDate.setDate(selDate.getDate()-this.value));
+    $('.periodNotice').text(`${selDate.getFullYear()}년 ${selDate.getMonth()+1}월 ${selDate.getDate()}일까지 대원이 신청할 수 있습니다.`);
+});
+
 
 // 기본정보/프립설명 탭 이동
 $(".nav-item a").on('click', function(e){
@@ -220,6 +233,10 @@ $('.input-group input[type=text].form-control').on('input', function(){
 $('.input-group .form-control').on('blur', function(){
     $(this).next().children('span').css('border-color', '');
     $(this).css('border-color', '');
+    if($(this).attr('class') == 'number1 form-control' || $(this).attr('class') == 'number2 form-control'){
+        console.log('d');
+        return;
+    }
     if(!$(this).val()){
         $(this).attr('class', 'form-control is-invalid');
         $(this).next().children('span').attr('class', 'input-group-text is-invalid');
@@ -251,6 +268,8 @@ function findPlace(){
     $('#__BVID__287___BV_modal_outer_').show();
     $('#__BVID__287___BV_modal_content_').show();
     $('#__BVID__1216___BV_modal_content_').hide();
+    $('#__BVID__21___BV_modal_content_').hide();
+    $('#__BVID__123___BV_modal_content_').hide();
 }
 
 let checkedLegion = false;
@@ -268,20 +287,20 @@ $('.countryOption .custom-radio').on('click', function(){
 
 //장소 등록 삭제
 $('.clearPlace').on('click', function(){
-    $('.placTableBtn').hide();
+    $('.placeTableBtn').hide();
     $('.my-2.placeTable').hide();
 });
 
-//난이도 선택
-$('.difficulty input[type=radio]').on('click', function(){
-    if($(this).is(':checked')){
-        $('.difficulty input[type=radio]').prop('checked',false);
-        $(this).prop('checked',true);
-    }
-});
+// //난이도 선택
+// $('.difficulty input[type=radio]').on('click', function(){
+//     if($(this).is(':checked')){
+//         $('.difficulty input[type=radio]').prop('checked',false);
+//         $(this).prop('checked',true);
+//     }
+// });
 
 // 진행 장소 등록 버튼 클릭 이벤트막기
-$('.container .btn-frip-primary').on('click', function(e){
+$('.createPlace').on('click', function(e){
     if($('input[data-v-72dffd28]').eq(2).val() == ""){
         $('input[data-v-72dffd28]').eq(2).blur();
     }
@@ -301,7 +320,7 @@ $('.container .btn-frip-primary').on('click', function(e){
         $('.placeTable .placeName').text($('input[data-v-72dffd28]').eq(2).val());
         $('.placeTable .placeAddr').text($('#placeAddress').val());
         $('.my-2.placeTable').show();
-        $('.placTableBtn').show();
+        $('.placeTableBtn').show();
 
         closeModal();
     }
@@ -316,23 +335,65 @@ $('#placeAddress').on('blur', function(){
 
 
 // 일정 추가 버튼 클릭 -> 모달창 열기
-
 $('.day-btn').on('click', function(){
     $('#__BVID__287___BV_modal_outer_').show();
     $('#__BVID__287___BV_modal_content_').hide();
+    $('#__BVID__21___BV_modal_content_').hide();
+    $('#__BVID__123___BV_modal_content_').hide();
     $('#__BVID__1216___BV_modal_content_').show();
 
     $('input[type=date]').val($(this).attr('data-date'));
+    let selDate = new Date($('input[type=date]').val());
+    selDate < date ? $('.dateNotice').css('display', ''): $('.dateNotice').css('display', 'none');
+    if($('input[type=date]').val()){
+        $('.periodNotice').text(`${selDate.getFullYear()}년 ${selDate.getMonth()+1}월 ${selDate.getDate()}일까지 대원이 신청할 수 있습니다.`);
+    }else{
+        $('.periodNotice').text(`날짜를 입력해주세요`);
+    }
 });
 
+//일정 시간 유효성 검사
+$('.openTime').on('change', function (){
+    console.log(this.value);
+    let openTime = new Date(date.setTime($('.openTime').val()));
+    let closeTime = new Date(date.setTime($('.closeTime').val()));
+
+    console.log(openTime.getTime());
+    console.log(closeTime.getTime());
+
+    // if($('.openTime').val() > $('.closeTime').val()){
+    //     $('.timeNotice').css('display', '');
+    // }else{
+    //     $('.timeNotice').css('display', 'none');
+    // }
+    //
+    // if($('.closeTime').val() - $())
+});
 
 
 //일정 등록
 $('.createPlan').on('click', function(){
     //이거 백엔드에서 DB일정 등록하시고 rest로 달력이랑 같이 로딩하시면 됨,
-    // 내용은 알아서 변경해주세요 대충 뼈대만 이해하시라고 코드 남깁니다
-    let plan = {date : $('input[type=date]').val(), content : '테스트123' };
-    console.log(data);
+
+    if(!$('input[type=date]').val()){
+        $('input[type=date]').focus();
+        return;
+    }
+
+    if(!$('.openTime').val() || !$('.closeTime').val()){
+        $('.openTime').focus();
+        return;
+    }
+
+    if(!$('input[type=number].period').val()){
+        $('input[type=number].period').focus();
+        return;
+    }
+
+    if($('.dateNotice').css('display') != 'none'){
+        return;
+    }
+
     $('#__BVID__287___BV_modal_outer_').hide();
     $('#__BVID__1216___BV_modal_content_').hide();
 });
@@ -355,6 +416,9 @@ $('#parkingOption .custom-radio').on('click', function(){
 
 // 옵션 선택 박스 선택시
 $('.col-lg-5.selectBox').on('click', function(){
+    if($(this).attr('class') == 'col-lg-5 selectBox selected'){
+        $(this).attr('class', 'col-lg-5 selectBox');
+    }
     $(this).attr('class', 'col-lg-5 selectBox selected');
 });
 
@@ -384,8 +448,29 @@ $('.removeImg').on('click', function(){
     $('.img-box').attr('src', '');
 });
 
-//등록버튼
+//검수 요청 버튼
 $('.fixed-bottom .frip-button').on('click', function(){
+    $('#__BVID__287___BV_modal_outer_').show();
+    $('#__BVID__287___BV_modal_content_').hide();
+    $('#__BVID__21___BV_modal_content_').show();
+    $('#__BVID__1216___BV_modal_content_').hide();
+    $('#__BVID__123___BV_modal_content_').hide();
+});
+
+//검수 요청 확인
+$('.checkRequest').on('click', function (){
+//    누르면 승인대기 상태로 바꾸기
+    $('#__BVID__287___BV_modal_outer_').hide();
+});
+
+//임시 저장 버튼
+$('.saveRecruitment').on('click', function (){
+    $('.cancelRecruitment').show();
+    $('#__BVID__287___BV_modal_outer_').show();
+    $('#__BVID__287___BV_modal_content_').hide();
+    $('#__BVID__21___BV_modal_content_').hide();
+    $('#__BVID__1216___BV_modal_content_').hide();
+    $('#__BVID__123___BV_modal_content_').show();
 
 });
 
@@ -485,17 +570,17 @@ $(function() {
 //인원 설정 시 유료성검사.
 $('.number1').bind('keyup mouseup', function (){
     if($('.number1').val() > $('.number2').val()){
-        $('form .invalid-feedback').css('display', 'block');
+        $('.recruitment').next().css('display', '');
         $('.recruitment').next().show();
     }else{
         $('.recruitment').next().hide();
-        $('form .invalid-feedback').css('display', 'none');
+        $('.recruitment').next().css('display', 'none');
     }
 });
 
 $('.number2').bind('keyup mouseup', function (){
     if($('.number1').val() > $('.number2').val()){
-        $('.recruitment').next().css('display', 'block');
+        $('.recruitment').next().css('display', '');
         $('.recruitment').next().show();
     }else{
         $('.recruitment').next().hide();
