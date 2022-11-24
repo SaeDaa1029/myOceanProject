@@ -47,3 +47,25 @@ $exchangeFilterLi.click(function () {
     $(this).parent().prev().text(text);
 
 })
+
+checkMedia()
+$(window).resize(function(){
+    if(window.innerWidth<650){
+      $(".registerBtn_1h").hide()
+        $(".until650px").show()
+    } else{
+        $(".registerBtn_1h").show()
+        $(".until650px").hide()
+    }
+})
+
+function checkMedia(){
+
+    if(window.innerWidth<650){
+        $(".registerBtn_1h").hide()
+        $(".until650px").show()
+    } else{
+        $(".registerBtn_1h").show()
+        $(".until650px").hide()
+    }
+}

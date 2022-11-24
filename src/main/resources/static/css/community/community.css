@@ -924,19 +924,20 @@ button {
     border-bottom: 1px solid rgb(238, 238, 238);
 }
 
-.categoryMedia{
+.categoryMedia > div{
     display: flex;
     padding-bottom: 15px;
-    white-space: nowrap;
+    border-bottom: 1px solid rgb(238, 238, 238);
+
     padding-left: 20px;
     padding-right: 20px;
-    border-bottom: 1px solid rgb(238, 238, 238);
+    white-space: nowrap;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     margin: auto;
 }
 
-.categoryMedia > *{
+.categoryMedia > a, .categoryMedia > div > *{
     margin-right: 9px;
     margin-top: 7px;
 }
@@ -956,3 +957,21 @@ button {
     display: none;
     border: none;
 }
+
+/*.headWrapper_1h{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+.down785px{
+    display: none;
+    position: relative;
+    top: -2px;
+    left: 18px;
+}
+
+.jIjcTX{
+    display: flex;
+    justify-content: start;
+}
+

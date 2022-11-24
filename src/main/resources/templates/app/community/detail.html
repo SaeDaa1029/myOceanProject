@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="/css/community/detail.css">
     <link rel="stylesheet" href="/css/fix/header.css">
     <link rel="stylesheet" href="/css/fix/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
+<style>
+    *{
+        font-family: "Noto Sans KR" !important;
+    }
+</style>
 <body>
 <header th:replace="/app/fix/header.html :: header"></header>
     <div class="ProductDetailPage__Wrapper-sc-126q1k2-0 CijWU">
@@ -157,8 +163,15 @@
                                         </div>
                                         <!-- 수정,삭제 모달-->
                                         <div class="loungeCardContentsComponents_loungeContentsMoreButtonBox__2jERo">
-                                            <button class="buttonComponents_button__1hvQa buttonComponents_plain__1ljW5 postUpdate_1j">수정</button>
-                                            <button class="buttonComponents_button__1hvQa buttonComponents_plain__1ljW5 postDelete_1j">삭제</button>
+<!--                                            <button class="buttonComponents_button__1hvQa buttonComponents_plain__1ljW5 postUpdate_1j">수정</button>-->
+<!--                                            <button class="buttonComponents_button__1hvQa buttonComponents_plain__1ljW5 postDelete_1j">삭제</button>-->
+                                            <div class="selectBox2 exchange_filter_1h active" style="display: block;">
+                                                <ul class="optionList">
+                                                    <input type="hidden" class="exchange_filter_input" value="교환 일기">
+                                                    <li class="optionItem" style="border-bottom: 1px solid rgb(220 215 215);">수정</li>
+                                                    <li class="optionItem">삭제</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
