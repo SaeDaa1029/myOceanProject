@@ -305,3 +305,21 @@ div.my_list:hover{
     line-height: 20px;
     margin-top: 6px;
 }
+
+/*모임 상태*/
+.groupStatus{
+    margin-right:15px;
+}
+
+.completeGroup{
+    color: coral;
+}
+
+.readyGroup{
+    color: #0314b4;
+}
+
+.denyGroup{
+    color: #062965;
+}
+

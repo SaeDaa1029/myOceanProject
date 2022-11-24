@@ -374,3 +374,17 @@ button:disabled {
 .jlqpgo:hover{
     background: #F6FAFE;
 }
+
+
+/*답변 상태*/
+.answerStatus{
+    margin-right: 15px;
+}
+
+.completeAnswer{
+    color: coral;
+}
+
+.readyAnswer{
+    color: #0314b4;
+}
