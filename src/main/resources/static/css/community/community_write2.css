@@ -3,6 +3,8 @@
 
 /*셀렉트박스*/
 
+
+
 .selectBox2 * { box-sizing: border-box; }
 .selectBox2 {
     position: relative;
@@ -81,7 +83,10 @@
 .selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
 .selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
 
-/*셀렉트 박스*/
+/*여기 위까지 셀렉트 박스*/
+
+
+
 .filter_wrapper{
     display: flex;
     gap: 16px;
@@ -126,7 +131,7 @@
 }
 .gRnEmw {
     display: flex;
-    z-index: 0;
+    z-index: 5;
     justify-content: space-between;
     overflow-x: unset;
     padding-bottom: 15px;
@@ -151,10 +156,38 @@
     /*font-weight: bold;*/
 }
 
-@media (max-width: 769px) {
-
-    .filter_wrapper{
-        display: flex;
-        gap: 16px;
+@media (max-width: 650px) {
+    .selectBox2{
+        width: 125px;
     }
+}
+
+
+@media (max-width: 416px) {
+    .selectBox2{
+        width: 100px;
+        font-size: 10px;
+    }
+    .filter_wrapper{
+        width: 100%;
+        justify-content: start;
+    }
+    .selectBox2 .label{
+        padding-left: 9px;
+    }
+}
+
+.optionList li{
+    z-index: 5;
+}
+
+.highWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.until650px{
+    position: relative;
+    top: 19px;
+    left: -14px;
 }
