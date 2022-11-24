@@ -7,10 +7,12 @@
     <title>h.hyeoniya_모임목록</title>
     <link rel="stylesheet" href="/css/fix/header.css">
     <link rel="stylesheet" href="/css/fix/footer.css">
+    <link rel="stylesheet" href="/css/fix/chatting.css">
     <link rel="stylesheet" href="/css/bulletin_board/bulletin.css">
 </head>
 <body>
 <header th:replace="/app/fix/header.html :: header"></header>
+<div th:replace="/app/fix/chattingAll.html:: chattingAll"></div>
     <div class="PageWrapper-sc-1w87j10-0 bScXKt">
         <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
             <div class="sc-AxgMl fFPQpk">이번주 모임 추천👍🏻<span class="sc-AxheI eXzlnr">26</span></div>
@@ -741,5 +743,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/fix/header.js"></script>
+<script src="/js/fix/chatting.js"></script>
 <script src="/js/bulletin_board/bulletin_board.js"></script>
 </html>

@@ -1,4 +1,3 @@
-
 * {
     outline: none;
     font-family: inherit;
@@ -177,10 +176,9 @@ p, label {
 }
 
 .butSez {
-    margin: 17px 0px 17px 20px;
+    margin: 12px 0px 17px 20px;
     width: 32px;
     height: 32px;
-    margin-top: 12px;
 }
 
 .dNvbrl {
@@ -554,4 +552,3 @@ a, area, button, input, label, select, textarea, [tabindex] {
     right: 18px;
     transform: rotate(45deg);
 }
-
