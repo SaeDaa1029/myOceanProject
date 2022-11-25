@@ -9,8 +9,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_POINT")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "user")
 public class Point extends Period{
     @Id
     @GeneratedValue
@@ -20,4 +19,13 @@ public class Point extends Period{
     private User user; //FK
     private String pointAmountHistory;
 
+    public void create(Long pointId, User user, String pointAmountHistory) {
+        this.pointId = pointId;
+        this.user = user;
+        this.pointAmountHistory = pointAmountHistory;
+    }
+
+    public void changeUser(User user){
+        this.user = user;
+    }
 }

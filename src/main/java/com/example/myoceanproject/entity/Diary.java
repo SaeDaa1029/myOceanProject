@@ -10,8 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_DIARY")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = {"senderUser", "receiverUser"})
 @NoArgsConstructor
 public class Diary extends Period{
     @Id
@@ -19,12 +18,26 @@ public class Diary extends Period{
     private Long diaryId; //PK
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
-    private User senderUser;
+    private User user;
     private String diaryTitle;
     private String diaryContent;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
     private User receiverUser;
-//extend period
 
+    public void create(Long diaryId, User user, String diaryTitle, String diaryContent, User receiverUser) {
+        this.diaryId = diaryId;
+        this.user = user;
+        this.diaryTitle = diaryTitle;
+        this.diaryContent = diaryContent;
+        this.receiverUser = receiverUser;
+    }
+
+    public void changeUser(User user){
+        this.user = user;
+    }
+
+    public void changeReceiverUser(User receiverUser){
+        this.receiverUser = receiverUser;
+    }
 }

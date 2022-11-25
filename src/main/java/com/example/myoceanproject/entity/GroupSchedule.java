@@ -10,8 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "TBL_GROUP_SCHEDULE")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "group")
 public class GroupSchedule extends Period{
     @Id
     @GeneratedValue
@@ -22,6 +21,16 @@ public class GroupSchedule extends Period{
     private LocalDateTime groupScheduleDate;
     private LocalDateTime groupScheduleStartTime;
     private LocalDateTime groupScheduleEndTime;
-//extend period
 
+    public void create(Long groupScheduleId, Group group, LocalDateTime groupScheduleDate, LocalDateTime groupScheduleStartTime, LocalDateTime groupScheduleEndTime) {
+        this.groupScheduleId = groupScheduleId;
+        this.group = group;
+        this.groupScheduleDate = groupScheduleDate;
+        this.groupScheduleStartTime = groupScheduleStartTime;
+        this.groupScheduleEndTime = groupScheduleEndTime;
+    }
+
+    public void changeGroup(Group group){
+        this.group = group;
+    }
 }

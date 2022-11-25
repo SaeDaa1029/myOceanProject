@@ -8,8 +8,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_ASK")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "user")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Ask extends Period{
     @Id
@@ -23,6 +22,16 @@ public class Ask extends Period{
     private String askContent;
     private AskCategory askCategory;
 
+    public void create(Long askId, User user, String askStatus, String askTitle, String askContent, AskCategory askCategory) {
+        this.askId = askId;
+        this.user = user;
+        this.askStatus = askStatus;
+        this.askTitle = askTitle;
+        this.askContent = askContent;
+        this.askCategory = askCategory;
+    }
 
-
+    public void changeUser(User user){
+        this.user = user;
+    }
 }

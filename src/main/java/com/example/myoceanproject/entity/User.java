@@ -61,6 +61,16 @@ public class User extends Period {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<Alarm> alarms;
 
+    public User(Long userId, String userEmail, String userPassword, String userNickname, String userName, UserAccountStatus userAccountStatus, UserLoginMethod userLoginMethod, File file) {
+        this.userId = userId;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userNickname = userNickname;
+        this.userName = userName;
+        this.userAccountStatus = userAccountStatus;
+        this.userLoginMethod = userLoginMethod;
+        this.file = file;
+    }
 
 
 }

@@ -11,8 +11,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "TBL_ALARM")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "user")
 public class Alarm extends Period{
 
     @Id
@@ -24,5 +23,18 @@ public class Alarm extends Period{
     private String alarmContent;
     private LocalDateTime alarmDate;
     private ReadStatus readStatus; //Enum
+
+    public void create(Long alarmId, User user, String alarmContent, LocalDateTime alarmDate, ReadStatus readStatus) {
+        this.alarmId = alarmId;
+        this.user = user;
+        this.alarmContent = alarmContent;
+        this.alarmDate = alarmDate;
+        this.readStatus = readStatus;
+    }
+
+    public void changeUser(User user){
+        this.user = user;
+    }
+
 
 }
