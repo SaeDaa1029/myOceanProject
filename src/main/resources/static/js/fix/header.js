@@ -35,6 +35,7 @@ $(window).resize(function() {
         $(".cRoOrU").hide(); //카테고리 옆 선 가리기
         $(".kiAeGP").hide(); //피드/저장/마이 가리기
         $(".ierGsl").hide(); //알람 상태 메세지 가리기
+        $("#serachshowone").hide(); //카테고리를 켜 놓은 상태였다면 카테고리 끄기
         $nav.css("display", "flex");
         $nav.show();
         //$section.hide();

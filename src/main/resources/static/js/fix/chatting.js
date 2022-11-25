@@ -1,3 +1,65 @@
+
+$chatDateLine = $(".chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap .dayInfo");
+
+checkChatMedia();
+/*반응형*/
+function checkChatMedia(){
+    if (window.innerWidth < 769) {
+        //채팅창 썸네일 이미지 삭제
+        $(".chatThumb").css("display", "none");
+        //채팅창 활성화 시작 시간 삭제
+        $(".beforeTime").css("display", "none");
+        //채팅창 활성화 종료 시간 삭제
+        $(".endTime").css("display", "none");
+        //채팅창 설명 삭제
+        $(".chatInfoTxt").css("display", "none");
+        //채팅 내역에서 날짜 옆 선 길이 조정
+        $chatDateLine.attr("class", "dayInfo media");
+
+
+    } else{
+        //채팅창 썸네일 이미지 살리기
+        $(".chatThumb").css("display", "block");
+        //채팅창 활성화 시작 시간 삭제
+        $(".beforeTime").css("display", "block");
+        //채팅창 활성화 종료 시간 삭제
+        $(".endTime").css("display", "block");
+        //채팅창 설명 삭제
+        $(".chatInfoTxt").css("display", "block");
+        //채팅 내역에서 날짜 옆 선 길이 조정
+        $chatDateLine.attr("class", "dayInfo");
+    }
+}
+
+$(window).resize(function() {
+    if (window.innerWidth < 769) {
+        //채팅창 썸네일 이미지 삭제
+        $(".chatThumb").css("display", "none");
+        //채팅창 활성화 시작 시간 삭제
+        $(".beforeTime").css("display", "none");
+        //채팅창 활성화 종료 시간 삭제
+        $(".endTime").css("display", "none");
+        //채팅창 설명 삭제
+        $(".chatInfoTxt").css("display", "none");
+        //채팅 내역에서 날짜 옆 선 길이 조정
+        $chatDateLine.attr("class", "dayInfo media");
+
+
+    } else{
+        //채팅창 썸네일 이미지 살리기
+        $(".chatThumb").css("display", "block");
+        //채팅창 활성화 시작 시간 삭제
+        $(".beforeTime").css("display", "block");
+        //채팅창 활성화 종료 시간 삭제
+        $(".endTime").css("display", "block");
+        //채팅창 설명 삭제
+        $(".chatInfoTxt").css("display", "block");
+        //채팅 내역에서 날짜 옆 선 길이 조정
+        $chatDateLine.attr("class", "dayInfo");
+    }
+})
+
+
 /* 오른쪽 하단 아이콘 누르면 채팅창 보이기 */
 $(".chattingWrap2").on("click", function () {
     $(".chattingWrap2").css("display", "none");

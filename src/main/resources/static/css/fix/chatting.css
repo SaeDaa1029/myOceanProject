@@ -17,12 +17,12 @@ dl, li, menu, ol, ul {
 }
 
 .chattingWrap {
-    right: -360px;
+    right: 0px;
     max-width: 720px;
 }
 
 .chattingWrap2 {
-    right: 0px;
+    right: 10px;
     height: 50px;
     max-width: 50px;
     display: block;
@@ -49,7 +49,7 @@ dl, li, menu, ol, ul {
     margin: 0 auto;
     z-index: 6999;
     bottom: 0;
-    transform: translateX(-50%);
+    /*transform: translateX(-50%);*/
     text-align: right;
 }
 
@@ -108,29 +108,21 @@ blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4,
 
 .chattingWrap .chattingContentWrap .left {
     max-width: 250px;
-    width: 100%;
+    width: 40%;
     border-right: 1px solid #f0f0f0;
     box-sizing: border-box;
-    padding: 0 12px;
+    padding: 0 18px;
 }
 
 .chattingWrap .chattingContentWrap .chattingHeader .left p {
     padding: 18px 0 7px;
     font-weight: 700;
     font-size: 1rem;
+    text-align:left;
 }
 
 .chattingWrap .chattingContentWrap .chattingSection .list ul {
     width: 100%;
-}
-
-.chattingWrap .chattingContentWrap .chattingHeader .right, .chattingWrap .chattingContentWrap .chattingHeader .right.active {
-    flex-direction: row;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 5px 16px 5px 20px;
-    width: 100%;
-    position: relative;
 }
 
 .chattingWrap .chattingContentWrap .chattingHeader .right {
@@ -143,7 +135,7 @@ blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4,
     left: -20px;
     top: -10px;
     background-color: #fff;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/786/786263.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/8765/8765454.png);
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
@@ -415,7 +407,9 @@ a, button, input, select, textarea {
     margin-top: 2px;
 }
 
-.chattingWrap .chattingContentWrap .chattingSection .list ul li .chatInfo .endTime {
+.chattingWrap .chattingContentWrap .chattingSection .list ul li .chatInfo .endTime,
+.chattingWrap .chattingContentWrap .chattingSection .list ul li .chatInfo .beforeTime
+{
     font-size: .65rem;
     color: #222;
     text-align: left;
@@ -426,6 +420,7 @@ a, button, input, select, textarea {
     width: 100%;
     display: flex;
     flex-direction: column;
+    background: #bacee0;
 }
 
 .chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap {
@@ -439,6 +434,10 @@ a, button, input, select, textarea {
     padding: 5px 22px;
     margin-bottom: 5px;
     flex: 1 1;
+}
+
+.chattingRoomWrap::-webkit-scrollbar{
+    width: 5px;
 }
 
 .chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap .dayInfo {
@@ -529,10 +528,11 @@ img {
     position: relative;
     margin-left: 10px;
     border-radius: 4px;
-    max-width: 205px;
+    max-width: 150px;
     text-align: left;
     word-wrap: break-word;
     margin-bottom: 5px;
+    box-shadow: 7px 7px 12px -4px darkgrey;
 }
 
 .chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap .opponent .userIdChatTxt .chatTxt .chatTxtContents {
@@ -557,7 +557,7 @@ img {
 .chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap .opponent .userIdChatTxt .chatTxt .time {
     position: absolute;
     font-size: .65rem;
-    color: #b1b1b1;
+    color: #403f3f;
     bottom: 0;
     right: -55px;
 }
@@ -713,7 +713,7 @@ button, input, select, textarea {
     height: 100%;
     left: -12px;
     top: 0;
-    background-color: rgba(26, 124, 255,.7);
+    background-color: rgb(3, 25, 122);
     color: #fff0ef;
     z-index: 1;
 }
@@ -725,7 +725,7 @@ button, input, select, textarea {
     height: 100%;
     left: -12px;
     top: 0;
-    background-color: rgba(26, 124, 255,.4);
+    background-color: #c7caff;
     z-index: 1;
 }
 
@@ -740,9 +740,31 @@ button, input, select, textarea {
     transform: translateY(-50%);
 }
 
+.chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap .dayInfo.media p:before {
+    content: "";
+    width: 80px;
+    background-color: #f3f3f3;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap .dayInfo p:after {
     content: "";
     width: 140px;
+    background-color: #f3f3f3;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chattingWrap .chattingContentWrap .chattingSection .chattingRoom .chattingRoomWrap .dayInfo.media p:after {
+    content: "";
+    width: 80px;
     background-color: #f3f3f3;
     height: 1px;
     position: absolute;
@@ -862,7 +884,9 @@ body, button, input, select, td, textarea, th {
     z-index: 99999;
     display: none;
 }
-
+.chattingWrap2{
+    cursor: pointer;
+}
 
 
 
