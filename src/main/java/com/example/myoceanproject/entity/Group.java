@@ -12,8 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_GROUP")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "user")
 public class Group extends Period{
 
     @Id
@@ -32,4 +31,19 @@ public class Group extends Period{
     @Embedded
     private File file; //썸네일
 
+    public void create(Long groupId, User user, String groupName, String groupCategory, String groupContent, int groupPoint, String groupLocation, GroupLocationType groupLocationType, GroupStatus groupStatus, File file) {
+        this.groupId = groupId;
+        this.user = user;
+        this.groupName = groupName;
+        this.groupCategory = groupCategory;
+        this.groupContent = groupContent;
+        this.groupPoint = groupPoint;
+        this.groupLocation = groupLocation;
+        this.groupLocationType = groupLocationType;
+        this.groupStatus = groupStatus;
+        this.file = file;
+    }
+    public void changeUser(User user){
+        this.user = user;
+    }
 }

@@ -10,8 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_CHATTING")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "group")
 public class Chatting extends Period{
     @Id
     @GeneratedValue
@@ -24,7 +23,15 @@ public class Chatting extends Period{
     private String chattingContent;
 
     private ReadStatus readStatus;
-//extend period
 
+    public void create(Long chattingId, Group group, String chattingContent, ReadStatus readStatus) {
+        this.chattingId = chattingId;
+        this.group = group;
+        this.chattingContent = chattingContent;
+        this.readStatus = readStatus;
+    }
 
+    public void changeGroup(Group group){
+        this.group = group;
+    }
 }

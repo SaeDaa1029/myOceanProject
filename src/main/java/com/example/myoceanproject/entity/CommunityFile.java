@@ -10,8 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_COMMUNITY_FILE")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "communityPost")
 public class CommunityFile extends Period{
     @Id
     @GeneratedValue
@@ -21,8 +20,13 @@ public class CommunityFile extends Period{
     private CommunityPost communityPost; //FK
     @Embedded
     private File file;
-//extend period
 
-
-
+    public void create(Long communityFileId, CommunityPost communityPost, File file) {
+        this.communityFileId = communityFileId;
+        this.communityPost = communityPost;
+        this.file = file;
+    }
+    public void changeCommunityPost(CommunityPost communityPost){
+        this.communityPost = communityPost;
+    }
 }

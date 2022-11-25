@@ -1,7 +1,6 @@
 package com.example.myoceanproject.entity;
 
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
@@ -10,8 +9,7 @@ import java.util.List;
 @Entity
 @Table(name = "TBL_COMMUNITY_POST")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "user")
 public class CommunityPost extends Period{
     @Id
     @GeneratedValue
@@ -25,9 +23,20 @@ public class CommunityPost extends Period{
     private String communityViewNumber;
 
 //    커뮤니티 파일 테이블 양방향
-@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+@OneToMany(fetch = FetchType.LAZY, mappedBy = "communityPost")
 private List<CommunityFile> communityFiles;
 
+    public void create(Long communityPostId, User user, String communityCategory, String communityTitle, String communityContent, String communityViewNumber) {
+        this.communityPostId = communityPostId;
+        this.user = user;
+        this.communityCategory = communityCategory;
+        this.communityTitle = communityTitle;
+        this.communityContent = communityContent;
+        this.communityViewNumber = communityViewNumber;
+    }
 
+    public void changeUser(User user){
+        this.user = user;
+    }
 
 }

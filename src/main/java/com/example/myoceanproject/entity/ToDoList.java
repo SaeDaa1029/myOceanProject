@@ -11,8 +11,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "TBL_TODOLIST")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = "user")
 @NoArgsConstructor
 public class ToDoList extends Period{
     @Id
@@ -23,8 +22,15 @@ public class ToDoList extends Period{
     private User user; //FK
     private String toDoListContent;
     private LocalDateTime toDoListSelectDate;
-//extend period
 
+    public void create(Long toDoListId, User user, String toDoListContent, LocalDateTime toDoListSelectDate) {
+        this.toDoListId = toDoListId;
+        this.user = user;
+        this.toDoListContent = toDoListContent;
+        this.toDoListSelectDate = toDoListSelectDate;
+    }
 
-
+    public void changeUser(User user){
+        this.user = user;
+    }
 }

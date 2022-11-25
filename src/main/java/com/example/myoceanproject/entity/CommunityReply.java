@@ -9,8 +9,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_COMMUNITY_REPLY")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = {"communityPost", "user"})
 public class CommunityReply extends Period{
 
     @Id
@@ -23,6 +22,19 @@ public class CommunityReply extends Period{
     @JoinColumn(name = "USER_ID")
     private User user; //FK
     private String communityReplyContent;
-//extend period
 
+    public CommunityReply(Long communityReplyId, CommunityPost communityPost, User user, String communityReplyContent) {
+        this.communityReplyId = communityReplyId;
+        this.communityPost = communityPost;
+        this.user = user;
+        this.communityReplyContent = communityReplyContent;
+    }
+
+    public void changeCommunityPost(CommunityPost communityPost){
+        this.communityPost = communityPost;
+    }
+
+    public void changeUser(User user){
+        this.user = user;
+    }
 }

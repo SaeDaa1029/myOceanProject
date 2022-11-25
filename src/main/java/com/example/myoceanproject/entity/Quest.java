@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "TBL_QUEST")
 @Getter
-@Setter
 @ToString
 public class Quest extends Period{
     @Id
@@ -23,7 +22,8 @@ public class Quest extends Period{
     private LocalDateTime questDeadLine;
     @Embedded
     private File file;
-//extend period
+
+
 
 
 }

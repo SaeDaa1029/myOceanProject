@@ -9,8 +9,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TBL_QUEST_ACHIEVEMENT")
 @Getter
-@Setter
-@ToString
+@ToString(exclude = {"user", "quest"})
 public class QuestAchievement extends Period{
 
     @Id
@@ -22,6 +21,17 @@ public class QuestAchievement extends Period{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "QUEST_ID")
     private Quest quest; //FK
-//extend period
 
+    public QuestAchievement(Long questAchievementId, User user, Quest quest) {
+        this.questAchievementId = questAchievementId;
+        this.user = user;
+        this.quest = quest;
+    }
+
+    public void changeUser(User user){
+        this.user = user;
+    }
+    public void changeQuest(Quest quest){
+        this.quest = quest;
+    }
 }
