@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "TBL_GROUP")
@@ -31,6 +32,8 @@ public class Group extends Period{
     @Embedded
     private File file; //썸네일
 
+
+
     public void create(Long groupId, User user, String groupName, String groupCategory, String groupContent, int groupPoint, String groupLocation, GroupLocationType groupLocationType, GroupStatus groupStatus, File file) {
         this.groupId = groupId;
         this.user = user;
@@ -45,5 +48,6 @@ public class Group extends Period{
     }
     public void changeUser(User user){
         this.user = user;
+        user.getGroups().add(this);
     }
 }

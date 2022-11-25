@@ -33,11 +33,14 @@ public class Diary extends Period{
         this.receiverUser = receiverUser;
     }
 
+
     public void changeUser(User user){
         this.user = user;
+        user.getDiaries().add(this);
     }
-
     public void changeReceiverUser(User receiverUser){
+
         this.receiverUser = receiverUser;
+        receiverUser.getDiaries().add(this);
     }
 }

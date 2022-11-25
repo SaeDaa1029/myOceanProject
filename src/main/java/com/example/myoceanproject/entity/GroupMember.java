@@ -30,9 +30,11 @@ public class GroupMember extends Period{
 
     public void changeUser(User user){
         this.user = user;
+
     }
 
     public void changeGroup(Group group){
         this.group = group;
     }
+
 }

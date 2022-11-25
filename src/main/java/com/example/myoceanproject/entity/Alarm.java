@@ -34,6 +34,7 @@ public class Alarm extends Period{
 
     public void changeUser(User user){
         this.user = user;
+        user.getAlarms().add(this);
     }
 
 

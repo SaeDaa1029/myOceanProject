@@ -36,7 +36,9 @@ private List<CommunityFile> communityFiles;
     }
 
     public void changeUser(User user){
+
         this.user = user;
+        user.getCommunityPosts().add(this);
     }
 
 }
