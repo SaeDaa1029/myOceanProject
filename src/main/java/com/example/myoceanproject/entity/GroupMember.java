@@ -22,6 +22,5 @@ public class GroupMember extends Period{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "GROUP_ID")
     private Group group;
-//extend period
 
 }

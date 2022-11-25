@@ -1,5 +1,8 @@
 package com.example.myoceanproject.entity;
 
+import com.example.myoceanproject.embeddable.File;
+import com.example.myoceanproject.type.GroupLocationType;
+import com.example.myoceanproject.type.GroupStatus;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -24,10 +27,9 @@ public class Group extends Period{
     private String groupContent;
     private int groupPoint;
     private String groupLocation;
-    private String groupLocationType; //Enum
-    private String groupStatus; //Enum
-    private String thumbNailPath;
-    private String thumbNailOriginName;
-//extend period
+    private GroupLocationType groupLocationType; //Enum
+    private GroupStatus groupStatus; // Enum
+    @Embedded
+    private File file; //썸네일
 
 }

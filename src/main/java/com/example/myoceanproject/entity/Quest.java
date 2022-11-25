@@ -1,13 +1,11 @@
 package com.example.myoceanproject.entity;
 
+import com.example.myoceanproject.embeddable.File;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -23,8 +21,8 @@ public class Quest extends Period{
     private String questName;
     private String questContent;
     private LocalDateTime questDeadLine;
-    private String questFilePath;
-    private String questFileOriginName;
+    @Embedded
+    private File file;
 //extend period
 
 

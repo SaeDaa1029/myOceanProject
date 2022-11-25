@@ -1,5 +1,6 @@
 package com.example.myoceanproject.entity;
 
+import com.example.myoceanproject.embeddable.File;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -18,8 +19,8 @@ public class CommunityFile extends Period{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COMMUNITY_POST_ID")
     private CommunityPost communityPost; //FK
-    private String communityFilePath;
-    private String communityFileOriginName;
+    @Embedded
+    private File file;
 //extend period
 
 
