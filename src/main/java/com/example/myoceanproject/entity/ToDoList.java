@@ -32,5 +32,6 @@ public class ToDoList extends Period{
 
     public void changeUser(User user){
         this.user = user;
+        user.getToDoLists().add(this);
     }
 }

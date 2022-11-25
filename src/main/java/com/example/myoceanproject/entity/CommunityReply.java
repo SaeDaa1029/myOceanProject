@@ -34,7 +34,5 @@ public class CommunityReply extends Period{
         this.communityPost = communityPost;
     }
 
-    public void changeUser(User user){
-        this.user = user;
-    }
+
 }

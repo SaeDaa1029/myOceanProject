@@ -28,5 +28,6 @@ public class CommunityFile extends Period{
     }
     public void changeCommunityPost(CommunityPost communityPost){
         this.communityPost = communityPost;
+        communityPost.getCommunityFiles().add(this);
     }
 }

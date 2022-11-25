@@ -32,6 +32,8 @@ public class Ask extends Period{
     }
 
     public void changeUser(User user){
+
         this.user = user;
+        user.getAsks().add(this);
     }
 }
