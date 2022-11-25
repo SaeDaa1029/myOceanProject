@@ -918,7 +918,7 @@ button {
 
 .media > div{
     max-width: 450px !important;
-    width: 100%;
+    width: 90%;
     padding-top: 30px;
     padding-bottom: 15px;
     border-bottom: 1px solid rgb(238, 238, 238);
@@ -967,7 +967,7 @@ button {
     display: none;
     position: relative;
     top: -2px;
-    left: 18px;
+    left: 80px;
 }
 
 .jIjcTX{
