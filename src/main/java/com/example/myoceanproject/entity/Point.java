@@ -19,6 +19,5 @@ public class Point extends Period{
     @JoinColumn(name = "USER_ID")
     private User user; //FK
     private String pointAmountHistory;
-//extend period
 
 }

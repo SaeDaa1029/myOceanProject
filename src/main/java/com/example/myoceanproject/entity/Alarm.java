@@ -1,5 +1,6 @@
 package com.example.myoceanproject.entity;
 
+import com.example.myoceanproject.type.ReadStatus;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -22,6 +23,6 @@ public class Alarm extends Period{
     private User user; //FK
     private String alarmContent;
     private LocalDateTime alarmDate;
-    private String alarmStatus; //Enum
+    private ReadStatus readStatus; //Enum
 
 }

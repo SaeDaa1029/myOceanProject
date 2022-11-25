@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "TBL_COMMUNITY_POST")
@@ -22,6 +23,11 @@ public class CommunityPost extends Period{
     private String communityTitle;
     private String communityContent;
     private String communityViewNumber;
-//extend period
+
+//    커뮤니티 파일 테이블 양방향
+@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+private List<CommunityFile> communityFiles;
+
+
 
 }
