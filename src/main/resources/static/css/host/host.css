@@ -437,7 +437,7 @@ button, input, optgroup, select, textarea {
     font-size: .875rem!important;
 }
 .text-frip-primary {
-    color: #7a29fa!important;
+    color: #5682ad!important;
 }
 .mt-1, .my-1 {
     margin-top: 0.25rem!important;
@@ -1014,10 +1014,10 @@ label {
     border-width: 1px;
 }
 .btn-outline-frip-primary {
-    color: #7a29fa;
+    color: #83aad1;
     background-color: transparent;
     background-image: none;
-    border-color: #7a29fa;
+    border-color: #83aad1;
 }
 .frip-button {
     display: inline-flex;
@@ -1677,8 +1677,8 @@ fieldset {
 
 .btn-frip-primary, .btn-frip-primary:hover {
     color: #fff;
-    background-color: #7a29fa;
-    border-color: #7a29fa;
+    background-color: #6985a0;
+    border-color: #6985a0;
 }
 .btn:hover {
     text-decoration: none;
@@ -2231,7 +2231,7 @@ tr th[data-v-52931a0e] {
     color: #f5365c !important;
 }
 .week td:last-child div.text-gray{
-    color: #7a29fa !important;
+    color: #41a0ff !important;
 }
 .float-left {
     float: left!important;
@@ -2254,5 +2254,11 @@ tr th[data-v-52931a0e] {
     border-radius: 0.375rem!important;
 }
 .bg-frip-primary-50 {
-    background-color: #e3d1ff!important;
+    background-color: #dbedff!important;
+}
+.btn-outline-frip-danger {
+    color: #eb385e;
+    background-color: transparent;
+    background-image: none;
+    border-color: #eb385e;
 }

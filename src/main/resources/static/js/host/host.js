@@ -10,6 +10,8 @@ $('.noticeEx').css('display', '');
 
 
 
+
+
 //다이어리
 // 임시 데이터
 const data = [
@@ -189,8 +191,8 @@ $(".nav-item a").on('click', function(e){
 
 // focus됐을 때 border 보라색으로 변경
 $('.input-group .form-control').on('focus', function(){
-    $(this).next().children('span').css('border-color', '#7a29fa');
-    $(this).css('border-color', '#7a29fa');
+    $(this).next().children('span').css('border-color', '#83aad1');
+    $(this).css('border-color', '#83aad1');
 });
 
 //주소 찾기 버튼클릭 시
@@ -289,6 +291,7 @@ $('.countryOption .custom-radio').on('click', function(){
 $('.clearPlace').on('click', function(){
     $('.placeTableBtn').hide();
     $('.my-2.placeTable').hide();
+    $('.findPlace').show();
 });
 
 // //난이도 선택
@@ -321,6 +324,7 @@ $('.createPlace').on('click', function(e){
         $('.placeTable .placeAddr').text($('#placeAddress').val());
         $('.my-2.placeTable').show();
         $('.placeTableBtn').show();
+        $('.findPlace').hide();
 
         closeModal();
     }
@@ -354,20 +358,34 @@ $('.day-btn').on('click', function(){
 
 //일정 시간 유효성 검사
 $('.openTime').on('change', function (){
-    console.log(this.value);
-    let openTime = new Date(date.setTime($('.openTime').val()));
-    let closeTime = new Date(date.setTime($('.closeTime').val()));
+    if(!$('.closeTime').val()){return;}
+    let open = $('.openTime').val().split(':');
+    let close = $('.closeTime').val().split(':');
+    let openTime = new Date();
+    let closeTime = new Date();
 
-    console.log(openTime.getTime());
-    console.log(closeTime.getTime());
+    openTime.setHours(open[0]);
+    openTime.setMinutes(open[1]);
+    closeTime.setHours(close[0]);
+    closeTime.setMinutes(close[1]);
 
-    // if($('.openTime').val() > $('.closeTime').val()){
-    //     $('.timeNotice').css('display', '');
-    // }else{
-    //     $('.timeNotice').css('display', 'none');
-    // }
-    //
-    // if($('.closeTime').val() - $())
+    let differ = (closeTime.getTime() - openTime.getTime()) / (1000*60*60)
+
+    console.log("openTime" + openTime);
+    console.log("closeTime" + closeTime);
+    console.log(openTime > closeTime);
+
+    if(openTime > closeTime){
+        console.log('dd');
+        $('.timeNotice').text('종료시간은 시작시간보다 빠를 수 없습니다.');
+        $('.timeNotice').css('display', '');
+    }else if(differ > 5){
+        $('.timeNotice').text('모임시간은 최대 5시간을 초과할 수 없습니다.');
+        $('.timeNotice').css('display', '');
+    }else{
+        $('.timeNotice').css('display', 'none');
+    }
+
 });
 
 
@@ -391,6 +409,10 @@ $('.createPlan').on('click', function(){
     }
 
     if($('.dateNotice').css('display') != 'none'){
+        return;
+    }
+
+    if($('.timeNotice').css('display') != 'none'){
         return;
     }
 
@@ -459,8 +481,55 @@ $('.fixed-bottom .frip-button').on('click', function(){
 
 //검수 요청 확인
 $('.checkRequest').on('click', function (){
+
+    if($('.image-header').css('display') == 'none'){
+        alert('이미지를 등록해주세요')
+        $('#__BVID__287___BV_modal_outer_').hide();
+        return;
+    }
+
+    if(tinymce.activeEditor.getContent() === ''){
+        alert('모임 설명을 확인해주세요')
+        $('#__BVID__287___BV_modal_outer_').hide();
+        return;
+    }
+
+    if($('.cancelRecruitment').css('display') == 'none'){
+        alert('좌측 저장버튼을 먼저 눌러주세요')
+        $('#__BVID__287___BV_modal_outer_').hide();
+        return;
+    }
+
+    if($('input[type=text].form-control').get(0).value == '' || $('input[type=text].form-control').get(1).value == '' || $('input[type=text].form-control').get(2).value == ''){
+        alert('필수입력 항목을 확인해주세요')
+        $('#__BVID__287___BV_modal_outer_').hide();
+        return;
+    }
+
+    if($('.number1').val() == '' || $('.number2').val() == '' || $('.recruitment').next().css('display') != 'none'){
+        alert('모집인원 항목을 확인해주세요')
+        $('#__BVID__287___BV_modal_outer_').hide();
+        return;
+    }
+
+    if(!$('.selectBox.mx-2.selected').attr('data-type')){
+        alert('모임 유형을 선택해주세요');
+        $('#__BVID__287___BV_modal_outer_').hide();
+        return;
+    }
+
+    if($('.selectBox.mx-2').attr('data-type') == 'offline'){
+        //장소등록 안되있으면 return
+        if($('.my-2.placeTable').css('display')=='none'){
+            return;
+        }
+    }
+
+
 //    누르면 승인대기 상태로 바꾸기
+    alert('검수 요청이 완료되었습니다');
     $('#__BVID__287___BV_modal_outer_').hide();
+
 });
 
 //임시 저장 버튼
@@ -471,7 +540,11 @@ $('.saveRecruitment').on('click', function (){
     $('#__BVID__21___BV_modal_content_').hide();
     $('#__BVID__1216___BV_modal_content_').hide();
     $('#__BVID__123___BV_modal_content_').show();
+});
 
+//임시 저장 확인
+$('.saveRequest').on('click', function (){
+    $('#__BVID__287___BV_modal_outer_').hide();
 });
 
 //에디터
